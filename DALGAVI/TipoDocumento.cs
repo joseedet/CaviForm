@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Dal;
+﻿using Dal;
 using Microsoft.Data.SqlClient;
-using Models;
-using System.IO;
+using System.Data;
 
 
 
@@ -23,30 +17,54 @@ namespace DAL
         }
         public bool InsertTipoDocumento (string Documento)
         {
-            var connectionString = DbConnection.GetConnectionString();
+            //var connectionString = DbConnection.GetConnectionString();
 
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+
+            using (SqlConnection conn = new SqlConnection(DbConnection.GetConnectionString().ToString()))
+            { 
+                try
                 {
-                    try
+                    conn.Open();
+                           
+
+                    using (var command = new SqlCommand("InsertTipoDocumento", conn))
                     {
-                        conn.Open();
-                        //MessageBox.Show("Conexión exitosa a la base de datos.");
-                        return true;
-                    }
-                    catch (Exception ex)
-                    {
-                        // MessageBox.Show($"Error al conectar a la base de datos: {ex.Message}");
-                        return false;
-                    }
-                    finally
-                    {
-                        conn.Close();
+
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@tipoDocumento", tipo.Descripcion);
+                        //command.Parameters.AddWithValue("@Contenido", post.Titulo);
+                        //command.Parameters.AddWithValue("@CategoriaId", post.CategoriaId);                      
 
                     }
+                    return true;
+
 
                 }
+                catch (Exception ex)
+                {
+                    // MessageBox.Show($"Error al conectar a la base de datos: {ex.Message}");
+
+                    return false;
+                }
+                finally
+                {
+                    conn.Close();
+
+                }
+
             }
+
         }
+
     }
 }
+        
+
+
+        
+
+
+
+            
+
+            
