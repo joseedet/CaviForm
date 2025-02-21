@@ -33,12 +33,16 @@
             txtDescripcion = new TextBox();
             btnAceptar = new Button();
             btnCancelar = new Button();
+            lstResultados = new ListBox();
+            btnNuevo = new Button();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // lblTipoDocumento
             // 
             lblTipoDocumento.AutoSize = true;
-            lblTipoDocumento.Location = new Point(32, 40);
+            lblTipoDocumento.Location = new Point(38, 12);
             lblTipoDocumento.Name = "lblTipoDocumento";
             lblTipoDocumento.Size = new Size(96, 15);
             lblTipoDocumento.TabIndex = 0;
@@ -46,7 +50,7 @@
             // 
             // txtDescripcion
             // 
-            txtDescripcion.Location = new Point(134, 32);
+            txtDescripcion.Location = new Point(38, 30);
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.Size = new Size(232, 23);
             txtDescripcion.TabIndex = 1;
@@ -54,7 +58,7 @@
             // btnAceptar
             // 
             btnAceptar.Image = (Image)resources.GetObject("btnAceptar.Image");
-            btnAceptar.Location = new Point(122, 89);
+            btnAceptar.Location = new Point(38, 294);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(75, 36);
             btnAceptar.TabIndex = 2;
@@ -64,18 +68,58 @@
             // btnCancelar
             // 
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
-            btnCancelar.Location = new Point(239, 89);
+            btnCancelar.Location = new Point(195, 294);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 36);
             btnCancelar.TabIndex = 3;
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
+            // lstResultados
+            // 
+            lstResultados.FormattingEnabled = true;
+            lstResultados.ItemHeight = 15;
+            lstResultados.Location = new Point(38, 79);
+            lstResultados.Name = "lstResultados";
+            lstResultados.Size = new Size(232, 184);
+            lstResultados.TabIndex = 4;
+            // 
+            // btnNuevo
+            // 
+            btnNuevo.Image = (Image)resources.GetObject("btnNuevo.Image");
+            btnNuevo.Location = new Point(276, 94);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new Size(75, 36);
+            btnNuevo.TabIndex = 5;
+            btnNuevo.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(276, 151);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 36);
+            button1.TabIndex = 6;
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(273, 209);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 36);
+            button2.TabIndex = 7;
+            button2.UseVisualStyleBackColor = true;
+            // 
             // frmTipoDocumento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(401, 155);
+            ClientSize = new Size(360, 342);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(btnNuevo);
+            Controls.Add(lstResultados);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(txtDescripcion);
@@ -96,5 +140,9 @@
         private TextBox txtDescripcion;
         private Button btnAceptar;
         private Button btnCancelar;
+        private ListBox lstResultados;
+        private Button btnNuevo;
+        private Button button1;
+        private Button button2;
     }
 }

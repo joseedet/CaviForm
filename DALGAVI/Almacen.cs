@@ -1,22 +1,17 @@
-﻿using Dal;
+﻿using System.Data;
+using Dal;
 using DAL.Interfaces;
 using Microsoft.Data.SqlClient;
-using System.Data;
 using Models;
+//using DbConexion = Dal.DbConexion;
 
 namespace DAL
 {
-    public class TipoDocumento : IBaseRepositorio<Models.TipoDocumento>
+    public class Almacen : IBaseRepositorio<Models.Almacen>
     {
-        private static int TipoDocumentoId;
-        private static string Descripcion = "";
-        //private TipoDocumento tipoDocumento;
 
-        public TipoDocumento ( )
-        {
-            //tipoDocumento = new TipoDocumento();
-
-        }
+        private int AlmacenId;
+        private string Descripcion="";
 
         public static bool Actualizar (int id, string Descripcion, string NombreProcedimiento)
         {
@@ -30,16 +25,12 @@ namespace DAL
 
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@Descripcion", Descripcion);
-                        command.Parameters.AddWithValue("@TipoDocumentoId", id);
-
                         command.ExecuteNonQuery();
-                        return true;
-
                     }
+                    return true;
                 }
                 catch
                 {
-                    conn.Close();
                     return false;
 
                 }
@@ -47,7 +38,6 @@ namespace DAL
                 {
                     conn.Close();
                 }
-
             }
         }
 
@@ -58,31 +48,25 @@ namespace DAL
                 try
                 {
                     conn.Open();
-
-
                     using (var command = new SqlCommand(NombreProcedimiento, conn))
                     {
 
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@Descripcion", Descripcion);
-
                         command.ExecuteNonQuery();
-
                     }
-
-
                 }
                 catch
                 {
-                    // MessageBox.Show($"Error al conectar a la base de datos: {ex.Message}");                    
+
+
                 }
                 finally
                 {
                     conn.Close();
-
                 }
-
             }
+
         }
 
         public static bool Eliminar (int id, string NonbreProcedimiento)
@@ -92,37 +76,31 @@ namespace DAL
                 try
                 {
                     conn.Open();
-
-
                     using (var command = new SqlCommand(NonbreProcedimiento, conn))
                     {
 
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@TipoDocumentoId", id);
-
+                        command.Parameters.AddWithValue("@AlmacenId", id);
                         command.ExecuteNonQuery();
-
                     }
                     return true;
 
                 }
                 catch
                 {
-                    // MessageBox.Show($"Error al conectar a la base de datos: {ex.Message}");
                     return false;
+
                 }
                 finally
                 {
                     conn.Close();
-
                 }
-
             }
-        }        
+        }
 
-        public static Models.TipoDocumento PorId (int id, string NonbreProcedimiento)
+        public static Models.Almacen PorId (int id, string NonbreProcedimiento)
         {
-            Models.TipoDocumento tipo = new Models.TipoDocumento();
+            Models.Almacen tipo = new Models.Almacen();
 
             {
                 using (SqlConnection conn = new SqlConnection(DbConexion.GetConnectionString().ToString()))
@@ -136,7 +114,7 @@ namespace DAL
                     {
 
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@TipoDocumentoId", id);
+                        command.Parameters.AddWithValue("@Almacen", id);
 
                         //command.ExecuteReader();
 
@@ -146,40 +124,22 @@ namespace DAL
                         {
                             while (reader.Read())
                             {
-                                TipoDocumento.TipoDocumentoId = (int)reader[0];
-                                Descripcion = reader[1].ToString();
+                                tipo.AlmacenId = (int)reader[0];
+                                tipo.Descripcion = reader[1].ToString();
 
                             }
 
-                            conn.Close();
-
-                            tipo.TipoDocumentoId = TipoDocumentoId;
-                            tipo.Descripcion = Descripcion.ToString();
+                            conn.Close();                            
                         }
                         return tipo;
                     }
-
                 }
             }
         }
 
-        public static Task<List<Models.TipoDocumento>> TodosLosRegistros (string NombreProcedimiento)
+        public static Task<List<Models.Almacen>> TodosLosRegistros (string NombreProcedimiento)
         {
             throw new NotImplementedException();
         }
-
-    }        
+    }
 }
-
-
-
-        
-
-
-        
-
-
-
-            
-
-            

@@ -2,12 +2,12 @@
 
 namespace Dal
 {
-    public static class DbConnection
+    public static class DbConexion
     {
 
         private static string connectionString;
 
-        static DbConnection()
+        static DbConexion()
         {
             LoadConnectionString();
         }

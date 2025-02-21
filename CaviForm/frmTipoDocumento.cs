@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Models;
 
+
 namespace CaviForm
 {
     public partial class frmTipoDocumento : Form
@@ -32,6 +33,7 @@ namespace CaviForm
             if (txtDescripcion.TextLength < 3 || txtDescripcion.Text == "")
             {
                 MessageBox.Show("El tipo documento tiene que tener un minímo de 3 carácteres y un máximo de 50");
+                tipo.Descripcion = txtDescripcion.Text;
 
             }
             else
