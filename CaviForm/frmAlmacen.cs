@@ -1,23 +1,27 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
 
 namespace CaviForm
 {
-    public partial class frmTipoDocumento : Form
+    public partial class frmAlmacen : Form
     {
-        private Models.TipoDocumento tipo;
         private ErrorProvider errorProvider;
+        private Models.Almacen almacen;
 
-        public frmTipoDocumento ( )
+        public frmAlmacen ( )
         {
             InitializeComponent();
-
-            tipo = new Models.TipoDocumento();
+            almacen = new Models.Almacen();
             errorProvider = new ErrorProvider();
-        }
 
-        private void btnCancelar_Click (object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void btnAceptar_Click (object sender, EventArgs e)
@@ -35,27 +39,25 @@ namespace CaviForm
                 }
                 else
                 {
-                    tipo.Descripcion = txtDescripcion.Text.ToUpper();
+                    almacen.Descripcion = txtDescripcion.Text.ToUpper();
 
 
-                    DAL.TipoDocumento.Agregar(tipo.Descripcion.ToString().ToUpper(), "InsertTipo_Documento");
+                    DAL.Almacen.Agregar(almacen.Descripcion.ToString().ToUpper(), "InsertTipo_Documento");
 
                 }
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
 
                 MessageBox.Show("El valor que intenta introducir ya figura en la base de datos", Application.ProductName, MessageBoxButtons.OK);
-            
+
             }
 
-            
         }
 
-        private void frmTipoDocumento_Load (object sender, EventArgs e)
+        private void btnCancelar_Click (object sender, EventArgs e)
         {
-           
-
+            Close();
         }
     }
 }

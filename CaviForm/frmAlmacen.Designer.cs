@@ -1,6 +1,6 @@
 ﻿namespace CaviForm
 {
-    partial class frmTipoDocumento
+    partial class frmAlmacen
     {
         /// <summary>
         /// Required designer variable.
@@ -11,7 +11,7 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        protected override void Dispose (bool disposing)
         {
             if (disposing && (components != null))
             {
@@ -28,50 +28,50 @@
         /// </summary>
         private void InitializeComponent ( )
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTipoDocumento));
-            lblTipoDocumento = new Label();
-            txtDescripcion = new TextBox();
-            btnAceptar = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlmacen));
             btnCancelar = new Button();
+            btnAceptar = new Button();
+            txtDescripcion = new TextBox();
+            lblAlmacien = new Label();
             SuspendLayout();
-            // 
-            // lblTipoDocumento
-            // 
-            lblTipoDocumento.AutoSize = true;
-            lblTipoDocumento.Location = new Point(62, 18);
-            lblTipoDocumento.Name = "lblTipoDocumento";
-            lblTipoDocumento.Size = new Size(96, 15);
-            lblTipoDocumento.TabIndex = 0;
-            lblTipoDocumento.Text = "Tipo Documento";
-            // 
-            // txtDescripcion
-            // 
-            txtDescripcion.Location = new Point(62, 45);
-            txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.Size = new Size(232, 23);
-            txtDescripcion.TabIndex = 1;
-            // 
-            // btnAceptar
-            // 
-            btnAceptar.Image = (Image)resources.GetObject("btnAceptar.Image");
-            btnAceptar.Location = new Point(62, 94);
-            btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(75, 36);
-            btnAceptar.TabIndex = 2;
-            btnAceptar.UseVisualStyleBackColor = true;
-            btnAceptar.Click += btnAceptar_Click;
             // 
             // btnCancelar
             // 
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
-            btnCancelar.Location = new Point(219, 94);
+            btnCancelar.Location = new Point(217, 91);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 36);
-            btnCancelar.TabIndex = 3;
+            btnCancelar.TabIndex = 7;
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
-            // frmTipoDocumento
+            // btnAceptar
+            // 
+            btnAceptar.Image = (Image)resources.GetObject("btnAceptar.Image");
+            btnAceptar.Location = new Point(60, 91);
+            btnAceptar.Name = "btnAceptar";
+            btnAceptar.Size = new Size(75, 36);
+            btnAceptar.TabIndex = 6;
+            btnAceptar.UseVisualStyleBackColor = true;
+            btnAceptar.Click += btnAceptar_Click;
+            // 
+            // txtDescripcion
+            // 
+            txtDescripcion.Location = new Point(60, 41);
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new Size(232, 23);
+            txtDescripcion.TabIndex = 5;
+            // 
+            // lblAlmacien
+            // 
+            lblAlmacien.AutoSize = true;
+            lblAlmacien.Location = new Point(60, 23);
+            lblAlmacien.Name = "lblAlmacien";
+            lblAlmacien.Size = new Size(54, 15);
+            lblAlmacien.TabIndex = 4;
+            lblAlmacien.Text = "Almacén";
+            // 
+            // frmAlmacen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -79,22 +79,21 @@
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(txtDescripcion);
-            Controls.Add(lblTipoDocumento);
+            Controls.Add(lblAlmacien);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            Name = "frmTipoDocumento";
-            Text = "Tipo Documento";
-            Load += frmTipoDocumento_Load;
+            Name = "frmAlmacen";
+            Text = "Almacén";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label lblTipoDocumento;
-        private TextBox txtDescripcion;
-        private Button btnAceptar;
         private Button btnCancelar;
+        private Button btnAceptar;
+        private TextBox txtDescripcion;
+        private Label lblAlmacien;
     }
 }

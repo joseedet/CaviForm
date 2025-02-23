@@ -72,9 +72,9 @@ namespace DAL
 
 
                 }
-                catch
+                catch( SqlException ex)
                 {
-                    // MessageBox.Show($"Error al conectar a la base de datos: {ex.Message}");                    
+                    ex.Errors.ToString();
                 }
                 finally
                 {

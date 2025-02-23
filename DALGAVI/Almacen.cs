@@ -114,11 +114,11 @@ namespace DAL
                     {
 
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@Almacen", id);
+                        command.Parameters.AddWithValue("@AlmacenId", id);
 
-                        //command.ExecuteReader();
+                        //command.ExecuteReader();                    
 
-
+                      
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {

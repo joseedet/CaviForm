@@ -1,6 +1,6 @@
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=Localhost;Database=Gest;User Id=sa;Password=Morfeo1968.;"
+    "DefaultConnection": "Server=DESKTOP-7F40RVJ\\NEO;Database=Gest;User Id=sa;Password=Malabo1968.;Encrypt=True;TrustServerCertificate=True"
   },
   
   "Logs": {
