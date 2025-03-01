@@ -7,7 +7,7 @@ using Models;
 
 namespace DAL
 {
-    public class Almacen : IBaseRepositorio<Models.Almacen>
+    public class DALAlmacen : IBaseRepositorio<Almacen>
     {
 
         private int AlmacenId;
@@ -15,10 +15,8 @@ namespace DAL
 
         public static bool Actualizar (int id, string Descripcion, string NombreProcedimiento)
         {
-            using (SqlConnection conn = new SqlConnection(DbConexion.GetConnectionString().ToString()))
+            using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
             {
-                try
-                {
                     conn.Open();
                     using (var command = new SqlCommand(NombreProcedimiento, conn))
                     {
@@ -26,27 +24,16 @@ namespace DAL
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@Descripcion", Descripcion);
                         command.ExecuteNonQuery();
-                    }
-                    return true;
-                }
-                catch
-                {
-                    return false;
-
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                        return true;
+                    }              
             }
         }
 
         public static void Agregar (string Descripcion, string NombreProcedimiento)
         {
-            using (SqlConnection conn = new SqlConnection(DbConexion.GetConnectionString().ToString()))
+            using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
             {
-                try
-                {
+                
                     conn.Open();
                     using (var command = new SqlCommand(NombreProcedimiento, conn))
                     {
@@ -54,27 +41,15 @@ namespace DAL
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@Descripcion", Descripcion);
                         command.ExecuteNonQuery();
-                    }
-                }
-                catch
-                {
-
-
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                    }                
             }
-
         }
 
         public static bool Eliminar (int id, string NonbreProcedimiento)
         {
-            using (SqlConnection conn = new SqlConnection(DbConexion.GetConnectionString().ToString()))
+            using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
             {
-                try
-                {
+              
                     conn.Open();
                     using (var command = new SqlCommand(NonbreProcedimiento, conn))
                     {
@@ -82,28 +57,19 @@ namespace DAL
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@AlmacenId", id);
                         command.ExecuteNonQuery();
-                    }
-                    return true;
-
-                }
-                catch
-                {
-                    return false;
-
-                }
-                finally
-                {
-                    conn.Close();
-                }
+                        return true;
+                     }
             }
+           
+
         }
 
         public static Models.Almacen PorId (int id, string NonbreProcedimiento)
         {
-            Models.Almacen tipo = new Models.Almacen();
+                Almacen tipo = new Almacen();
 
             {
-                using (SqlConnection conn = new SqlConnection(DbConexion.GetConnectionString().ToString()))
+                using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
                 {
 
 

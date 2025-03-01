@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent ( )
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             lblUsuario = new Label();
@@ -52,6 +52,8 @@
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(152, 23);
             txtUsuario.TabIndex = 1;
+            txtUsuario.Validating += txtUsuario_Validating;
+            txtUsuario.Validated += txtUsuario_Validated;
             // 
             // lblContrasenya
             // 
@@ -68,6 +70,7 @@
             txtContrasenya.Name = "txtContrasenya";
             txtContrasenya.Size = new Size(152, 23);
             txtContrasenya.TabIndex = 3;
+            txtContrasenya.UseSystemPasswordChar = true;
             // 
             // btnAceptar
             // 
@@ -95,14 +98,16 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(313, 158);
-            ControlBox = false;
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(txtContrasenya);
             Controls.Add(lblContrasenya);
             Controls.Add(txtUsuario);
             Controls.Add(lblUsuario);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmLogin";
             Text = "Login";
             ResumeLayout(false);

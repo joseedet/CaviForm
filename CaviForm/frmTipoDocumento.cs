@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using DAL;
+using Microsoft.Data.SqlClient;
 
 namespace CaviForm
 {
@@ -38,23 +39,24 @@ namespace CaviForm
                     tipo.Descripcion = txtDescripcion.Text.ToUpper();
 
 
-                    DAL.TipoDocumento.Agregar(tipo.Descripcion.ToString().ToUpper(), "InsertTipo_Documento");
+                    DALTipoDocumento.Agregar(tipo.Descripcion.ToString().ToUpper(), "InsertTipo_Documento");
 
                 }
             }
-            catch(SqlException ex)
+            catch (SqlException ex)
             {
 
                 MessageBox.Show("El valor que intenta introducir ya figura en la base de datos", Application.ProductName, MessageBoxButtons.OK);
-            
+
+
             }
 
-            
+
         }
 
         private void frmTipoDocumento_Load (object sender, EventArgs e)
         {
-           
+
 
         }
     }

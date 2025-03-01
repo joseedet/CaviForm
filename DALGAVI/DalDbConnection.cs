@@ -1,12 +1,12 @@
 ﻿using Newtonsoft.Json.Linq;
 namespace Dal
 {
-    public static class DbConexion
+    public static class DalDbConexion
     {
 
         private static string connectionString;
 
-        static DbConexion()
+        static DalDbConexion()
         {
             LoadConnectionString();
         }

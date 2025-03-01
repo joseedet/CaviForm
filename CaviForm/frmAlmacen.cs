@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using DAL;
 using Microsoft.Data.SqlClient;
 
 namespace CaviForm
@@ -42,7 +34,7 @@ namespace CaviForm
                     almacen.Descripcion = txtDescripcion.Text.ToUpper();
 
 
-                    DAL.Almacen.Agregar(almacen.Descripcion.ToString().ToUpper(), "InsertTipo_Documento");
+                    DALAlmacen.Agregar(almacen.Descripcion.ToString().ToUpper(), "InsertTipo_Documento");
 
                 }
             }
