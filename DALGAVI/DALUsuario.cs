@@ -7,6 +7,22 @@ namespace DAL
 {
     public class DALUsuario : IBaseRepositorio<Usuario>
     {
+      /*private string UsuarioId = "";
+        private string Nombre = "";
+        private string Apellidos = "";
+        private string Contrasenya = "";
+        private DateOnly FechaModificacionContra;
+        private int RolId;
+        private string Correo="";*/
+
+        /// <summary>
+        /// Actualiza datos del usuario
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="Descripcion"></param>
+        /// <param name="NombreProcedimiento"></param>
+        /// <returns>boolean</returns>
+        /// <exception cref="NotImplementedException"></exception>
         public static bool Actualizar (int id, string Descripcion, string NombreProcedimiento)
         {
             throw new NotImplementedException();
@@ -22,10 +38,45 @@ namespace DAL
             throw new NotImplementedException();
         }
 
+        public static Usuario PorId (string id, string NombreProcedimiento)
+        {
+            Usuario user = new Usuario();
+
+            using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
+            {
+                conn.Open();
+                using (SqlCommand command = new SqlCommand(NombreProcedimiento, conn))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@UsuarioId", id);
+
+                    using(SqlDataReader reader= command.ExecuteReader())
+                    {
+                        while(reader.Read())
+                        {
+
+                            user.UsuarioId = reader[0].ToString();
+                            user.Nombre = reader[1].ToString();
+                            user.Apellidos = reader[2].ToString();
+                            user.Contrasenya = reader[3].ToString();
+                            user.RolId = (int)reader[4];
+                            user.Correo = reader[5].ToString();
+
+                        }
+
+                        return user;
+
+                    }
+
+                }
+
+            }
+        }
         public static Usuario PorId (int id, string NonbreProcedimiento)
         {
             throw new NotImplementedException();
         }
+       
 
         public static Task<List<Usuario>> TodosLosRegistros (string NombreProcedimiento)
         {

@@ -10,8 +10,8 @@ namespace DAL
     public class DALAlmacen : IBaseRepositorio<Almacen>
     {
 
-        private int AlmacenId;
-        private string Descripcion="";
+       /* private int AlmacenId;
+        private string Descripcion="";*/
 
         public static bool Actualizar (int id, string Descripcion, string NombreProcedimiento)
         {
@@ -64,7 +64,7 @@ namespace DAL
 
         }
 
-        public static Models.Almacen PorId (int id, string NonbreProcedimiento)
+        public static Almacen PorId (int id, string NonbreProcedimiento)
         {
                 Almacen tipo = new Almacen();
 

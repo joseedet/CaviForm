@@ -1,4 +1,6 @@
-﻿namespace CaviForm
+﻿using DAL;
+
+namespace CaviForm
 {
     public partial class frmLogin : Form
     {
@@ -16,9 +18,16 @@
 
         private void btnAceptar_Click (object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "" || txtContrasenya.Text == "")
+            /*if (txtUsuario.Text == "" || txtContrasenya.Text == "")
             {
                 MessageBox.Show("Usuario o contraseña incorrectas");
+
+            }*/
+            if (DALUsuario.ValidarUsuario(txtUsuario.Text,txtContrasenya.Text,"ValidarUsuariario")==1)
+            {
+                
+             // ejecutar otro procedimiento almacenado paras saber el rol al que pertenece el usuario.
+
 
             }
 
