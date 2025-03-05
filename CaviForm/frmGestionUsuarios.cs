@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CaviForm
 {
-    public partial class GestionUsuarios: Form
+    public partial class frmGestionUsuarios: Form
     {
-        public GestionUsuarios()
+        public frmGestionUsuarios()
         {
             InitializeComponent();
         }

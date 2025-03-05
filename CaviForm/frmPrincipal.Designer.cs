@@ -41,6 +41,8 @@
             toolStripSeparator3 = new ToolStripSeparator();
             toolStripMenuItemClave = new ToolStripMenuItem();
             toolStripSeparator4 = new ToolStripSeparator();
+            toolStripMenuItemGestionUsuarios = new ToolStripMenuItem();
+            toolStripSeparator5 = new ToolStripSeparator();
             toolStripMenuItemSalir = new ToolStripMenuItem();
             MaestrosToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItemAlmacen = new ToolStripMenuItem();
@@ -78,7 +80,7 @@
             // 
             // archivoToolStripMenuItem
             // 
-            archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItemConectar, toolStripMenuItemDesconectar, toolStripSeparator1, toolStripMenuItemCambiarUsuario, toolStripSeparator2, toolStripMenuItemBloquear, toolStripMenuItemDesBloquear, toolStripSeparator3, toolStripMenuItemClave, toolStripSeparator4, toolStripMenuItemSalir });
+            archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItemConectar, toolStripMenuItemDesconectar, toolStripSeparator1, toolStripMenuItemCambiarUsuario, toolStripSeparator2, toolStripMenuItemBloquear, toolStripMenuItemDesBloquear, toolStripSeparator3, toolStripMenuItemClave, toolStripSeparator4, toolStripMenuItemGestionUsuarios, toolStripSeparator5, toolStripMenuItemSalir });
             archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             archivoToolStripMenuItem.Size = new Size(60, 20);
             archivoToolStripMenuItem.Text = "&Archivo";
@@ -151,6 +153,19 @@
             toolStripSeparator4.Name = "toolStripSeparator4";
             toolStripSeparator4.Size = new Size(177, 6);
             // 
+            // toolStripMenuItemGestionUsuarios
+            // 
+            toolStripMenuItemGestionUsuarios.Image = (Image)resources.GetObject("toolStripMenuItemGestionUsuarios.Image");
+            toolStripMenuItemGestionUsuarios.Name = "toolStripMenuItemGestionUsuarios";
+            toolStripMenuItemGestionUsuarios.Size = new Size(180, 22);
+            toolStripMenuItemGestionUsuarios.Text = "&Gestión Usuarios";
+            toolStripMenuItemGestionUsuarios.Click += toolStripMenuItemGestionUsuarios_Click;
+            // 
+            // toolStripSeparator5
+            // 
+            toolStripSeparator5.Name = "toolStripSeparator5";
+            toolStripSeparator5.Size = new Size(177, 6);
+            // 
             // toolStripMenuItemSalir
             // 
             toolStripMenuItemSalir.Image = (Image)resources.GetObject("toolStripMenuItemSalir.Image");
@@ -170,7 +185,7 @@
             // 
             toolStripMenuItemAlmacen.Image = (Image)resources.GetObject("toolStripMenuItemAlmacen.Image");
             toolStripMenuItemAlmacen.Name = "toolStripMenuItemAlmacen";
-            toolStripMenuItemAlmacen.Size = new Size(163, 22);
+            toolStripMenuItemAlmacen.Size = new Size(180, 22);
             toolStripMenuItemAlmacen.Text = "&Almacén";
             toolStripMenuItemAlmacen.Click += toolStripMenuItemAlmacen_Click;
             // 
@@ -178,14 +193,14 @@
             // 
             toolStripMenuItemCliente.Image = (Image)resources.GetObject("toolStripMenuItemCliente.Image");
             toolStripMenuItemCliente.Name = "toolStripMenuItemCliente";
-            toolStripMenuItemCliente.Size = new Size(163, 22);
+            toolStripMenuItemCliente.Size = new Size(180, 22);
             toolStripMenuItemCliente.Text = "&Clientes";
             // 
             // toolStripMenuItemConcepto
             // 
             toolStripMenuItemConcepto.Image = (Image)resources.GetObject("toolStripMenuItemConcepto.Image");
             toolStripMenuItemConcepto.Name = "toolStripMenuItemConcepto";
-            toolStripMenuItemConcepto.Size = new Size(163, 22);
+            toolStripMenuItemConcepto.Size = new Size(180, 22);
             toolStripMenuItemConcepto.Text = "C&onceptos";
             // 
             // toolStripMenuItemProducto
@@ -193,7 +208,7 @@
             toolStripMenuItemProducto.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItemDepartamentos, toolStripMenuItemIVAs, toolStripMenuItemProductos, toolStripMenuItemUnidadesMedidas });
             toolStripMenuItemProducto.Image = (Image)resources.GetObject("toolStripMenuItemProducto.Image");
             toolStripMenuItemProducto.Name = "toolStripMenuItemProducto";
-            toolStripMenuItemProducto.Size = new Size(163, 22);
+            toolStripMenuItemProducto.Size = new Size(180, 22);
             toolStripMenuItemProducto.Text = "&Productos";
             // 
             // toolStripMenuItemDepartamentos
@@ -224,14 +239,14 @@
             // 
             toolStripMenuItemProveedor.Image = (Image)resources.GetObject("toolStripMenuItemProveedor.Image");
             toolStripMenuItemProveedor.Name = "toolStripMenuItemProveedor";
-            toolStripMenuItemProveedor.Size = new Size(163, 22);
+            toolStripMenuItemProveedor.Size = new Size(180, 22);
             toolStripMenuItemProveedor.Text = "P&roveedores";
             // 
             // toolStripMenuItemTipoDocumento
             // 
             toolStripMenuItemTipoDocumento.Image = (Image)resources.GetObject("toolStripMenuItemTipoDocumento.Image");
             toolStripMenuItemTipoDocumento.Name = "toolStripMenuItemTipoDocumento";
-            toolStripMenuItemTipoDocumento.Size = new Size(163, 22);
+            toolStripMenuItemTipoDocumento.Size = new Size(180, 22);
             toolStripMenuItemTipoDocumento.Text = "&Tipo Documento";
             toolStripMenuItemTipoDocumento.Click += toolStripMenuItemTipoDocumento_Click;
             // 
@@ -379,5 +394,7 @@
         private ToolStripMenuItem toolStripMenuItemAyuda1;
         private ToolStripMenuItem toolStripMenuItemAcerca;
         private ToolStripMenuItem toolStripMenuItemTipoDocumento;
+        private ToolStripMenuItem toolStripMenuItemGestionUsuarios;
+        private ToolStripSeparator toolStripSeparator5;
     }
 }

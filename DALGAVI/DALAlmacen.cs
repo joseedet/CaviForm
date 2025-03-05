@@ -103,7 +103,9 @@ namespace DAL
             }
         }
 
-        public static Task<List<Models.Almacen>> TodosLosRegistros (string NombreProcedimiento)
+        
+
+        public static List<Almacen>TodosLosRegistros (string NombreProcedimiento)
         {
             throw new NotImplementedException();
         }

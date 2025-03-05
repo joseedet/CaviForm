@@ -1,6 +1,6 @@
 ﻿namespace CaviForm
 {
-    partial class GestionUsuarios
+    partial class frmGestionUsuarios
     {
         /// <summary>
         /// Required designer variable.

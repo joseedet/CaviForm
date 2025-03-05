@@ -50,12 +50,12 @@ namespace DAL
             }
         }
 
-        public static Models.Departamento PorId (int id, string NonbreProcedimiento)
+        public static Departamento PorId (int id, string NonbreProcedimiento)
         {
             throw new NotImplementedException();
         }
 
-        public static Task<List<Departamento>> TodosLosRegistros (string NombreProcedimiento)
+        public static List<Departamento> TodosLosRegistros (string NombreProcedimiento)
         {
             throw new NotImplementedException();
         }

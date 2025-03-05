@@ -10,6 +10,6 @@ namespace Models
     {
         public int RolId{ get; set; }
         public string Descripcion { get; set; } = "";
-
+       // public required List<Rol>Roles { get; set; }
     }
 }

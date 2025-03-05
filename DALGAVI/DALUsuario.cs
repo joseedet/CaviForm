@@ -3,6 +3,8 @@ using Dal;
 using DAL.Interfaces;
 using Microsoft.Data.SqlClient;
 using Models;
+
+
 namespace DAL
 {
     public class DALUsuario : IBaseRepositorio<Usuario>
@@ -65,7 +67,6 @@ namespace DAL
                         }
 
                         return user;
-
                     }
 
                 }
@@ -78,9 +79,40 @@ namespace DAL
         }
        
 
-        public static Task<List<Usuario>> TodosLosRegistros (string NombreProcedimiento)
+        public static List<Usuario> TodosLosRegistros (string NombreProcedimiento)
         {
-            throw new NotImplementedException();
+            Usuario user = new Usuario();
+            List<Usuario> lst = new List<Usuario>();
+            using (SqlConnection conn=new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
+            {
+                conn.Open();
+
+                using (SqlCommand command = new SqlCommand(NombreProcedimiento, conn))
+                {
+
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+
+                            user.UsuarioId = reader[0].ToString();
+                            user.Nombre = reader[1].ToString();
+                            user.Apellidos = reader[2].ToString();
+                            user.Contrasenya = reader[3].ToString();
+                            user.RolId = (int)reader[4];
+                            user.Correo = reader[5].ToString();
+
+                            lst.Add(user);
+
+                        }
+
+                        return lst;
+                    }
+
+                }
+            }
         }
 
         public static void Agregar(string UsuarioId,string Nombre,string Apellidos, string Contrasenya,DateOnly FechaModificacionContra, int RolId,string Correo,string NombreProcedimiento)

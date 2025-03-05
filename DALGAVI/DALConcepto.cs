@@ -2,6 +2,7 @@
 using Dal;
 using DAL.Interfaces;
 using Microsoft.Data.SqlClient;
+using Models;
 
 namespace DAL
 {
@@ -82,7 +83,7 @@ namespace DAL
             }
         }
 
-        public static Task<List<Models.Concepto>> TodosLosRegistros (string NombreProcedimiento)
+        public static List<Concepto> TodosLosRegistros (string NombreProcedimiento)
         {
             throw new NotImplementedException();
         }

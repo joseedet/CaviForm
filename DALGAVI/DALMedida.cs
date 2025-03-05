@@ -106,7 +106,7 @@ namespace DAL
 
         }
 
-        public static Task<List<Models.Medida>> TodosLosRegistros (string NombreProcedimiento)
+        public static List<Medida> TodosLosRegistros (string NombreProcedimiento)
         {
             throw new NotImplementedException();
         }

@@ -36,7 +36,8 @@ namespace CaviForm
         private void frmPrincipal_Load (object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            this.toolStripMenuItemBloquear.Visible = false;
+            CargaMenus(true);
+            /*this.toolStripMenuItemBloquear.Visible = false;
             this.toolStripMenuItemCambiarUsuario.Visible = false;
             this.toolStripMenuItemClave.Visible = false;
             this.toolStripMenuItemDesBloquear.Visible = false;
@@ -45,8 +46,7 @@ namespace CaviForm
             this.MovimientosToolStripMenuItem.Visible = false;
             this.ConsultasToolStripMenuItem.Visible = false;
             this.InformesToolStripMenuItem.Visible = false;
-            this.AyudaToolStripMenuItem.Visible = false;
-
+            this.AyudaToolStripMenuItem.Visible = false;*/
 
 
         }
@@ -78,6 +78,40 @@ namespace CaviForm
             frm.StartPosition = FormStartPosition.CenterScreen;
 
             frm.ShowDialog();
+        }
+        private void CargaMenus (bool visible)
+        {
+
+            this.toolStripMenuItemBloquear.Visible = visible;
+            this.toolStripMenuItemCambiarUsuario.Visible = visible;
+            this.toolStripMenuItemClave.Visible = visible;
+            this.toolStripMenuItemDesBloquear.Visible = visible;
+            this.toolStripMenuItemDesconectar.Visible = visible;
+            this.MaestrosToolStripMenuItem.Visible = visible;
+            this.MovimientosToolStripMenuItem.Visible = visible;
+            this.ConsultasToolStripMenuItem.Visible = visible;
+            this.InformesToolStripMenuItem.Visible = visible;
+            this.AyudaToolStripMenuItem.Visible = visible;
+        }
+
+        private void toolStripMenuItemGestionUsuarios_Click (object sender, EventArgs e)
+        {
+            frmUsuario frm = new frmUsuario();
+
+            frm.MdiParent = this;
+
+            frm.StartPosition = FormStartPosition.Manual;
+
+            //Calculamos el centro del formulario padre
+
+            frm.Location = new Point(
+                (this.ClientSize.Width - frm.Width) / 2,
+                (this.ClientSize.Height - frm.Height) / 2);
+
+
+            frm.Show();
+
+
         }
     }
 }
