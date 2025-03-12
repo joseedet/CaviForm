@@ -113,5 +113,23 @@ namespace CaviForm
 
 
         }
+
+        private void toolStripMenuItemCliente_Click (object sender, EventArgs e)
+        {
+            frmCliente frm = new frmCliente();
+
+            frm.MdiParent = this;
+
+            frm.StartPosition = FormStartPosition.Manual;
+
+            //Calculamos el centro del formulario padre
+
+            frm.Location = new Point(
+                (this.ClientSize.Width - frm.Width) / 2,
+                (this.ClientSize.Height - frm.Height) / 2);
+
+
+            frm.Show();
+        }
     }
 }

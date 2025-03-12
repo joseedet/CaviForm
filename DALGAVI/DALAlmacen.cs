@@ -3,15 +3,23 @@ using Dal;
 using DAL.Interfaces;
 using Microsoft.Data.SqlClient;
 using Models;
-//using DbConexion = Dal.DbConexion;
+
 
 namespace DAL
 {
+    /// <summary>
+    /// Clase DALAlmacen, hereda de la interfaz IBaseRepositorio.
+    /// </summary>
     public class DALAlmacen : IBaseRepositorio<Almacen>
     {
 
-       /* private int AlmacenId;
-        private string Descripcion="";*/
+        /// <summary>
+        /// Ejecuta consulta a base de datos del tipo Update y devuelve true si ha sido exitosa
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="Descripcion"></param>
+        /// <param name="NombreProcedimiento"></param>
+        /// <returns>bool</returns>
 
         public static bool Actualizar (int id, string Descripcion, string NombreProcedimiento)
         {
@@ -28,7 +36,11 @@ namespace DAL
                     }              
             }
         }
-
+        /// <summary>
+        /// Ejecuta consulta a base de datos del tipo Insert y devuelve true si ha sido exitosa
+        /// </summary>
+        /// <param name="Descripcion"></param>
+        /// <param name="NombreProcedimiento"></param>
         public static void Agregar (string Descripcion, string NombreProcedimiento)
         {
             using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
@@ -44,7 +56,12 @@ namespace DAL
                     }                
             }
         }
-
+        /// <summary>
+        /// Ejecuta consulta a base de datos del tipo Delete y devuelve true si ha sido exitosa
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="NonbreProcedimiento"></param>
+        /// <returns>bool</returns>
         public static bool Eliminar (int id, string NonbreProcedimiento)
         {
             using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
@@ -58,12 +75,17 @@ namespace DAL
                         command.Parameters.AddWithValue("@AlmacenId", id);
                         command.ExecuteNonQuery();
                         return true;
-                     }
+                    }
             }
            
 
         }
-
+        /// <summary>
+        /// Ejecuta consulta a base de datos del tipo select parametrizada y devuelve true si ha sido exitosa
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="NonbreProcedimiento"></param>
+        /// <returns></returns>
         public static Almacen PorId (int id, string NonbreProcedimiento)
         {
                 Almacen tipo = new Almacen();

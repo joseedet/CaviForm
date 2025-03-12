@@ -1,4 +1,5 @@
-﻿namespace CaviForm
+﻿
+namespace CaviForm
 {
     partial class frmUsuario
     {
@@ -203,6 +204,7 @@
             btnGuardar.Size = new Size(75, 43);
             btnGuardar.TabIndex = 17;
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             btnGuardar.MouseEnter += btnGuardar_MouseEnter;
             // 
             // btnCerrar
@@ -246,12 +248,16 @@
             Controls.Add(lblUsuarioId);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            MinimizeBox = false;
             Name = "frmUsuario";
             Text = "Gestión Usuario";
             Load += frmUsuario_Load;
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void btnCerrar_Click (object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

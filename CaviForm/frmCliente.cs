@@ -10,11 +10,29 @@ using System.Windows.Forms;
 
 namespace CaviForm
 {
-    public partial class frmCliente: Form
+    public partial class frmCliente : Form
     {
-        public frmCliente()
+        public frmCliente ( )
         {
             InitializeComponent();
+        }
+
+        private void frmCliente_Load (object sender, EventArgs e)
+        {
+            HablitacionBotonesCarga();
+        }
+        /// <summary>
+        /// Habilitamos los botones guardar y cerrar
+        /// </summary>
+        private void HablitacionBotonesCarga()
+        {
+            btnGuardar.Enabled = true;
+            btnEditar.Enabled = false;
+            btnDeshacer.Enabled = false;
+            btnCerrar.Enabled = true;
+            btnNuevo.Enabled = false;
+
+
         }
     }
 }

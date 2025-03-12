@@ -1,17 +1,21 @@
 ﻿using DAL;
 using Microsoft.Data.SqlClient;
+using Models;
+using static Validaciones.IValidacion<Models.Almacen>;
+
 
 namespace CaviForm
 {
     public partial class frmAlmacen : Form
     {
         private ErrorProvider errorProvider;
-        private Models.Almacen almacen;
+        private Almacen almacen;
+        private static string ? miAlmacen;
 
         public frmAlmacen ( )
         {
             InitializeComponent();
-            almacen = new Models.Almacen();
+            almacen = new Almacen();
             errorProvider = new ErrorProvider();
 
         }
@@ -20,8 +24,13 @@ namespace CaviForm
         {
             try
             {
+                miAlmacen = almacen.Descripcion;
+                var func = Validator.Validate(almacen, Validaciones.ValidarAlmacen.validations) ?
+                (Action)Success :
+                (Action)Error;
 
-                if (txtDescripcion.TextLength < 3 || txtDescripcion.Text == "" || txtDescripcion.Text == null)
+                func();
+                /*if (txtDescripcion.TextLength < 3 || txtDescripcion.Text == "" || txtDescripcion.Text == null)
                 {
                     errorProvider.SetError(btnAceptar, "El tipo documento tiene que tener un minímo de 3 y un máximo de 50 carácters");
                     //MessageBox.Show("El tipo documento tiene que tener un minímo de 3 carácteres, un máximo de 50");
@@ -36,7 +45,8 @@ namespace CaviForm
 
                     DALAlmacen.Agregar(almacen.Descripcion.ToString().ToUpper(), "InsertTipo_Documento");
 
-                }
+
+                }*/
             }
             catch (SqlException ex)
             {
@@ -46,10 +56,17 @@ namespace CaviForm
             }
 
         }
-
-        private void btnCancelar_Click (object sender, EventArgs e)
+        public static void Success ( )
         {
-            Close();
+            Ejecutar();
         }
+
+        public static void Error ( ) => MessageBox.Show("error");
+
+
+        private void btnCancelar_Click (object sender, EventArgs e) => Close();
+      
+        private static void Ejecutar()=> DALAlmacen.Agregar(miAlmacen.ToUpper(), "InsertTipo_Documento");
+        
     }
 }

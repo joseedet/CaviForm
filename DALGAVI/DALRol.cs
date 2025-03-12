@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using Dal;
 using DAL.Interfaces;
 using Microsoft.Data.SqlClient;
@@ -11,7 +12,7 @@ namespace DAL
 
         
         
-
+        
         public static bool Actualizar (int id, string Descripcion, string NombreProcedimiento)
         {
             using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
@@ -20,6 +21,7 @@ namespace DAL
 
                 using (SqlCommand command = new SqlCommand(NombreProcedimiento, conn))
                 {
+                    command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@RolId", id);
                     command.Parameters.AddWithValue("@Descripcion", Descripcion);
                     command.ExecuteNonQuery();
@@ -61,9 +63,6 @@ namespace DAL
 
                     return true;
                 }
-
-
-
             }
 
         }

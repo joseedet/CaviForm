@@ -195,6 +195,7 @@
             toolStripMenuItemCliente.Name = "toolStripMenuItemCliente";
             toolStripMenuItemCliente.Size = new Size(180, 22);
             toolStripMenuItemCliente.Text = "&Clientes";
+            toolStripMenuItemCliente.Click += toolStripMenuItemCliente_Click;
             // 
             // toolStripMenuItemConcepto
             // 

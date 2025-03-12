@@ -17,5 +17,6 @@
         public string Correo { get; set; } = "";
         public string Notas { get; set; } = "";
         public DateTime Aniversario { get; set; }
+        public bool Activo { get; set; }
     }
 }

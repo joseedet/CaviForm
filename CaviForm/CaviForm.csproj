@@ -27,6 +27,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DALGAVI\DAL.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\Validaciones\Validaciones.csproj" />
   </ItemGroup>
 
   <ItemGroup>

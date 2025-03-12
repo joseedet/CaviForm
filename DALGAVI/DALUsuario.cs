@@ -18,7 +18,7 @@ namespace DAL
         private string Correo="";*/
 
         /// <summary>
-        /// Actualiza datos del usuario
+        /// Update datos del usuario
         /// </summary>
         /// <param name="id"></param>
         /// <param name="Descripcion"></param>
@@ -39,7 +39,12 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Busca un usuario por el id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="NombreProcedimiento"></param>
+        /// <returns>Usuario</returns>
         public static Usuario PorId (string id, string NombreProcedimiento)
         {
             Usuario user = new Usuario();
@@ -73,12 +78,23 @@ namespace DAL
 
             }
         }
+        /// <summary>
+        /// Busca usuario por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="NonbreProcedimiento"></param>
+        /// <returns>Usuario</returns>
+        /// <exception cref="NotImplementedException"></exception>
         public static Usuario PorId (int id, string NonbreProcedimiento)
         {
             throw new NotImplementedException();
         }
        
-
+        /// <summary>
+        /// Obtiene un todos los registros base de datos
+        /// </summary>
+        /// <param name="NombreProcedimiento"></param>
+        /// <returns>List</returns>
         public static List<Usuario> TodosLosRegistros (string NombreProcedimiento)
         {
             Usuario user = new Usuario();
@@ -114,8 +130,19 @@ namespace DAL
                 }
             }
         }
+        /// <summary>
+        /// Inserta procedimento almacenado en base de datos.
+        /// </summary>
+        /// <param name="UsuarioId"></param>
+        /// <param name="Nombre"></param>
+        /// <param name="Apellidos"></param>
+        /// <param name="Contrasenya"></param>
+        /// <param name="FechaModificacionContra"></param>
+        /// <param name="RolId"></param>
+        /// <param name="Correo"></param>
+        /// <param name="NombreProcedimiento"></param>
 
-        public static void Agregar(string UsuarioId,string Nombre,string Apellidos, string Contrasenya,DateOnly FechaModificacionContra, int RolId,string Correo,string NombreProcedimiento)
+        public static void Agregar(string UsuarioId,string Nombre,string Apellidos, string Contrasenya,DateTime FechaModificacionContra, int RolId,string Correo,string NombreProcedimiento)
         {
             using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
             {
@@ -139,6 +166,13 @@ namespace DAL
             }
 
         }
+        /// <summary>
+        /// Valida que el usuario sea el correocto.
+        /// </summary>
+        /// <param name="UsuarioId"></param>
+        /// <param name="Contrasenya"></param>
+        /// <param name="NombreProcedimiento"></param>
+        /// <returns>int</returns>
         public static int ValidarUsuario(string UsuarioId,string Contrasenya,string NombreProcedimiento)
         {
             int resultado;
