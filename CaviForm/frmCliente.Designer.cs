@@ -31,25 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             cboTipoDocumento = new ComboBox();
-            lblNombreContacto = new Label();
-            txtNombreContacto = new TextBox();
-            lblApellidosContacto = new Label();
-            txtApellidosContacto = new TextBox();
-            lblDireccion = new Label();
-            txtDireccion = new TextBox();
-            lblCodPostal = new Label();
-            txtCodPostal = new TextBox();
-            lblPoblacion = new Label();
-            txtPoblacion = new TextBox();
-            lblProvincia = new Label();
-            txtProvincia = new TextBox();
-            lblTelefono = new Label();
-            txtTelefono = new TextBox();
-            lblMovil = new Label();
-            txtMovil = new TextBox();
-            lblCorreo = new Label();
-            txtCorreo = new TextBox();
-            lblNotas = new Label();
             txtNotas = new TextBox();
             panel1 = new Panel();
             btnEliminar = new Button();
@@ -58,18 +39,33 @@
             btnDeshacer = new Button();
             btnEditar = new Button();
             btnNuevo = new Button();
-            lblBuscar = new Label();
-            txtBuscar = new TextBox();
-            btnBuscar = new Button();
             listViewResultados = new ListView();
             dataGridViewResultados = new DataGridView();
-            lblCodCliente = new MaterialSkin.Controls.MaterialLabel();
+            toolTip2 = new ToolTip(components);
             lblTipoDocumento = new MaterialSkin.Controls.MaterialLabel();
             lblDocumento = new MaterialSkin.Controls.MaterialLabel();
             lblNombreComercial = new MaterialSkin.Controls.MaterialLabel();
-            toolTip2 = new ToolTip(components);
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            lblNombreContacto = new MaterialSkin.Controls.MaterialLabel();
+            lblApellidosContacto = new MaterialSkin.Controls.MaterialLabel();
+            lblDireccion = new MaterialSkin.Controls.MaterialLabel();
+            lblNotas = new MaterialSkin.Controls.MaterialLabel();
+            txtDocumento = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            txtNombreComercial = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            txtNombreContacto = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            txtApellidosContacto = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            txtDireccion = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            lblCodPostal = new MaterialSkin.Controls.MaterialLabel();
+            txtCodPostal = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            lblPoblacion = new MaterialSkin.Controls.MaterialLabel();
+            txtPoblacion = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            lblProvincia = new MaterialSkin.Controls.MaterialLabel();
+            txtProvincia = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            lblTelefono = new MaterialSkin.Controls.MaterialLabel();
+            txtTelefono = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            lblMovil = new MaterialSkin.Controls.MaterialLabel();
+            txtMovil = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            lblCorreo = new MaterialSkin.Controls.MaterialLabel();
+            txtCorreo = new MaterialSkin.Controls.MaterialSingleLineTextField();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewResultados).BeginInit();
             SuspendLayout();
@@ -82,213 +78,43 @@
             cboTipoDocumento.Margin = new Padding(3, 4, 3, 4);
             cboTipoDocumento.Name = "cboTipoDocumento";
             cboTipoDocumento.Size = new Size(280, 26);
-            cboTipoDocumento.TabIndex = 3;
-            // 
-            // lblNombreContacto
-            // 
-            lblNombreContacto.AutoSize = true;
-            lblNombreContacto.Location = new Point(38, 218);
-            lblNombreContacto.Name = "lblNombreContacto";
-            lblNombreContacto.Size = new Size(137, 18);
-            lblNombreContacto.TabIndex = 8;
-            lblNombreContacto.Text = "Nombre Contacto *";
-            // 
-            // txtNombreContacto
-            // 
-            txtNombreContacto.Location = new Point(196, 212);
-            txtNombreContacto.Margin = new Padding(3, 4, 3, 4);
-            txtNombreContacto.Name = "txtNombreContacto";
-            txtNombreContacto.Size = new Size(280, 24);
-            txtNombreContacto.TabIndex = 9;
-            // 
-            // lblApellidosContacto
-            // 
-            lblApellidosContacto.AutoSize = true;
-            lblApellidosContacto.Location = new Point(32, 256);
-            lblApellidosContacto.Name = "lblApellidosContacto";
-            lblApellidosContacto.Size = new Size(142, 18);
-            lblApellidosContacto.TabIndex = 10;
-            lblApellidosContacto.Text = "Apellidos Contacto *";
-            // 
-            // txtApellidosContacto
-            // 
-            txtApellidosContacto.Location = new Point(196, 250);
-            txtApellidosContacto.Margin = new Padding(3, 4, 3, 4);
-            txtApellidosContacto.Name = "txtApellidosContacto";
-            txtApellidosContacto.Size = new Size(280, 24);
-            txtApellidosContacto.TabIndex = 11;
-            // 
-            // lblDireccion
-            // 
-            lblDireccion.AutoSize = true;
-            lblDireccion.Location = new Point(98, 296);
-            lblDireccion.Name = "lblDireccion";
-            lblDireccion.Size = new Size(81, 18);
-            lblDireccion.TabIndex = 12;
-            lblDireccion.Text = "Dirección *";
-            // 
-            // txtDireccion
-            // 
-            txtDireccion.Location = new Point(196, 288);
-            txtDireccion.Margin = new Padding(3, 4, 3, 4);
-            txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(280, 24);
-            txtDireccion.TabIndex = 13;
-            // 
-            // lblCodPostal
-            // 
-            lblCodPostal.AutoSize = true;
-            lblCodPostal.Location = new Point(479, 99);
-            lblCodPostal.Name = "lblCodPostal";
-            lblCodPostal.RightToLeft = RightToLeft.No;
-            lblCodPostal.Size = new Size(110, 18);
-            lblCodPostal.TabIndex = 14;
-            lblCodPostal.Text = "Código postal *";
-            lblCodPostal.TextAlign = ContentAlignment.TopRight;
-            // 
-            // txtCodPostal
-            // 
-            txtCodPostal.Location = new Point(606, 96);
-            txtCodPostal.Margin = new Padding(3, 4, 3, 4);
-            txtCodPostal.Name = "txtCodPostal";
-            txtCodPostal.Size = new Size(280, 24);
-            txtCodPostal.TabIndex = 15;
-            // 
-            // lblPoblacion
-            // 
-            lblPoblacion.AutoSize = true;
-            lblPoblacion.Location = new Point(506, 137);
-            lblPoblacion.Name = "lblPoblacion";
-            lblPoblacion.RightToLeft = RightToLeft.No;
-            lblPoblacion.Size = new Size(84, 18);
-            lblPoblacion.TabIndex = 16;
-            lblPoblacion.Text = "Población *";
-            lblPoblacion.TextAlign = ContentAlignment.TopRight;
-            // 
-            // txtPoblacion
-            // 
-            txtPoblacion.Location = new Point(606, 134);
-            txtPoblacion.Margin = new Padding(3, 4, 3, 4);
-            txtPoblacion.Name = "txtPoblacion";
-            txtPoblacion.Size = new Size(280, 24);
-            txtPoblacion.TabIndex = 17;
-            // 
-            // lblProvincia
-            // 
-            lblProvincia.AutoSize = true;
-            lblProvincia.Location = new Point(512, 176);
-            lblProvincia.Name = "lblProvincia";
-            lblProvincia.RightToLeft = RightToLeft.No;
-            lblProvincia.Size = new Size(79, 18);
-            lblProvincia.TabIndex = 18;
-            lblProvincia.Text = "Provincia *";
-            lblProvincia.TextAlign = ContentAlignment.TopRight;
-            // 
-            // txtProvincia
-            // 
-            txtProvincia.Location = new Point(606, 173);
-            txtProvincia.Margin = new Padding(3, 4, 3, 4);
-            txtProvincia.Name = "txtProvincia";
-            txtProvincia.Size = new Size(280, 24);
-            txtProvincia.TabIndex = 19;
-            // 
-            // lblTelefono
-            // 
-            lblTelefono.AutoSize = true;
-            lblTelefono.Location = new Point(516, 214);
-            lblTelefono.Name = "lblTelefono";
-            lblTelefono.RightToLeft = RightToLeft.No;
-            lblTelefono.Size = new Size(66, 18);
-            lblTelefono.TabIndex = 20;
-            lblTelefono.Text = "Teléfono";
-            lblTelefono.TextAlign = ContentAlignment.TopRight;
-            // 
-            // txtTelefono
-            // 
-            txtTelefono.Location = new Point(606, 212);
-            txtTelefono.Margin = new Padding(3, 4, 3, 4);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(280, 24);
-            txtTelefono.TabIndex = 21;
-            // 
-            // lblMovil
-            // 
-            lblMovil.AutoSize = true;
-            lblMovil.Location = new Point(536, 252);
-            lblMovil.Name = "lblMovil";
-            lblMovil.RightToLeft = RightToLeft.No;
-            lblMovil.Size = new Size(53, 18);
-            lblMovil.TabIndex = 22;
-            lblMovil.Text = "Movil *";
-            // 
-            // txtMovil
-            // 
-            txtMovil.Location = new Point(606, 250);
-            txtMovil.Margin = new Padding(3, 4, 3, 4);
-            txtMovil.Name = "txtMovil";
-            txtMovil.Size = new Size(280, 24);
-            txtMovil.TabIndex = 23;
-            // 
-            // lblCorreo
-            // 
-            lblCorreo.AutoSize = true;
-            lblCorreo.Location = new Point(528, 291);
-            lblCorreo.Name = "lblCorreo";
-            lblCorreo.RightToLeft = RightToLeft.No;
-            lblCorreo.Size = new Size(65, 18);
-            lblCorreo.TabIndex = 24;
-            lblCorreo.Text = "Correo *";
-            lblCorreo.TextAlign = ContentAlignment.TopRight;
-            // 
-            // txtCorreo
-            // 
-            txtCorreo.Location = new Point(606, 288);
-            txtCorreo.Margin = new Padding(3, 4, 3, 4);
-            txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(280, 24);
-            txtCorreo.TabIndex = 25;
-            // 
-            // lblNotas
-            // 
-            lblNotas.AutoSize = true;
-            lblNotas.Location = new Point(118, 334);
-            lblNotas.Name = "lblNotas";
-            lblNotas.Size = new Size(48, 18);
-            lblNotas.TabIndex = 26;
-            lblNotas.Text = "Notas";
+            cboTipoDocumento.TabIndex = 2;
             // 
             // txtNotas
             // 
-            txtNotas.Location = new Point(190, 334);
+            txtNotas.Location = new Point(196, 334);
             txtNotas.Margin = new Padding(3, 4, 3, 4);
             txtNotas.Multiline = true;
             txtNotas.Name = "txtNotas";
-            txtNotas.Size = new Size(697, 105);
-            txtNotas.TabIndex = 27;
+            txtNotas.Size = new Size(691, 105);
+            txtNotas.TabIndex = 26;
             // 
             // panel1
             // 
+            panel1.BackColor = Color.Transparent;
             panel1.Controls.Add(btnEliminar);
             panel1.Controls.Add(btnCerrar);
             panel1.Controls.Add(btnGuardar);
             panel1.Controls.Add(btnDeshacer);
             panel1.Controls.Add(btnEditar);
             panel1.Controls.Add(btnNuevo);
-            panel1.Location = new Point(289, 710);
+            panel1.Location = new Point(485, 686);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(720, 68);
+            panel1.Size = new Size(359, 66);
             panel1.TabIndex = 28;
             // 
             // btnEliminar
             // 
             btnEliminar.FlatAppearance.BorderSize = 0;
+            btnEliminar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnEliminar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Image = (Image)resources.GetObject("btnEliminar.Image");
-            btnEliminar.Location = new Point(484, 10);
+            btnEliminar.Location = new Point(222, 10);
             btnEliminar.Margin = new Padding(3, 4, 3, 4);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(97, 52);
+            btnEliminar.Size = new Size(62, 52);
             btnEliminar.TabIndex = 24;
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.MouseEnter += btnEliminar_MouseEnter;
@@ -296,12 +122,14 @@
             // btnCerrar
             // 
             btnCerrar.FlatAppearance.BorderSize = 0;
+            btnCerrar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnCerrar.FlatAppearance.MouseOverBackColor = Color.White;
             btnCerrar.FlatStyle = FlatStyle.Flat;
             btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.Location = new Point(606, 10);
+            btnCerrar.Location = new Point(270, 10);
             btnCerrar.Margin = new Padding(3, 4, 3, 4);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(97, 52);
+            btnCerrar.Size = new Size(62, 52);
             btnCerrar.TabIndex = 23;
             btnCerrar.UseVisualStyleBackColor = true;
             btnCerrar.Click += btnCerrar_Click;
@@ -310,12 +138,14 @@
             // btnGuardar
             // 
             btnGuardar.FlatAppearance.BorderSize = 0;
+            btnGuardar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnGuardar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
-            btnGuardar.Location = new Point(258, 10);
+            btnGuardar.Location = new Point(76, 10);
             btnGuardar.Margin = new Padding(3, 4, 3, 4);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(97, 52);
+            btnGuardar.Size = new Size(62, 52);
             btnGuardar.TabIndex = 22;
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.MouseEnter += btnGuardar_MouseEnter;
@@ -323,12 +153,14 @@
             // btnDeshacer
             // 
             btnDeshacer.FlatAppearance.BorderSize = 0;
+            btnDeshacer.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnDeshacer.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnDeshacer.FlatStyle = FlatStyle.Flat;
             btnDeshacer.Image = (Image)resources.GetObject("btnDeshacer.Image");
-            btnDeshacer.Location = new Point(370, 10);
+            btnDeshacer.Location = new Point(186, 10);
             btnDeshacer.Margin = new Padding(3, 4, 3, 4);
             btnDeshacer.Name = "btnDeshacer";
-            btnDeshacer.Size = new Size(97, 52);
+            btnDeshacer.Size = new Size(62, 52);
             btnDeshacer.TabIndex = 21;
             btnDeshacer.UseVisualStyleBackColor = true;
             btnDeshacer.MouseEnter += btnDeshacer_MouseEnter;
@@ -336,12 +168,14 @@
             // btnEditar
             // 
             btnEditar.FlatAppearance.BorderSize = 0;
+            btnEditar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnEditar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
-            btnEditar.Location = new Point(144, 10);
+            btnEditar.Location = new Point(127, 10);
             btnEditar.Margin = new Padding(3, 4, 3, 4);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(97, 52);
+            btnEditar.Size = new Size(62, 52);
             btnEditar.TabIndex = 20;
             btnEditar.UseVisualStyleBackColor = true;
             btnEditar.MouseEnter += btnEditar_MouseEnter;
@@ -349,46 +183,18 @@
             // btnNuevo
             // 
             btnNuevo.FlatAppearance.BorderSize = 0;
+            btnNuevo.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnNuevo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Image = (Image)resources.GetObject("btnNuevo.Image");
-            btnNuevo.Location = new Point(30, 10);
+            btnNuevo.Location = new Point(26, 10);
             btnNuevo.Margin = new Padding(3, 4, 3, 4);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(97, 52);
+            btnNuevo.Size = new Size(64, 52);
             btnNuevo.TabIndex = 19;
             btnNuevo.UseVisualStyleBackColor = true;
             btnNuevo.MouseEnter += btnNuevo_MouseEnter;
             btnNuevo.MouseMove += btnNuevo_MouseMove;
-            // 
-            // lblBuscar
-            // 
-            lblBuscar.AutoSize = true;
-            lblBuscar.Location = new Point(648, 29);
-            lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(105, 18);
-            lblBuscar.TabIndex = 29;
-            lblBuscar.Text = "Introducir texto";
-            lblBuscar.TextAlign = ContentAlignment.TopRight;
-            // 
-            // txtBuscar
-            // 
-            txtBuscar.Location = new Point(772, 19);
-            txtBuscar.Margin = new Padding(3, 4, 3, 4);
-            txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new Size(328, 24);
-            txtBuscar.TabIndex = 30;
-            // 
-            // btnBuscar
-            // 
-            btnBuscar.FlatAppearance.BorderSize = 0;
-            btnBuscar.FlatStyle = FlatStyle.Flat;
-            btnBuscar.Image = (Image)resources.GetObject("btnBuscar.Image");
-            btnBuscar.Location = new Point(1110, 15);
-            btnBuscar.Margin = new Padding(3, 4, 3, 4);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(40, 33);
-            btnBuscar.TabIndex = 31;
-            btnBuscar.UseVisualStyleBackColor = true;
             // 
             // listViewResultados
             // 
@@ -396,111 +202,417 @@
             listViewResultados.Margin = new Padding(3, 4, 3, 4);
             listViewResultados.Name = "listViewResultados";
             listViewResultados.Size = new Size(318, 345);
-            listViewResultados.TabIndex = 32;
+            listViewResultados.TabIndex = 27;
             listViewResultados.UseCompatibleStateImageBehavior = false;
             // 
             // dataGridViewResultados
             // 
             dataGridViewResultados.AllowUserToAddRows = false;
             dataGridViewResultados.AllowUserToDeleteRows = false;
-            dataGridViewResultados.BackgroundColor = Color.FromArgb(128, 128, 255);
+            dataGridViewResultados.BackgroundColor = Color.White;
             dataGridViewResultados.BorderStyle = BorderStyle.Fixed3D;
             dataGridViewResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewResultados.Location = new Point(190, 461);
+            dataGridViewResultados.Location = new Point(196, 446);
             dataGridViewResultados.Name = "dataGridViewResultados";
             dataGridViewResultados.ReadOnly = true;
-            dataGridViewResultados.Size = new Size(1023, 212);
+            dataGridViewResultados.Size = new Size(1016, 212);
             dataGridViewResultados.TabIndex = 33;
-            // 
-            // lblCodCliente
-            // 
-            lblCodCliente.AutoSize = true;
-            lblCodCliente.Depth = 0;
-            lblCodCliente.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
-            lblCodCliente.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblCodCliente.Location = new Point(81, 26);
-            lblCodCliente.MouseState = MaterialSkin.MouseState.HOVER;
-            lblCodCliente.Name = "lblCodCliente";
-            lblCodCliente.Size = new Size(85, 19);
-            lblCodCliente.TabIndex = 34;
-            lblCodCliente.Text = "Cod. Cliente";
-            lblCodCliente.TextAlign = ContentAlignment.MiddleRight;
             // 
             // lblTipoDocumento
             // 
             lblTipoDocumento.AutoSize = true;
+            lblTipoDocumento.BackColor = Color.Transparent;
             lblTipoDocumento.Depth = 0;
-            lblTipoDocumento.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lblTipoDocumento.FlatStyle = FlatStyle.Flat;
+            lblTipoDocumento.Font = new Font("Roboto", 11F);
             lblTipoDocumento.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblTipoDocumento.Location = new Point(39, 100);
+            lblTipoDocumento.Location = new Point(34, 100);
             lblTipoDocumento.MouseState = MaterialSkin.MouseState.HOVER;
             lblTipoDocumento.Name = "lblTipoDocumento";
-            lblTipoDocumento.Size = new Size(130, 19);
-            lblTipoDocumento.TabIndex = 36;
-            lblTipoDocumento.Text = "Tipo Documento *";
+            lblTipoDocumento.Size = new Size(135, 19);
+            lblTipoDocumento.TabIndex = 1;
+            lblTipoDocumento.Text = "Tipo Documento * ";
             // 
             // lblDocumento
             // 
             lblDocumento.AutoSize = true;
+            lblDocumento.BackColor = Color.Transparent;
             lblDocumento.Depth = 0;
-            lblDocumento.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lblDocumento.FlatStyle = FlatStyle.Flat;
+            lblDocumento.Font = new Font("Roboto", 11F);
             lblDocumento.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblDocumento.Location = new Point(65, 134);
+            lblDocumento.Location = new Point(72, 137);
             lblDocumento.MouseState = MaterialSkin.MouseState.HOVER;
             lblDocumento.Name = "lblDocumento";
-            lblDocumento.Size = new Size(102, 19);
-            lblDocumento.TabIndex = 37;
-            lblDocumento.Text = " Documento  *";
-            lblDocumento.TextAlign = ContentAlignment.MiddleRight;
-            lblDocumento.Click += lblDocumento_Click;
+            lblDocumento.Size = new Size(97, 19);
+            lblDocumento.TabIndex = 3;
+            lblDocumento.Text = "Documento *";
             // 
             // lblNombreComercial
             // 
             lblNombreComercial.AutoSize = true;
+            lblNombreComercial.BackColor = Color.Transparent;
             lblNombreComercial.Depth = 0;
-            lblNombreComercial.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lblNombreComercial.Font = new Font("Roboto", 11F);
             lblNombreComercial.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblNombreComercial.Location = new Point(26, 173);
+            lblNombreComercial.Location = new Point(23, 176);
             lblNombreComercial.MouseState = MaterialSkin.MouseState.HOVER;
             lblNombreComercial.Name = "lblNombreComercial";
-            lblNombreComercial.Size = new Size(143, 19);
-            lblNombreComercial.TabIndex = 39;
+            lblNombreComercial.Size = new Size(146, 19);
+            lblNombreComercial.TabIndex = 5;
             lblNombreComercial.Text = "Nombre Comercial *";
             // 
-            // textBox1
+            // lblNombreContacto
             // 
-            textBox1.Location = new Point(196, 134);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(280, 24);
-            textBox1.TabIndex = 40;
+            lblNombreContacto.AutoSize = true;
+            lblNombreContacto.BackColor = Color.Transparent;
+            lblNombreContacto.Depth = 0;
+            lblNombreContacto.FlatStyle = FlatStyle.Flat;
+            lblNombreContacto.Font = new Font("Roboto", 11F);
+            lblNombreContacto.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblNombreContacto.Location = new Point(30, 215);
+            lblNombreContacto.MouseState = MaterialSkin.MouseState.HOVER;
+            lblNombreContacto.Name = "lblNombreContacto";
+            lblNombreContacto.Size = new Size(139, 19);
+            lblNombreContacto.TabIndex = 7;
+            lblNombreContacto.Text = "Nombre Contacto *";
             // 
-            // textBox2
+            // lblApellidosContacto
             // 
-            textBox2.Location = new Point(196, 173);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(280, 24);
-            textBox2.TabIndex = 41;
+            lblApellidosContacto.AutoSize = true;
+            lblApellidosContacto.BackColor = Color.Transparent;
+            lblApellidosContacto.Depth = 0;
+            lblApellidosContacto.Font = new Font("Roboto", 11F);
+            lblApellidosContacto.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblApellidosContacto.Location = new Point(21, 253);
+            lblApellidosContacto.MouseState = MaterialSkin.MouseState.HOVER;
+            lblApellidosContacto.Name = "lblApellidosContacto";
+            lblApellidosContacto.Size = new Size(148, 19);
+            lblApellidosContacto.TabIndex = 9;
+            lblApellidosContacto.Text = "Apellidos Contacto *";
+            // 
+            // lblDireccion
+            // 
+            lblDireccion.AutoSize = true;
+            lblDireccion.BackColor = Color.Transparent;
+            lblDireccion.Depth = 0;
+            lblDireccion.FlatStyle = FlatStyle.Flat;
+            lblDireccion.Font = new Font("Roboto", 11F);
+            lblDireccion.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblDireccion.Location = new Point(86, 293);
+            lblDireccion.MouseState = MaterialSkin.MouseState.HOVER;
+            lblDireccion.Name = "lblDireccion";
+            lblDireccion.Size = new Size(83, 19);
+            lblDireccion.TabIndex = 11;
+            lblDireccion.Text = "Direccion *";
+            // 
+            // lblNotas
+            // 
+            lblNotas.AutoSize = true;
+            lblNotas.BackColor = Color.Transparent;
+            lblNotas.Depth = 0;
+            lblNotas.FlatStyle = FlatStyle.Flat;
+            lblNotas.Font = new Font("Roboto", 11F);
+            lblNotas.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblNotas.Location = new Point(119, 334);
+            lblNotas.MouseState = MaterialSkin.MouseState.HOVER;
+            lblNotas.Name = "lblNotas";
+            lblNotas.Size = new Size(50, 19);
+            lblNotas.TabIndex = 25;
+            lblNotas.Text = "Notas";
+            // 
+            // txtDocumento
+            // 
+            txtDocumento.BackColor = Color.White;
+            txtDocumento.Depth = 0;
+            txtDocumento.Hint = "";
+            txtDocumento.Location = new Point(196, 135);
+            txtDocumento.MaxLength = 32767;
+            txtDocumento.MouseState = MaterialSkin.MouseState.HOVER;
+            txtDocumento.Name = "txtDocumento";
+            txtDocumento.PasswordChar = '\0';
+            txtDocumento.SelectedText = "";
+            txtDocumento.SelectionLength = 0;
+            txtDocumento.SelectionStart = 0;
+            txtDocumento.Size = new Size(280, 23);
+            txtDocumento.TabIndex = 4;
+            txtDocumento.TabStop = false;
+            txtDocumento.UseSystemPasswordChar = false;
+            // 
+            // txtNombreComercial
+            // 
+            txtNombreComercial.BackColor = Color.White;
+            txtNombreComercial.Depth = 0;
+            txtNombreComercial.Hint = "";
+            txtNombreComercial.Location = new Point(196, 171);
+            txtNombreComercial.MaxLength = 32767;
+            txtNombreComercial.MouseState = MaterialSkin.MouseState.HOVER;
+            txtNombreComercial.Name = "txtNombreComercial";
+            txtNombreComercial.PasswordChar = '\0';
+            txtNombreComercial.SelectedText = "";
+            txtNombreComercial.SelectionLength = 0;
+            txtNombreComercial.SelectionStart = 0;
+            txtNombreComercial.Size = new Size(280, 23);
+            txtNombreComercial.TabIndex = 6;
+            txtNombreComercial.TabStop = false;
+            txtNombreComercial.UseSystemPasswordChar = false;
+            // 
+            // txtNombreContacto
+            // 
+            txtNombreContacto.BackColor = Color.White;
+            txtNombreContacto.Depth = 0;
+            txtNombreContacto.Hint = "";
+            txtNombreContacto.Location = new Point(196, 209);
+            txtNombreContacto.MaxLength = 32767;
+            txtNombreContacto.MouseState = MaterialSkin.MouseState.HOVER;
+            txtNombreContacto.Name = "txtNombreContacto";
+            txtNombreContacto.PasswordChar = '\0';
+            txtNombreContacto.SelectedText = "";
+            txtNombreContacto.SelectionLength = 0;
+            txtNombreContacto.SelectionStart = 0;
+            txtNombreContacto.Size = new Size(280, 23);
+            txtNombreContacto.TabIndex = 8;
+            txtNombreContacto.TabStop = false;
+            txtNombreContacto.UseSystemPasswordChar = false;
+            // 
+            // txtApellidosContacto
+            // 
+            txtApellidosContacto.BackColor = Color.White;
+            txtApellidosContacto.Depth = 0;
+            txtApellidosContacto.Hint = "";
+            txtApellidosContacto.Location = new Point(196, 247);
+            txtApellidosContacto.MaxLength = 32767;
+            txtApellidosContacto.MouseState = MaterialSkin.MouseState.HOVER;
+            txtApellidosContacto.Name = "txtApellidosContacto";
+            txtApellidosContacto.PasswordChar = '\0';
+            txtApellidosContacto.SelectedText = "";
+            txtApellidosContacto.SelectionLength = 0;
+            txtApellidosContacto.SelectionStart = 0;
+            txtApellidosContacto.Size = new Size(280, 23);
+            txtApellidosContacto.TabIndex = 10;
+            txtApellidosContacto.TabStop = false;
+            txtApellidosContacto.UseSystemPasswordChar = false;
+            // 
+            // txtDireccion
+            // 
+            txtDireccion.BackColor = Color.White;
+            txtDireccion.Depth = 0;
+            txtDireccion.Hint = "";
+            txtDireccion.Location = new Point(196, 291);
+            txtDireccion.MaxLength = 32767;
+            txtDireccion.MouseState = MaterialSkin.MouseState.HOVER;
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.PasswordChar = '\0';
+            txtDireccion.SelectedText = "";
+            txtDireccion.SelectionLength = 0;
+            txtDireccion.SelectionStart = 0;
+            txtDireccion.Size = new Size(280, 23);
+            txtDireccion.TabIndex = 12;
+            txtDireccion.TabStop = false;
+            txtDireccion.UseSystemPasswordChar = false;
+            // 
+            // lblCodPostal
+            // 
+            lblCodPostal.AutoSize = true;
+            lblCodPostal.BackColor = Color.Transparent;
+            lblCodPostal.Depth = 0;
+            lblCodPostal.Font = new Font("Roboto", 11F);
+            lblCodPostal.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblCodPostal.Location = new Point(496, 98);
+            lblCodPostal.MouseState = MaterialSkin.MouseState.HOVER;
+            lblCodPostal.Name = "lblCodPostal";
+            lblCodPostal.Size = new Size(97, 19);
+            lblCodPostal.TabIndex = 13;
+            lblCodPostal.Text = "Cod. Postal *";
+            // 
+            // txtCodPostal
+            // 
+            txtCodPostal.BackColor = Color.White;
+            txtCodPostal.Depth = 0;
+            txtCodPostal.Hint = "";
+            txtCodPostal.Location = new Point(606, 98);
+            txtCodPostal.MaxLength = 32767;
+            txtCodPostal.MouseState = MaterialSkin.MouseState.HOVER;
+            txtCodPostal.Name = "txtCodPostal";
+            txtCodPostal.PasswordChar = '\0';
+            txtCodPostal.SelectedText = "";
+            txtCodPostal.SelectionLength = 0;
+            txtCodPostal.SelectionStart = 0;
+            txtCodPostal.Size = new Size(280, 23);
+            txtCodPostal.TabIndex = 14;
+            txtCodPostal.TabStop = false;
+            txtCodPostal.UseSystemPasswordChar = false;
+            // 
+            // lblPoblacion
+            // 
+            lblPoblacion.AutoSize = true;
+            lblPoblacion.BackColor = Color.Transparent;
+            lblPoblacion.Depth = 0;
+            lblPoblacion.FlatStyle = FlatStyle.Flat;
+            lblPoblacion.Font = new Font("Roboto", 11F);
+            lblPoblacion.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblPoblacion.Location = new Point(507, 135);
+            lblPoblacion.MouseState = MaterialSkin.MouseState.HOVER;
+            lblPoblacion.Name = "lblPoblacion";
+            lblPoblacion.Size = new Size(86, 19);
+            lblPoblacion.TabIndex = 15;
+            lblPoblacion.Text = "Población *";
+            // 
+            // txtPoblacion
+            // 
+            txtPoblacion.BackColor = Color.White;
+            txtPoblacion.Depth = 0;
+            txtPoblacion.Hint = "";
+            txtPoblacion.Location = new Point(606, 133);
+            txtPoblacion.MaxLength = 32767;
+            txtPoblacion.MouseState = MaterialSkin.MouseState.HOVER;
+            txtPoblacion.Name = "txtPoblacion";
+            txtPoblacion.PasswordChar = '\0';
+            txtPoblacion.SelectedText = "";
+            txtPoblacion.SelectionLength = 0;
+            txtPoblacion.SelectionStart = 0;
+            txtPoblacion.Size = new Size(280, 23);
+            txtPoblacion.TabIndex = 16;
+            txtPoblacion.TabStop = false;
+            txtPoblacion.UseSystemPasswordChar = false;
+            // 
+            // lblProvincia
+            // 
+            lblProvincia.AutoSize = true;
+            lblProvincia.BackColor = Color.Transparent;
+            lblProvincia.Depth = 0;
+            lblProvincia.FlatStyle = FlatStyle.Flat;
+            lblProvincia.Font = new Font("Roboto", 11F);
+            lblProvincia.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblProvincia.Location = new Point(512, 173);
+            lblProvincia.MouseState = MaterialSkin.MouseState.HOVER;
+            lblProvincia.Name = "lblProvincia";
+            lblProvincia.Size = new Size(81, 19);
+            lblProvincia.TabIndex = 17;
+            lblProvincia.Text = "Provincia *";
+            // 
+            // txtProvincia
+            // 
+            txtProvincia.BackColor = Color.White;
+            txtProvincia.Depth = 0;
+            txtProvincia.Hint = "";
+            txtProvincia.Location = new Point(606, 169);
+            txtProvincia.MaxLength = 32767;
+            txtProvincia.MouseState = MaterialSkin.MouseState.HOVER;
+            txtProvincia.Name = "txtProvincia";
+            txtProvincia.PasswordChar = '\0';
+            txtProvincia.SelectedText = "";
+            txtProvincia.SelectionLength = 0;
+            txtProvincia.SelectionStart = 0;
+            txtProvincia.Size = new Size(280, 23);
+            txtProvincia.TabIndex = 18;
+            txtProvincia.TabStop = false;
+            txtProvincia.UseSystemPasswordChar = false;
+            // 
+            // lblTelefono
+            // 
+            lblTelefono.AutoSize = true;
+            lblTelefono.BackColor = Color.Transparent;
+            lblTelefono.Depth = 0;
+            lblTelefono.FlatStyle = FlatStyle.Flat;
+            lblTelefono.Font = new Font("Roboto", 11F);
+            lblTelefono.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblTelefono.Location = new Point(520, 213);
+            lblTelefono.MouseState = MaterialSkin.MouseState.HOVER;
+            lblTelefono.Name = "lblTelefono";
+            lblTelefono.Size = new Size(73, 19);
+            lblTelefono.TabIndex = 19;
+            lblTelefono.Text = "Teléfono ";
+            // 
+            // txtTelefono
+            // 
+            txtTelefono.BackColor = Color.White;
+            txtTelefono.Depth = 0;
+            txtTelefono.Hint = "";
+            txtTelefono.Location = new Point(606, 212);
+            txtTelefono.MaxLength = 32767;
+            txtTelefono.MouseState = MaterialSkin.MouseState.HOVER;
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.PasswordChar = '\0';
+            txtTelefono.SelectedText = "";
+            txtTelefono.SelectionLength = 0;
+            txtTelefono.SelectionStart = 0;
+            txtTelefono.Size = new Size(280, 23);
+            txtTelefono.TabIndex = 20;
+            txtTelefono.TabStop = false;
+            txtTelefono.UseSystemPasswordChar = false;
+            // 
+            // lblMovil
+            // 
+            lblMovil.AutoSize = true;
+            lblMovil.BackColor = Color.Transparent;
+            lblMovil.Depth = 0;
+            lblMovil.Font = new Font("Roboto", 11F);
+            lblMovil.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblMovil.Location = new Point(537, 253);
+            lblMovil.MouseState = MaterialSkin.MouseState.HOVER;
+            lblMovil.Name = "lblMovil";
+            lblMovil.Size = new Size(56, 19);
+            lblMovil.TabIndex = 21;
+            lblMovil.Text = "Movil *";
+            // 
+            // txtMovil
+            // 
+            txtMovil.BackColor = Color.White;
+            txtMovil.Depth = 0;
+            txtMovil.Hint = "";
+            txtMovil.Location = new Point(608, 255);
+            txtMovil.MaxLength = 32767;
+            txtMovil.MouseState = MaterialSkin.MouseState.HOVER;
+            txtMovil.Name = "txtMovil";
+            txtMovil.PasswordChar = '\0';
+            txtMovil.SelectedText = "";
+            txtMovil.SelectionLength = 0;
+            txtMovil.SelectionStart = 0;
+            txtMovil.Size = new Size(278, 23);
+            txtMovil.TabIndex = 22;
+            txtMovil.TabStop = false;
+            txtMovil.UseSystemPasswordChar = false;
+            // 
+            // lblCorreo
+            // 
+            lblCorreo.AutoSize = true;
+            lblCorreo.BackColor = Color.Transparent;
+            lblCorreo.Depth = 0;
+            lblCorreo.FlatStyle = FlatStyle.Flat;
+            lblCorreo.Font = new Font("Roboto", 11F);
+            lblCorreo.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblCorreo.Location = new Point(528, 295);
+            lblCorreo.MouseState = MaterialSkin.MouseState.HOVER;
+            lblCorreo.Name = "lblCorreo";
+            lblCorreo.Size = new Size(65, 19);
+            lblCorreo.TabIndex = 23;
+            lblCorreo.Text = "Correo *";
+            // 
+            // txtCorreo
+            // 
+            txtCorreo.BackColor = Color.White;
+            txtCorreo.Depth = 0;
+            txtCorreo.Hint = "";
+            txtCorreo.Location = new Point(608, 291);
+            txtCorreo.MaxLength = 32767;
+            txtCorreo.MouseState = MaterialSkin.MouseState.HOVER;
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.PasswordChar = '\0';
+            txtCorreo.SelectedText = "";
+            txtCorreo.SelectionLength = 0;
+            txtCorreo.SelectionStart = 0;
+            txtCorreo.Size = new Size(278, 23);
+            txtCorreo.TabIndex = 24;
+            txtCorreo.TabStop = false;
+            txtCorreo.UseSystemPasswordChar = false;
             // 
             // frmCliente
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
-            ClientSize = new Size(1256, 820);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(lblNombreComercial);
-            Controls.Add(lblDocumento);
-            Controls.Add(lblTipoDocumento);
-            Controls.Add(lblCodCliente);
-            Controls.Add(dataGridViewResultados);
-            Controls.Add(listViewResultados);
-            Controls.Add(btnBuscar);
-            Controls.Add(txtBuscar);
-            Controls.Add(lblBuscar);
-            Controls.Add(panel1);
-            Controls.Add(txtNotas);
-            Controls.Add(lblNotas);
+            ClientSize = new Size(1237, 772);
             Controls.Add(txtCorreo);
             Controls.Add(lblCorreo);
             Controls.Add(txtMovil);
@@ -514,11 +626,21 @@
             Controls.Add(txtCodPostal);
             Controls.Add(lblCodPostal);
             Controls.Add(txtDireccion);
-            Controls.Add(lblDireccion);
             Controls.Add(txtApellidosContacto);
-            Controls.Add(lblApellidosContacto);
             Controls.Add(txtNombreContacto);
+            Controls.Add(txtNombreComercial);
+            Controls.Add(txtDocumento);
+            Controls.Add(lblNotas);
+            Controls.Add(lblDireccion);
+            Controls.Add(lblApellidosContacto);
             Controls.Add(lblNombreContacto);
+            Controls.Add(lblNombreComercial);
+            Controls.Add(lblDocumento);
+            Controls.Add(lblTipoDocumento);
+            Controls.Add(dataGridViewResultados);
+            Controls.Add(listViewResultados);
+            Controls.Add(panel1);
+            Controls.Add(txtNotas);
             Controls.Add(cboTipoDocumento);
             Font = new Font("Microsoft Sans Serif", 11F);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -535,25 +657,6 @@
 
         #endregion
         private ComboBox cboTipoDocumento;
-        private Label lblNombreContacto;
-        private TextBox txtNombreContacto;
-        private Label lblApellidosContacto;
-        private TextBox txtApellidosContacto;
-        private Label lblDireccion;
-        private TextBox txtDireccion;
-        private Label lblCodPostal;
-        private TextBox txtCodPostal;
-        private Label lblPoblacion;
-        private TextBox txtPoblacion;
-        private Label lblProvincia;
-        private TextBox txtProvincia;
-        private Label lblTelefono;
-        private TextBox txtTelefono;
-        private Label lblMovil;
-        private TextBox txtMovil;
-        private Label lblCorreo;
-        private TextBox txtCorreo;
-        private Label lblNotas;
         private TextBox txtNotas;
         private Panel panel1;
         private Button btnCerrar;
@@ -562,20 +665,33 @@
         private Button btnEditar;
         private Button btnNuevo;
         private Button btnEliminar;
-        private Label lblBuscar;
-        private TextBox txtBuscar;
-        private Button btnBuscar;
         private ListView listViewResultados;
         private DataGridView dataGridViewResultados;
-        private MaterialSkin.Controls.MaterialLabel lblCodCliente;
-        //private MaterialSkin.Controls.MaterialSingleLineTextField txtCodCliente;
-        private MaterialSkin.Controls.MaterialLabel lblTipoDocumento;
-        private MaterialSkin.Controls.MaterialLabel lblDocumento;
-        //private MaterialSkin.Controls.MaterialSingleLineTextField txtDocumento;
-        private MaterialSkin.Controls.MaterialLabel lblNombreComercial;
         //private MaterialSkin.Controls.MaterialSingleLineTextField txtNombreComercial;
         private ToolTip toolTip2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private MaterialSkin.Controls.MaterialLabel lblTipoDocumento;
+        private MaterialSkin.Controls.MaterialLabel lblDocumento;
+        private MaterialSkin.Controls.MaterialLabel lblNombreComercial;
+        private MaterialSkin.Controls.MaterialLabel lblNombreContacto;
+        private MaterialSkin.Controls.MaterialLabel lblApellidosContacto;
+        private MaterialSkin.Controls.MaterialLabel lblDireccion;
+        private MaterialSkin.Controls.MaterialLabel lblNotas;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtDocumento;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNombreComercial;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtNombreContacto;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtApellidosContacto;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtDireccion;
+        private MaterialSkin.Controls.MaterialLabel lblCodPostal;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtCodPostal;
+        private MaterialSkin.Controls.MaterialLabel lblPoblacion;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtPoblacion;
+        private MaterialSkin.Controls.MaterialLabel lblProvincia;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtProvincia;
+        private MaterialSkin.Controls.MaterialLabel lblTelefono;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtTelefono;
+        private MaterialSkin.Controls.MaterialLabel lblMovil;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtMovil;
+        private MaterialSkin.Controls.MaterialLabel lblCorreo;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtCorreo;
     }
 }

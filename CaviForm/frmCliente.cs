@@ -1,14 +1,20 @@
-﻿namespace CaviForm
+﻿using EjemploLogin;
+using MaterialSkin;
+using MaterialSkin.Controls;
+
+namespace CaviForm
 {
 
-    public partial class frmCliente : Form
+    public partial class frmCliente : MaterialForm
     {
         private ToolTip toolTip1;
         public frmCliente()
         {
             InitializeComponent();
+            MaterialUI.loadMaterial(this);
             toolTip1 = new ToolTip();
             toolTip1.IsBalloon = true;
+
 
         }
 

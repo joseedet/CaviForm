@@ -112,6 +112,7 @@
             txtUsuario.TabIndex = 8;
             txtUsuario.TabStop = false;
             txtUsuario.UseSystemPasswordChar = false;
+            txtUsuario.MouseEnter += txtUsuario_MouseEnter;
             // 
             // lblContrasenya
             // 
@@ -144,6 +145,7 @@
             txtContrasenya.TabIndex = 10;
             txtContrasenya.TabStop = false;
             txtContrasenya.UseSystemPasswordChar = false;
+            txtContrasenya.MouseEnter += txtContrasenya_MouseEnter;
             // 
             // frmLogin
             // 

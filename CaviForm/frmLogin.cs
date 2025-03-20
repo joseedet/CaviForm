@@ -1,6 +1,5 @@
 ﻿using DAL;
 using EjemploLogin;
-using MaterialSkin;
 using MaterialSkin.Controls;
 
 namespace CaviForm
@@ -87,6 +86,16 @@ namespace CaviForm
         private void frmLogin_Load(object sender, EventArgs e)
         {
             txtUsuario.Focus();
+        }
+
+        private void txtUsuario_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip.SetToolTip(txtUsuario, "Introducir nombre de usuario");
+        }
+
+        private void txtContrasenya_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip.SetToolTip(txtContrasenya, "Introducir contraseña");
         }
     }
 }
