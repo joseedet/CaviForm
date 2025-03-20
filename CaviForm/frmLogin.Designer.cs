@@ -26,101 +26,154 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent ( )
+        private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            lblUsuario = new Label();
-            txtUsuario = new TextBox();
-            lblContrasenya = new Label();
-            txtContrasenya = new TextBox();
             btnAceptar = new Button();
             btnCancelar = new Button();
+            lblUsuario = new MaterialSkin.Controls.MaterialLabel();
+            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            lblContrasenya = new MaterialSkin.Controls.MaterialLabel();
+            txtContrasenya = new MaterialSkin.Controls.MaterialSingleLineTextField();
             SuspendLayout();
+            // 
+            // btnAceptar
+            // 
+            btnAceptar.BackColor = Color.Transparent;
+            btnAceptar.FlatAppearance.BorderSize = 0;
+            btnAceptar.FlatStyle = FlatStyle.Flat;
+            btnAceptar.Image = (Image)resources.GetObject("btnAceptar.Image");
+            btnAceptar.Location = new Point(145, 151);
+            btnAceptar.Name = "btnAceptar";
+            btnAceptar.Size = new Size(44, 45);
+            btnAceptar.TabIndex = 4;
+            btnAceptar.UseVisualStyleBackColor = false;
+            btnAceptar.Click += btnAceptar_Click;
+            btnAceptar.MouseEnter += btnAceptar_MouseEnter;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Transparent;
+            btnCancelar.FlatAppearance.BorderSize = 0;
+            btnCancelar.FlatStyle = FlatStyle.Flat;
+            btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
+            btnCancelar.Location = new Point(215, 151);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(51, 45);
+            btnCancelar.TabIndex = 5;
+            btnCancelar.UseCompatibleTextRendering = true;
+            btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
+            btnCancelar.MouseEnter += btnCancelar_MouseEnter;
             // 
             // lblUsuario
             // 
             lblUsuario.AutoSize = true;
-            lblUsuario.Location = new Point(38, 34);
+            lblUsuario.BackColor = Color.Transparent;
+            lblUsuario.Depth = 0;
+            lblUsuario.Font = new Font("Roboto", 11F);
+            lblUsuario.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblUsuario.Location = new Point(1812, 494);
+            lblUsuario.MouseState = MaterialSkin.MouseState.HOVER;
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(47, 15);
-            lblUsuario.TabIndex = 0;
+            lblUsuario.Size = new Size(61, 19);
+            lblUsuario.TabIndex = 6;
             lblUsuario.Text = "Usuario";
+            // 
+            // materialLabel1
+            // 
+            materialLabel1.AutoSize = true;
+            materialLabel1.Depth = 0;
+            materialLabel1.FlatStyle = FlatStyle.Flat;
+            materialLabel1.Font = new Font("Roboto", 11F);
+            materialLabel1.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            materialLabel1.Location = new Point(56, 80);
+            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel1.Name = "materialLabel1";
+            materialLabel1.Size = new Size(61, 19);
+            materialLabel1.TabIndex = 7;
+            materialLabel1.Text = "Usuario";
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(111, 26);
+            txtUsuario.Depth = 0;
+            txtUsuario.Font = new Font("Microsoft Sans Serif", 11F);
+            txtUsuario.Hint = "";
+            txtUsuario.Location = new Point(130, 82);
+            txtUsuario.MaxLength = 32767;
+            txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(152, 23);
-            txtUsuario.TabIndex = 1;
-            txtUsuario.Validating += txtUsuario_Validating;
-            txtUsuario.Validated += txtUsuario_Validated;
+            txtUsuario.PasswordChar = '\0';
+            txtUsuario.SelectedText = "";
+            txtUsuario.SelectionLength = 0;
+            txtUsuario.SelectionStart = 0;
+            txtUsuario.Size = new Size(151, 23);
+            txtUsuario.TabIndex = 8;
+            txtUsuario.TabStop = false;
+            txtUsuario.UseSystemPasswordChar = false;
             // 
             // lblContrasenya
             // 
             lblContrasenya.AutoSize = true;
-            lblContrasenya.Location = new Point(38, 62);
+            lblContrasenya.Depth = 0;
+            lblContrasenya.FlatStyle = FlatStyle.Flat;
+            lblContrasenya.Font = new Font("Roboto", 11F);
+            lblContrasenya.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            lblContrasenya.Location = new Point(31, 111);
+            lblContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
             lblContrasenya.Name = "lblContrasenya";
-            lblContrasenya.Size = new Size(67, 15);
-            lblContrasenya.TabIndex = 2;
+            lblContrasenya.Size = new Size(86, 19);
+            lblContrasenya.TabIndex = 9;
             lblContrasenya.Text = "Contraseña";
             // 
             // txtContrasenya
             // 
-            txtContrasenya.Location = new Point(111, 54);
+            txtContrasenya.Depth = 0;
+            txtContrasenya.Font = new Font("Microsoft Sans Serif", 11F);
+            txtContrasenya.Hint = "";
+            txtContrasenya.Location = new Point(130, 111);
+            txtContrasenya.MaxLength = 32767;
+            txtContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
             txtContrasenya.Name = "txtContrasenya";
-            txtContrasenya.Size = new Size(152, 23);
-            txtContrasenya.TabIndex = 3;
-            txtContrasenya.UseSystemPasswordChar = true;
-            // 
-            // btnAceptar
-            // 
-            btnAceptar.Image = (Image)resources.GetObject("btnAceptar.Image");
-            btnAceptar.Location = new Point(85, 101);
-            btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(67, 45);
-            btnAceptar.TabIndex = 4;
-            btnAceptar.UseVisualStyleBackColor = true;
-            btnAceptar.Click += btnAceptar_Click;
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
-            btnCancelar.Location = new Point(169, 101);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(75, 45);
-            btnCancelar.TabIndex = 5;
-            btnCancelar.UseCompatibleTextRendering = true;
-            btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
+            txtContrasenya.PasswordChar = '\0';
+            txtContrasenya.SelectedText = "";
+            txtContrasenya.SelectionLength = 0;
+            txtContrasenya.SelectionStart = 0;
+            txtContrasenya.Size = new Size(151, 23);
+            txtContrasenya.TabIndex = 10;
+            txtContrasenya.TabStop = false;
+            txtContrasenya.UseSystemPasswordChar = false;
             // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(313, 158);
-            Controls.Add(btnCancelar);
-            Controls.Add(btnAceptar);
+            ClientSize = new Size(369, 208);
             Controls.Add(txtContrasenya);
             Controls.Add(lblContrasenya);
             Controls.Add(txtUsuario);
+            Controls.Add(materialLabel1);
             Controls.Add(lblUsuario);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Controls.Add(btnCancelar);
+            Controls.Add(btnAceptar);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "frmLogin";
             Text = "Login";
+            Load += frmLogin_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label lblUsuario;
-        private TextBox txtUsuario;
-        private Label lblContrasenya;
-        private TextBox txtContrasenya;
         private Button btnAceptar;
         private Button btnCancelar;
+        private MaterialSkin.Controls.MaterialLabel lblUsuario;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
+        private MaterialSkin.Controls.MaterialLabel lblContrasenya;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtContrasenya;
     }
 }

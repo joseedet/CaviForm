@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent ( )
+        private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlmacen));
             btnCancelar = new Button();
@@ -37,8 +37,10 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.FlatAppearance.BorderSize = 0;
+            btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
-            btnCancelar.Location = new Point(217, 91);
+            btnCancelar.Location = new Point(237, 91);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 36);
             btnCancelar.TabIndex = 7;
@@ -47,8 +49,10 @@
             // 
             // btnAceptar
             // 
+            btnAceptar.FlatAppearance.BorderSize = 0;
+            btnAceptar.FlatStyle = FlatStyle.Flat;
             btnAceptar.Image = (Image)resources.GetObject("btnAceptar.Image");
-            btnAceptar.Location = new Point(60, 91);
+            btnAceptar.Location = new Point(80, 91);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(75, 36);
             btnAceptar.TabIndex = 6;
@@ -57,25 +61,29 @@
             // 
             // txtDescripcion
             // 
-            txtDescripcion.Location = new Point(60, 41);
+            txtDescripcion.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDescripcion.Location = new Point(91, 41);
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.Size = new Size(232, 23);
             txtDescripcion.TabIndex = 5;
+            txtDescripcion.Validating += txtDescripcion_Validating;
             // 
             // lblAlmacien
             // 
             lblAlmacien.AutoSize = true;
-            lblAlmacien.Location = new Point(60, 23);
+            lblAlmacien.Font = new Font("Verdana", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblAlmacien.Location = new Point(9, 48);
             lblAlmacien.Name = "lblAlmacien";
-            lblAlmacien.Size = new Size(54, 15);
+            lblAlmacien.Size = new Size(76, 16);
             lblAlmacien.TabIndex = 4;
-            lblAlmacien.Text = "Almacén";
+            lblAlmacien.Text = "Almacén *";
             // 
             // frmAlmacen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(364, 156);
+            BackColor = Color.FromArgb(128, 128, 255);
+            ClientSize = new Size(335, 156);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(txtDescripcion);

@@ -1,10 +1,18 @@
+
+using EjemploLogin;
+using MaterialSkin;
+//using MaterialSkin.Controls;
+using MaterialSkin.Controls;
+
+
 namespace CaviForm
 {
-    public partial class frmPrincipal : Form
+    public partial class frmPrincipal : MaterialForm
     {
         public frmPrincipal ( )
         {
             InitializeComponent();
+            MaterialUI.loadMaterial(this);
         }
 
         private void toolStripMenuItemSalir_Click (object sender, EventArgs e)
@@ -36,6 +44,7 @@ namespace CaviForm
         private void frmPrincipal_Load (object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            //this.StartPosition = FormStartPosition.CenterScreen;
             CargaMenus(true);
             /*this.toolStripMenuItemBloquear.Visible = false;
             this.toolStripMenuItemCambiarUsuario.Visible = false;

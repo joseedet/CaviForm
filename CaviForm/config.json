@@ -1,7 +1,7 @@
 {
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=DESKTOP-7F40RVJ\\NEO;Database=Gest;User Id=sa;Password=Malabo1968.;Encrypt=True;TrustServerCertificate=True"
-  },
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=DESKTOP-7APQ8I3\\SQLEXPRESS;Database=Gest;User Id=sa;Password=Malabo1968.;Encrypt=True;TrustServerCertificate=True"
+    },
   
   "Logs": {
     "Path": "ErrorLog.dat"

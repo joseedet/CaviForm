@@ -26,8 +26,9 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent ( )
+        private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             menuStripPrincipal = new MenuStrip();
             archivoToolStripMenuItem = new ToolStripMenuItem();
@@ -67,15 +68,17 @@
             toolStripMenuItemAyuda1 = new ToolStripMenuItem();
             toolStripMenuItemAcerca = new ToolStripMenuItem();
             statusStripPrincipal = new StatusStrip();
+            imageList1 = new ImageList(components);
             menuStripPrincipal.SuspendLayout();
             SuspendLayout();
             // 
             // menuStripPrincipal
             // 
             menuStripPrincipal.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, MaestrosToolStripMenuItem, MovimientosToolStripMenuItem, ConsultasToolStripMenuItem, InformesToolStripMenuItem, AyudaToolStripMenuItem });
-            menuStripPrincipal.Location = new Point(0, 0);
+            menuStripPrincipal.Location = new Point(3, 24);
             menuStripPrincipal.Name = "menuStripPrincipal";
-            menuStripPrincipal.Size = new Size(1035, 24);
+            menuStripPrincipal.Padding = new Padding(8, 2, 0, 2);
+            menuStripPrincipal.Size = new Size(984, 24);
             menuStripPrincipal.TabIndex = 0;
             // 
             // archivoToolStripMenuItem
@@ -89,7 +92,7 @@
             // 
             toolStripMenuItemConectar.Image = (Image)resources.GetObject("toolStripMenuItemConectar.Image");
             toolStripMenuItemConectar.Name = "toolStripMenuItemConectar";
-            toolStripMenuItemConectar.Size = new Size(180, 22);
+            toolStripMenuItemConectar.Size = new Size(164, 22);
             toolStripMenuItemConectar.Text = "&Conectar";
             toolStripMenuItemConectar.ToolTipText = "Ingresar a la aplicación";
             toolStripMenuItemConectar.Click += toolStripMenuItemConectar_Click;
@@ -98,79 +101,79 @@
             // 
             toolStripMenuItemDesconectar.Image = (Image)resources.GetObject("toolStripMenuItemDesconectar.Image");
             toolStripMenuItemDesconectar.Name = "toolStripMenuItemDesconectar";
-            toolStripMenuItemDesconectar.Size = new Size(180, 22);
+            toolStripMenuItemDesconectar.Size = new Size(164, 22);
             toolStripMenuItemDesconectar.Text = "&Dessconectar";
             toolStripMenuItemDesconectar.ToolTipText = "Desconectar ";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(161, 6);
             // 
             // toolStripMenuItemCambiarUsuario
             // 
             toolStripMenuItemCambiarUsuario.Image = (Image)resources.GetObject("toolStripMenuItemCambiarUsuario.Image");
             toolStripMenuItemCambiarUsuario.Name = "toolStripMenuItemCambiarUsuario";
-            toolStripMenuItemCambiarUsuario.Size = new Size(180, 22);
+            toolStripMenuItemCambiarUsuario.Size = new Size(164, 22);
             toolStripMenuItemCambiarUsuario.Text = "Cambiar &Usuario";
             toolStripMenuItemCambiarUsuario.ToolTipText = "Cambiar de Usuario";
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(161, 6);
             // 
             // toolStripMenuItemBloquear
             // 
             toolStripMenuItemBloquear.Image = (Image)resources.GetObject("toolStripMenuItemBloquear.Image");
             toolStripMenuItemBloquear.Name = "toolStripMenuItemBloquear";
-            toolStripMenuItemBloquear.Size = new Size(180, 22);
+            toolStripMenuItemBloquear.Size = new Size(164, 22);
             toolStripMenuItemBloquear.Text = "&Bloquear";
             // 
             // toolStripMenuItemDesBloquear
             // 
             toolStripMenuItemDesBloquear.Image = (Image)resources.GetObject("toolStripMenuItemDesBloquear.Image");
             toolStripMenuItemDesBloquear.Name = "toolStripMenuItemDesBloquear";
-            toolStripMenuItemDesBloquear.Size = new Size(180, 22);
+            toolStripMenuItemDesBloquear.Size = new Size(164, 22);
             toolStripMenuItemDesBloquear.Text = "D&esbloquear";
             toolStripMenuItemDesBloquear.ToolTipText = "Desbloquear";
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(177, 6);
+            toolStripSeparator3.Size = new Size(161, 6);
             // 
             // toolStripMenuItemClave
             // 
             toolStripMenuItemClave.Image = (Image)resources.GetObject("toolStripMenuItemClave.Image");
             toolStripMenuItemClave.Name = "toolStripMenuItemClave";
-            toolStripMenuItemClave.Size = new Size(180, 22);
+            toolStripMenuItemClave.Size = new Size(164, 22);
             toolStripMenuItemClave.Text = "C&ambio de Clave";
             toolStripMenuItemClave.ToolTipText = "Cambiar Clave";
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(177, 6);
+            toolStripSeparator4.Size = new Size(161, 6);
             // 
             // toolStripMenuItemGestionUsuarios
             // 
             toolStripMenuItemGestionUsuarios.Image = (Image)resources.GetObject("toolStripMenuItemGestionUsuarios.Image");
             toolStripMenuItemGestionUsuarios.Name = "toolStripMenuItemGestionUsuarios";
-            toolStripMenuItemGestionUsuarios.Size = new Size(180, 22);
+            toolStripMenuItemGestionUsuarios.Size = new Size(164, 22);
             toolStripMenuItemGestionUsuarios.Text = "&Gestión Usuarios";
             toolStripMenuItemGestionUsuarios.Click += toolStripMenuItemGestionUsuarios_Click;
             // 
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(177, 6);
+            toolStripSeparator5.Size = new Size(161, 6);
             // 
             // toolStripMenuItemSalir
             // 
             toolStripMenuItemSalir.Image = (Image)resources.GetObject("toolStripMenuItemSalir.Image");
             toolStripMenuItemSalir.Name = "toolStripMenuItemSalir";
-            toolStripMenuItemSalir.Size = new Size(180, 22);
+            toolStripMenuItemSalir.Size = new Size(164, 22);
             toolStripMenuItemSalir.Text = "&Salir";
             toolStripMenuItemSalir.Click += toolStripMenuItemSalir_Click;
             // 
@@ -185,7 +188,7 @@
             // 
             toolStripMenuItemAlmacen.Image = (Image)resources.GetObject("toolStripMenuItemAlmacen.Image");
             toolStripMenuItemAlmacen.Name = "toolStripMenuItemAlmacen";
-            toolStripMenuItemAlmacen.Size = new Size(180, 22);
+            toolStripMenuItemAlmacen.Size = new Size(163, 22);
             toolStripMenuItemAlmacen.Text = "&Almacén";
             toolStripMenuItemAlmacen.Click += toolStripMenuItemAlmacen_Click;
             // 
@@ -193,7 +196,7 @@
             // 
             toolStripMenuItemCliente.Image = (Image)resources.GetObject("toolStripMenuItemCliente.Image");
             toolStripMenuItemCliente.Name = "toolStripMenuItemCliente";
-            toolStripMenuItemCliente.Size = new Size(180, 22);
+            toolStripMenuItemCliente.Size = new Size(163, 22);
             toolStripMenuItemCliente.Text = "&Clientes";
             toolStripMenuItemCliente.Click += toolStripMenuItemCliente_Click;
             // 
@@ -201,7 +204,7 @@
             // 
             toolStripMenuItemConcepto.Image = (Image)resources.GetObject("toolStripMenuItemConcepto.Image");
             toolStripMenuItemConcepto.Name = "toolStripMenuItemConcepto";
-            toolStripMenuItemConcepto.Size = new Size(180, 22);
+            toolStripMenuItemConcepto.Size = new Size(163, 22);
             toolStripMenuItemConcepto.Text = "C&onceptos";
             // 
             // toolStripMenuItemProducto
@@ -209,7 +212,7 @@
             toolStripMenuItemProducto.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItemDepartamentos, toolStripMenuItemIVAs, toolStripMenuItemProductos, toolStripMenuItemUnidadesMedidas });
             toolStripMenuItemProducto.Image = (Image)resources.GetObject("toolStripMenuItemProducto.Image");
             toolStripMenuItemProducto.Name = "toolStripMenuItemProducto";
-            toolStripMenuItemProducto.Size = new Size(180, 22);
+            toolStripMenuItemProducto.Size = new Size(163, 22);
             toolStripMenuItemProducto.Text = "&Productos";
             // 
             // toolStripMenuItemDepartamentos
@@ -240,14 +243,14 @@
             // 
             toolStripMenuItemProveedor.Image = (Image)resources.GetObject("toolStripMenuItemProveedor.Image");
             toolStripMenuItemProveedor.Name = "toolStripMenuItemProveedor";
-            toolStripMenuItemProveedor.Size = new Size(180, 22);
+            toolStripMenuItemProveedor.Size = new Size(163, 22);
             toolStripMenuItemProveedor.Text = "P&roveedores";
             // 
             // toolStripMenuItemTipoDocumento
             // 
             toolStripMenuItemTipoDocumento.Image = (Image)resources.GetObject("toolStripMenuItemTipoDocumento.Image");
             toolStripMenuItemTipoDocumento.Name = "toolStripMenuItemTipoDocumento";
-            toolStripMenuItemTipoDocumento.Size = new Size(180, 22);
+            toolStripMenuItemTipoDocumento.Size = new Size(163, 22);
             toolStripMenuItemTipoDocumento.Text = "&Tipo Documento";
             toolStripMenuItemTipoDocumento.Click += toolStripMenuItemTipoDocumento_Click;
             // 
@@ -330,26 +333,38 @@
             // 
             // statusStripPrincipal
             // 
-            statusStripPrincipal.Location = new Point(0, 648);
+            statusStripPrincipal.Location = new Point(3, 664);
             statusStripPrincipal.Name = "statusStripPrincipal";
-            statusStripPrincipal.Size = new Size(1035, 22);
+            statusStripPrincipal.Padding = new Padding(1, 0, 18, 0);
+            statusStripPrincipal.Size = new Size(984, 22);
             statusStripPrincipal.TabIndex = 2;
             statusStripPrincipal.Text = "statusStrip1";
             // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth32Bit;
+            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
+            imageList1.TransparentColor = Color.Transparent;
+            imageList1.Images.SetKeyName(0, "Almacen.ico");
+            // 
             // frmPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1035, 670);
+            BackColor = Color.Blue;
+            ClientSize = new Size(990, 689);
             Controls.Add(statusStripPrincipal);
             Controls.Add(menuStripPrincipal);
+            Font = new Font("Microsoft Sans Serif", 11F);
+            //FormStyle = FormStyles.ActionBar_None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             MainMenuStrip = menuStripPrincipal;
+            Margin = new Padding(4);
             Name = "frmPrincipal";
+            Padding = new Padding(3, 24, 3, 3);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CAVIC";
-            WindowState = FormWindowState.Maximized;
             Load += frmPrincipal_Load;
             menuStripPrincipal.ResumeLayout(false);
             menuStripPrincipal.PerformLayout();
@@ -397,5 +412,6 @@
         private ToolStripMenuItem toolStripMenuItemTipoDocumento;
         private ToolStripMenuItem toolStripMenuItemGestionUsuarios;
         private ToolStripSeparator toolStripSeparator5;
+        private ImageList imageList1;
     }
 }

@@ -1,14 +1,14 @@
-﻿using Azure.Core;
-using DAL;
-using Microsoft.Data.SqlClient;
+﻿using DAL;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Update;
 using Models;
 using static Validaciones.IValidacion<Models.Usuario>;
+using MaterialSkin;
+using MaterialSkin.Controls;
+using EjemploLogin;
 
 namespace CaviForm
 {
-    public partial class frmUsuario : Form
+    public partial class frmUsuario : MaterialForm
     {
         private List<Rol> roles = new List<Rol>();
         private Usuario user = new Usuario();
@@ -24,6 +24,7 @@ namespace CaviForm
         public frmUsuario ( )
         {
             InitializeComponent();
+            MaterialUI.loadMaterial(this);
         }
 
         private void frmUsuario_Load (object sender, EventArgs e)
