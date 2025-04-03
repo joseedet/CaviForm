@@ -91,9 +91,9 @@
             materialLabel1.Location = new Point(56, 80);
             materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel1.Name = "materialLabel1";
-            materialLabel1.Size = new Size(61, 19);
+            materialLabel1.Size = new Size(71, 19);
             materialLabel1.TabIndex = 7;
-            materialLabel1.Text = "Usuario";
+            materialLabel1.Text = "Usuario *";
             // 
             // txtUsuario
             // 
@@ -124,9 +124,9 @@
             lblContrasenya.Location = new Point(31, 111);
             lblContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
             lblContrasenya.Name = "lblContrasenya";
-            lblContrasenya.Size = new Size(86, 19);
+            lblContrasenya.Size = new Size(96, 19);
             lblContrasenya.TabIndex = 9;
-            lblContrasenya.Text = "Contraseña";
+            lblContrasenya.Text = "Contraseña *";
             // 
             // txtContrasenya
             // 
@@ -137,7 +137,7 @@
             txtContrasenya.MaxLength = 32767;
             txtContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
             txtContrasenya.Name = "txtContrasenya";
-            txtContrasenya.PasswordChar = '\0';
+            txtContrasenya.PasswordChar = '*';
             txtContrasenya.SelectedText = "";
             txtContrasenya.SelectionLength = 0;
             txtContrasenya.SelectionStart = 0;

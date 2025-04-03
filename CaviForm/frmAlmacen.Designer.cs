@@ -31,8 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlmacen));
             btnCancelar = new Button();
             lblDescripcion = new MaterialSkin.Controls.MaterialLabel();
-            txtDescripcion = new MaterialSkin.Controls.MaterialSingleLineTextField();
             btnAceptar = new Button();
+            checkBox1 = new CheckBox();
+            txtDescripcion = new MaterialSkin.Controls.MaterialSingleLineTextField();
             SuspendLayout();
             // 
             // btnCancelar
@@ -43,11 +44,11 @@
             btnCancelar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
-            btnCancelar.Location = new Point(228, 165);
+            btnCancelar.Location = new Point(235, 183);
             btnCancelar.Margin = new Padding(4);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(62, 43);
-            btnCancelar.TabIndex = 7;
+            btnCancelar.TabIndex = 5;
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             btnCancelar.MouseEnter += btnCancelar_MouseEnter;
@@ -64,26 +65,8 @@
             lblDescripcion.MouseState = MaterialSkin.MouseState.HOVER;
             lblDescripcion.Name = "lblDescripcion";
             lblDescripcion.Size = new Size(99, 19);
-            lblDescripcion.TabIndex = 8;
+            lblDescripcion.TabIndex = 1;
             lblDescripcion.Text = "Descripción *";
-            // 
-            // txtDescripcion
-            // 
-            txtDescripcion.Depth = 0;
-            txtDescripcion.Hint = "";
-            txtDescripcion.Location = new Point(119, 111);
-            txtDescripcion.MaxLength = 32767;
-            txtDescripcion.MouseState = MaterialSkin.MouseState.HOVER;
-            txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.PasswordChar = '\0';
-            txtDescripcion.SelectedText = "";
-            txtDescripcion.SelectionLength = 0;
-            txtDescripcion.SelectionStart = 0;
-            txtDescripcion.Size = new Size(290, 23);
-            txtDescripcion.TabIndex = 9;
-            txtDescripcion.TabStop = false;
-            txtDescripcion.UseSystemPasswordChar = false;
-            txtDescripcion.Validated += txtDescripcion_Validated;
             // 
             // btnAceptar
             // 
@@ -93,14 +76,46 @@
             btnAceptar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnAceptar.FlatStyle = FlatStyle.Flat;
             btnAceptar.Image = (Image)resources.GetObject("btnAceptar.Image");
-            btnAceptar.Location = new Point(162, 165);
+            btnAceptar.Location = new Point(169, 183);
             btnAceptar.Margin = new Padding(4);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(62, 43);
-            btnAceptar.TabIndex = 6;
+            btnAceptar.TabIndex = 4;
             btnAceptar.UseVisualStyleBackColor = false;
             btnAceptar.Click += btnAceptar_Click;
             btnAceptar.MouseEnter += btnAceptar_MouseEnter;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.CheckAlign = ContentAlignment.MiddleRight;
+            checkBox1.FlatStyle = FlatStyle.Flat;
+            checkBox1.Location = new Point(59, 137);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(64, 22);
+            checkBox1.TabIndex = 3;
+            checkBox1.Text = "Activo";
+            checkBox1.TextAlign = ContentAlignment.MiddleRight;
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // txtDescripcion
+            // 
+            txtDescripcion.BackColor = Color.White;
+            txtDescripcion.Depth = 0;
+            txtDescripcion.Hint = "";
+            txtDescripcion.Location = new Point(122, 107);
+            txtDescripcion.Margin = new Padding(4);
+            txtDescripcion.MaxLength = 32767;
+            txtDescripcion.MouseState = MaterialSkin.MouseState.HOVER;
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.PasswordChar = '\0';
+            txtDescripcion.SelectedText = "";
+            txtDescripcion.SelectionLength = 0;
+            txtDescripcion.SelectionStart = 0;
+            txtDescripcion.Size = new Size(246, 23);
+            txtDescripcion.TabIndex = 2;
+            txtDescripcion.TabStop = false;
+            txtDescripcion.UseSystemPasswordChar = false;
             // 
             // frmAlmacen
             // 
@@ -109,6 +124,7 @@
             BackColor = Color.FromArgb(128, 128, 255);
             ClientSize = new Size(431, 252);
             Controls.Add(txtDescripcion);
+            Controls.Add(checkBox1);
             Controls.Add(lblDescripcion);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
@@ -128,7 +144,8 @@
 
         private Button btnCancelar;
         private MaterialSkin.Controls.MaterialLabel lblDescripcion;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtDescripcion;
         private Button btnAceptar;
+        private CheckBox checkBox1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtDescripcion;
     }
 }

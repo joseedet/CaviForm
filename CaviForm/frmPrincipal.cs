@@ -103,6 +103,7 @@ namespace CaviForm
             this.AyudaToolStripMenuItem.Visible = visible;
         }
 
+        /*Gestión Usuarios*/
         private void toolStripMenuItemGestionUsuarios_Click (object sender, EventArgs e)
         {
             frmUsuario frm = new frmUsuario();

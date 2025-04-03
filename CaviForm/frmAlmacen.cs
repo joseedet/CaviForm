@@ -92,12 +92,17 @@ namespace CaviForm
 
         private void frmAlmacen_Load(object sender, EventArgs e)
         {
-            txtDescripcion.Focus();
+            Foco();
         }
 
         private void frmAlmacen_Activated(object sender, EventArgs e)
         {
+            Foco();
+        }
+        private void Foco()
+        {
             txtDescripcion.Focus();
+
         }
     }
 }

@@ -75,7 +75,7 @@ namespace CaviForm
                 nombreUsuario = user.Nombre;
                 apellidoUsuario = user.Apellidos;
                 contrasnyaUsuario = user.Contrasenya;
-                repetirContra = user.RepetirContra;
+                //repetirContra = user.RepetirContra;
                 rolUsuario = user.RolId;
                 fechaModificacion = user.FechaModificacionContra;
                 correoUsuario = user.Correo;
@@ -106,7 +106,7 @@ namespace CaviForm
                                                                 contrasnyaUsuario, fechaModificacion, (int)rolUsuario, correoUsuario, 
                                                                 "InsertUsuario");
 
-        public static void Error ( ) => MessageBox.Show("error");
+        public static void Error ( ) => MessageBox.Show("Error!!!, uno o más valores no han sido apropiadamente cumplimentados.");
 
 
         private void btnCancelar_Click (object sender, EventArgs e) => Close();
