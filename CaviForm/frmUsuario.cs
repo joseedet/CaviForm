@@ -1,17 +1,18 @@
 ﻿using DAL;
 using Microsoft.EntityFrameworkCore;
 using Models;
-using static Validaciones.IValidacion<Models.Usuario>;
+using static Validaciones.IValidacion<Models.ViewModels.ViewModelUsuario>;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using EjemploLogin;
+using Models.ViewModels;
 
 namespace CaviForm
 {
     public partial class frmUsuario : MaterialForm
     {
         private List<Rol> roles = new List<Rol>();
-        private Usuario user = new Usuario();
+        private ViewModelUsuario user = new ViewModelUsuario();
         private static string? usuarioId;
         private static string? nombreUsuario;
         private static string? apellidoUsuario;
@@ -114,4 +115,5 @@ namespace CaviForm
         
       
     }
+    //TODO:Validaciones individuales de cada campo
 }

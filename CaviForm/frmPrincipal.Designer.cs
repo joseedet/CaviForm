@@ -356,7 +356,6 @@
             Controls.Add(statusStripPrincipal);
             Controls.Add(menuStripPrincipal);
             Font = new Font("Microsoft Sans Serif", 11F);
-            //FormStyle = FormStyles.ActionBar_None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             MainMenuStrip = menuStripPrincipal;

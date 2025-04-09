@@ -39,8 +39,6 @@
             btnDeshacer = new Button();
             btnEditar = new Button();
             btnNuevo = new Button();
-            listViewResultados = new ListView();
-            dataGridViewResultados = new DataGridView();
             toolTip2 = new ToolTip(components);
             lblTipoDocumento = new MaterialSkin.Controls.MaterialLabel();
             lblDocumento = new MaterialSkin.Controls.MaterialLabel();
@@ -67,7 +65,6 @@
             lblCorreo = new MaterialSkin.Controls.MaterialLabel();
             txtCorreo = new MaterialSkin.Controls.MaterialSingleLineTextField();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewResultados).BeginInit();
             SuspendLayout();
             // 
             // cboTipoDocumento
@@ -98,10 +95,10 @@
             panel1.Controls.Add(btnDeshacer);
             panel1.Controls.Add(btnEditar);
             panel1.Controls.Add(btnNuevo);
-            panel1.Location = new Point(485, 686);
+            panel1.Location = new Point(333, 471);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(359, 66);
+            panel1.Size = new Size(349, 73);
             panel1.TabIndex = 28;
             // 
             // btnEliminar
@@ -111,10 +108,10 @@
             btnEliminar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Image = (Image)resources.GetObject("btnEliminar.Image");
-            btnEliminar.Location = new Point(222, 10);
+            btnEliminar.Location = new Point(229, 16);
             btnEliminar.Margin = new Padding(3, 4, 3, 4);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(62, 52);
+            btnEliminar.Size = new Size(46, 52);
             btnEliminar.TabIndex = 24;
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.MouseEnter += btnEliminar_MouseEnter;
@@ -126,10 +123,10 @@
             btnCerrar.FlatAppearance.MouseOverBackColor = Color.White;
             btnCerrar.FlatStyle = FlatStyle.Flat;
             btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.Location = new Point(270, 10);
+            btnCerrar.Location = new Point(281, 16);
             btnCerrar.Margin = new Padding(3, 4, 3, 4);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(62, 52);
+            btnCerrar.Size = new Size(46, 52);
             btnCerrar.TabIndex = 23;
             btnCerrar.UseVisualStyleBackColor = true;
             btnCerrar.Click += btnCerrar_Click;
@@ -142,10 +139,10 @@
             btnGuardar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.Image = (Image)resources.GetObject("btnGuardar.Image");
-            btnGuardar.Location = new Point(76, 10);
+            btnGuardar.Location = new Point(76, 16);
             btnGuardar.Margin = new Padding(3, 4, 3, 4);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(62, 52);
+            btnGuardar.Size = new Size(46, 52);
             btnGuardar.TabIndex = 22;
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.MouseEnter += btnGuardar_MouseEnter;
@@ -157,10 +154,10 @@
             btnDeshacer.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnDeshacer.FlatStyle = FlatStyle.Flat;
             btnDeshacer.Image = (Image)resources.GetObject("btnDeshacer.Image");
-            btnDeshacer.Location = new Point(186, 10);
+            btnDeshacer.Location = new Point(177, 16);
             btnDeshacer.Margin = new Padding(3, 4, 3, 4);
             btnDeshacer.Name = "btnDeshacer";
-            btnDeshacer.Size = new Size(62, 52);
+            btnDeshacer.Size = new Size(46, 52);
             btnDeshacer.TabIndex = 21;
             btnDeshacer.UseVisualStyleBackColor = true;
             btnDeshacer.MouseEnter += btnDeshacer_MouseEnter;
@@ -172,10 +169,10 @@
             btnEditar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
-            btnEditar.Location = new Point(127, 10);
+            btnEditar.Location = new Point(127, 16);
             btnEditar.Margin = new Padding(3, 4, 3, 4);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(62, 52);
+            btnEditar.Size = new Size(46, 52);
             btnEditar.TabIndex = 20;
             btnEditar.UseVisualStyleBackColor = true;
             btnEditar.MouseEnter += btnEditar_MouseEnter;
@@ -187,36 +184,14 @@
             btnNuevo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Image = (Image)resources.GetObject("btnNuevo.Image");
-            btnNuevo.Location = new Point(26, 10);
+            btnNuevo.Location = new Point(26, 16);
             btnNuevo.Margin = new Padding(3, 4, 3, 4);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(64, 52);
+            btnNuevo.Size = new Size(46, 52);
             btnNuevo.TabIndex = 19;
             btnNuevo.UseVisualStyleBackColor = true;
             btnNuevo.MouseEnter += btnNuevo_MouseEnter;
             btnNuevo.MouseMove += btnNuevo_MouseMove;
-            // 
-            // listViewResultados
-            // 
-            listViewResultados.Location = new Point(894, 96);
-            listViewResultados.Margin = new Padding(3, 4, 3, 4);
-            listViewResultados.Name = "listViewResultados";
-            listViewResultados.Size = new Size(318, 345);
-            listViewResultados.TabIndex = 27;
-            listViewResultados.UseCompatibleStateImageBehavior = false;
-            // 
-            // dataGridViewResultados
-            // 
-            dataGridViewResultados.AllowUserToAddRows = false;
-            dataGridViewResultados.AllowUserToDeleteRows = false;
-            dataGridViewResultados.BackgroundColor = Color.White;
-            dataGridViewResultados.BorderStyle = BorderStyle.Fixed3D;
-            dataGridViewResultados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewResultados.Location = new Point(196, 446);
-            dataGridViewResultados.Name = "dataGridViewResultados";
-            dataGridViewResultados.ReadOnly = true;
-            dataGridViewResultados.Size = new Size(1016, 212);
-            dataGridViewResultados.TabIndex = 33;
             // 
             // lblTipoDocumento
             // 
@@ -612,7 +587,7 @@
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
-            ClientSize = new Size(1237, 772);
+            ClientSize = new Size(939, 573);
             Controls.Add(txtCorreo);
             Controls.Add(lblCorreo);
             Controls.Add(txtMovil);
@@ -637,20 +612,16 @@
             Controls.Add(lblNombreComercial);
             Controls.Add(lblDocumento);
             Controls.Add(lblTipoDocumento);
-            Controls.Add(dataGridViewResultados);
-            Controls.Add(listViewResultados);
             Controls.Add(panel1);
             Controls.Add(txtNotas);
             Controls.Add(cboTipoDocumento);
             Font = new Font("Microsoft Sans Serif", 11F);
-            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "frmCliente";
             Text = " Cliente";
             Load += frmCliente_Load;
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridViewResultados).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -665,8 +636,6 @@
         private Button btnEditar;
         private Button btnNuevo;
         private Button btnEliminar;
-        private ListView listViewResultados;
-        private DataGridView dataGridViewResultados;
         //private MaterialSkin.Controls.MaterialSingleLineTextField txtNombreComercial;
         private ToolTip toolTip2;
         private MaterialSkin.Controls.MaterialLabel lblTipoDocumento;

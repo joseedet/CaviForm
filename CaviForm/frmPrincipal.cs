@@ -130,15 +130,16 @@ namespace CaviForm
 
             frm.MdiParent = this;
 
-            frm.StartPosition = FormStartPosition.Manual;
+            //frm.StartPosition = FormStartPosition.Manual;
 
             //Calculamos el centro del formulario padre
 
-            frm.Location = new Point(
+            /*frm.Location = new Point(
                 (this.ClientSize.Width - frm.Width) / 2,
-                (this.ClientSize.Height - frm.Height) / 2);
+                (this.ClientSize.Height - frm.Height) / 2);*/
 
-
+            //frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.WindowState = FormWindowState.Maximized;
             frm.Show();
         }
     }
