@@ -18,7 +18,7 @@ namespace CaviForm
             InitializeComponent();
             MaterialUI.loadMaterial(this);
 
-            tipo = new Models.TipoDocumento();
+            TipoDocumento tipo = new TipoDocumento();
             errorProvider = new ErrorProvider();
         }
 
@@ -40,23 +40,9 @@ namespace CaviForm
 
                 func();
 
-                ColocarLimpiar();
-               
+                ColocarLimpiar();               
 
-                /*if (txtDescripcion.TextLength < 3 || txtDescripcion.Text == "" || txtDescripcion.Text == null)
-                {
-                    errorProvider.SetError(btnAceptar, "El tipo documento tiene que tener un minímo de 3 y un máximo de 50 carácters");
-                    //MessageBox.Show("El tipo documento tiene que tener un minímo de 3 carácteres, un máximo de 50");
-                    txtDescripcion.Focus();
-                    errorProvider.Clear();
-
-                }
-                else
-                {
-                   
-
-                }*/
-            }
+                       }
             catch (SqlException ex)
             {
 
@@ -83,10 +69,7 @@ namespace CaviForm
                 MessageBox.Show(ex.ToString(), Application.ProductName, MessageBoxButtons.OK,MessageBoxIcon.Error);
 
             }
-        }
-
-
-            
+        }    
 
       
         public static void Error() => MessageBox.Show("El tipo documento tiene que tener un minímo de 3 y un máximo de 50 carácters", Application.ProductName);
@@ -106,9 +89,6 @@ namespace CaviForm
                 //MessageBox.Show("El tipo documento tiene que tener un minímo de 3 carácteres, un máximo de 50");
                 e.Cancel = true;
                 errorProvider.SetError(txtDescripcion, "El tipo documento tiene que tener un minímo de 3 y un máximo de 50 carácters");
-              
-
-
             }
             else
             {

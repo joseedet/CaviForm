@@ -14,6 +14,8 @@ namespace CaviForm
         private static string? miAlmacen;
         private ToolTip toolTip;
         private static bool miError;
+        private Estado _estado;
+        
 
         public frmAlmacen()
         {
@@ -24,19 +26,34 @@ namespace CaviForm
             toolTip = new ToolTip();
             toolTip.IsBalloon = true;
             miError = false;
+            _estado=new Estado();
+           
 
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+          //cambiar el enfoque en la tabla Almacen.  
             try
             {
-                miAlmacen = almacen.Descripcion;
+                //miAlmacen = almacen.Descripcion;
+                // miAlmacen=almacen.Direccion
+                almacen.Descripcion = txtDescripcion.Text;
+                almacen.Direccion = txtDireccion.Text;
+                almacen.CodPOstal = txtCodPostal.Text;
+                almacen.Poblacion = txtPoblacion.Text;
+                almacen.Provincia = txtProvin.Text;
+                almacen.Telefono = txtProvin.Text;
+
                 var func = Validator.Validate(almacen, Validaciones.ValidarAlmacen.validations) ?
                 (Action)Success :
                 (Action)Error;
 
                 func();
+
+                
+
+
 
             }
             catch (SqlException ex)
@@ -94,6 +111,7 @@ namespace CaviForm
         private void frmAlmacen_Load(object sender, EventArgs e)
         {
             Foco();
+            DesactivarControlesCarga();
         }
 
         private void frmAlmacen_Activated(object sender, EventArgs e)
@@ -210,6 +228,15 @@ namespace CaviForm
         private void txtTelefono_Validated(object sender, EventArgs e)
         {
             errorProvider.SetError(txtTelefono, "");
+        }
+        private void DesactivarControlesCarga()
+        {
+
+            btnModificar.Enabled = false;
+            btnAceptar.Enabled = false;
+            btnDeshacer.Enabled = false;
+            btnEliminar.Enabled = true;
+
         }
     }
 }

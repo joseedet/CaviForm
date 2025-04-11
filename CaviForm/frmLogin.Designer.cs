@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent ( )
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             btnAceptar = new Button();
@@ -36,6 +36,8 @@
             txtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             lblContrasenya = new MaterialSkin.Controls.MaterialLabel();
             txtContrasenya = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnAceptar
@@ -44,7 +46,7 @@
             btnAceptar.FlatAppearance.BorderSize = 0;
             btnAceptar.FlatStyle = FlatStyle.Flat;
             btnAceptar.Image = (Image)resources.GetObject("btnAceptar.Image");
-            btnAceptar.Location = new Point(145, 151);
+            btnAceptar.Location = new Point(516, 480);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(44, 45);
             btnAceptar.TabIndex = 4;
@@ -58,7 +60,7 @@
             btnCancelar.FlatAppearance.BorderSize = 0;
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
-            btnCancelar.Location = new Point(215, 151);
+            btnCancelar.Location = new Point(586, 480);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(51, 45);
             btnCancelar.TabIndex = 5;
@@ -88,7 +90,7 @@
             materialLabel1.FlatStyle = FlatStyle.Flat;
             materialLabel1.Font = new Font("Roboto", 11F);
             materialLabel1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialLabel1.Location = new Point(56, 80);
+            materialLabel1.Location = new Point(427, 418);
             materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel1.Name = "materialLabel1";
             materialLabel1.Size = new Size(71, 19);
@@ -100,7 +102,7 @@
             txtUsuario.Depth = 0;
             txtUsuario.Font = new Font("Microsoft Sans Serif", 11F);
             txtUsuario.Hint = "";
-            txtUsuario.Location = new Point(130, 82);
+            txtUsuario.Location = new Point(501, 420);
             txtUsuario.MaxLength = 32767;
             txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
             txtUsuario.Name = "txtUsuario";
@@ -121,7 +123,7 @@
             lblContrasenya.FlatStyle = FlatStyle.Flat;
             lblContrasenya.Font = new Font("Roboto", 11F);
             lblContrasenya.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblContrasenya.Location = new Point(31, 111);
+            lblContrasenya.Location = new Point(402, 449);
             lblContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
             lblContrasenya.Name = "lblContrasenya";
             lblContrasenya.Size = new Size(96, 19);
@@ -133,7 +135,7 @@
             txtContrasenya.Depth = 0;
             txtContrasenya.Font = new Font("Microsoft Sans Serif", 11F);
             txtContrasenya.Hint = "";
-            txtContrasenya.Location = new Point(130, 111);
+            txtContrasenya.Location = new Point(501, 449);
             txtContrasenya.MaxLength = 32767;
             txtContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
             txtContrasenya.Name = "txtContrasenya";
@@ -147,11 +149,22 @@
             txtContrasenya.UseSystemPasswordChar = false;
             txtContrasenya.MouseEnter += txtContrasenya_MouseEnter;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(501, 278);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(151, 137);
+            pictureBox1.TabIndex = 11;
+            pictureBox1.TabStop = false;
+            // 
             // frmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(369, 208);
+            ClientSize = new Size(1035, 628);
+            Controls.Add(pictureBox1);
             Controls.Add(txtContrasenya);
             Controls.Add(lblContrasenya);
             Controls.Add(txtUsuario);
@@ -159,12 +172,11 @@
             Controls.Add(lblUsuario);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
-            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            MinimizeBox = false;
             Name = "frmLogin";
             Text = "Login";
             Load += frmLogin_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -177,5 +189,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuario;
         private MaterialSkin.Controls.MaterialLabel lblContrasenya;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtContrasenya;
+        private PictureBox pictureBox1;
     }
 }

@@ -26,7 +26,7 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent ( )
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
@@ -67,9 +67,15 @@
             AyudaToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItemAyuda1 = new ToolStripMenuItem();
             toolStripMenuItemAcerca = new ToolStripMenuItem();
-            statusStripPrincipal = new StatusStrip();
             imageList1 = new ImageList(components);
+            panel1 = new Panel();
+            btnSalir = new Button();
+            btnProducto = new Button();
+            btnProveedor = new Button();
+            btnMenuConfituracion = new Button();
+            btnMenuCliente = new Button();
             menuStripPrincipal.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStripPrincipal
@@ -331,15 +337,6 @@
             toolStripMenuItemAcerca.Size = new Size(126, 22);
             toolStripMenuItemAcerca.Text = "A&cerca de";
             // 
-            // statusStripPrincipal
-            // 
-            statusStripPrincipal.Location = new Point(3, 664);
-            statusStripPrincipal.Name = "statusStripPrincipal";
-            statusStripPrincipal.Padding = new Padding(1, 0, 18, 0);
-            statusStripPrincipal.Size = new Size(984, 22);
-            statusStripPrincipal.TabIndex = 2;
-            statusStripPrincipal.Text = "statusStrip1";
-            // 
             // imageList1
             // 
             imageList1.ColorDepth = ColorDepth.Depth32Bit;
@@ -347,13 +344,99 @@
             imageList1.TransparentColor = Color.Transparent;
             imageList1.Images.SetKeyName(0, "Almacen.ico");
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.SteelBlue;
+            panel1.Controls.Add(btnSalir);
+            panel1.Controls.Add(btnProducto);
+            panel1.Controls.Add(btnProveedor);
+            panel1.Controls.Add(btnMenuConfituracion);
+            panel1.Controls.Add(btnMenuCliente);
+            panel1.Dock = DockStyle.Left;
+            panel1.ForeColor = Color.White;
+            panel1.Location = new Point(3, 48);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(201, 767);
+            panel1.TabIndex = 6;
+            // 
+            // btnSalir
+            // 
+            btnSalir.BackColor = Color.SteelBlue;
+            btnSalir.FlatAppearance.BorderSize = 0;
+            btnSalir.FlatStyle = FlatStyle.Flat;
+            btnSalir.Image = (Image)resources.GetObject("btnSalir.Image");
+            btnSalir.ImageAlign = ContentAlignment.TopLeft;
+            btnSalir.Location = new Point(3, 612);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(195, 136);
+            btnSalir.TabIndex = 9;
+            btnSalir.Text = "Salir aplicación";
+            btnSalir.TextAlign = ContentAlignment.BottomCenter;
+            btnSalir.UseVisualStyleBackColor = false;
+            // 
+            // btnProducto
+            // 
+            btnProducto.FlatAppearance.BorderSize = 0;
+            btnProducto.FlatStyle = FlatStyle.Flat;
+            btnProducto.Image = (Image)resources.GetObject("btnProducto.Image");
+            btnProducto.ImageAlign = ContentAlignment.MiddleLeft;
+            btnProducto.Location = new Point(3, 61);
+            btnProducto.Name = "btnProducto";
+            btnProducto.Size = new Size(195, 40);
+            btnProducto.TabIndex = 8;
+            btnProducto.Text = "Producto";
+            btnProducto.UseVisualStyleBackColor = true;
+            // 
+            // btnProveedor
+            // 
+            btnProveedor.FlatAppearance.BorderSize = 0;
+            btnProveedor.FlatStyle = FlatStyle.Flat;
+            btnProveedor.Image = (Image)resources.GetObject("btnProveedor.Image");
+            btnProveedor.ImageAlign = ContentAlignment.MiddleLeft;
+            btnProveedor.Location = new Point(3, 107);
+            btnProveedor.Name = "btnProveedor";
+            btnProveedor.Size = new Size(195, 40);
+            btnProveedor.TabIndex = 8;
+            btnProveedor.Text = "Proveedor";
+            btnProveedor.UseVisualStyleBackColor = true;
+            // 
+            // btnMenuConfituracion
+            // 
+            btnMenuConfituracion.BackColor = Color.SteelBlue;
+            btnMenuConfituracion.FlatAppearance.BorderSize = 0;
+            btnMenuConfituracion.FlatStyle = FlatStyle.Flat;
+            btnMenuConfituracion.Image = (Image)resources.GetObject("btnMenuConfituracion.Image");
+            btnMenuConfituracion.ImageAlign = ContentAlignment.MiddleLeft;
+            btnMenuConfituracion.Location = new Point(3, 285);
+            btnMenuConfituracion.Name = "btnMenuConfituracion";
+            btnMenuConfituracion.Size = new Size(195, 40);
+            btnMenuConfituracion.TabIndex = 7;
+            btnMenuConfituracion.Text = "Configuración";
+            btnMenuConfituracion.UseVisualStyleBackColor = false;
+            btnMenuConfituracion.Click += btnMenuConfituracion_Click;
+            btnMenuConfituracion.MouseEnter += btnMenuConfituracion_MouseEnter;
+            // 
+            // btnMenuCliente
+            // 
+            btnMenuCliente.FlatAppearance.BorderSize = 0;
+            btnMenuCliente.FlatStyle = FlatStyle.Flat;
+            btnMenuCliente.Image = (Image)resources.GetObject("btnMenuCliente.Image");
+            btnMenuCliente.ImageAlign = ContentAlignment.MiddleLeft;
+            btnMenuCliente.Location = new Point(3, 15);
+            btnMenuCliente.Name = "btnMenuCliente";
+            btnMenuCliente.Size = new Size(195, 40);
+            btnMenuCliente.TabIndex = 5;
+            btnMenuCliente.Text = "Cliente";
+            btnMenuCliente.UseVisualStyleBackColor = true;
+            btnMenuCliente.Click += btnMenuCliente_Click_1;
+            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Blue;
-            ClientSize = new Size(990, 689);
-            Controls.Add(statusStripPrincipal);
+            ClientSize = new Size(990, 818);
+            Controls.Add(panel1);
             Controls.Add(menuStripPrincipal);
             Font = new Font("Microsoft Sans Serif", 11F);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -367,6 +450,7 @@
             Load += frmPrincipal_Load;
             menuStripPrincipal.ResumeLayout(false);
             menuStripPrincipal.PerformLayout();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -392,7 +476,6 @@
         private ToolStripMenuItem toolStripMenuItemProveedor;
         private ToolStripMenuItem toolStripMenuItemConcepto;
         private ToolStripMenuItem toolStripMenuItemProducto;
-        private StatusStrip statusStripPrincipal;
         private ToolStripMenuItem toolStripMenuItemDepartamentos;
         private ToolStripMenuItem toolStripMenuItemIVAs;
         private ToolStripMenuItem toolStripMenuItemProductos;
@@ -412,5 +495,12 @@
         private ToolStripMenuItem toolStripMenuItemGestionUsuarios;
         private ToolStripSeparator toolStripSeparator5;
         private ImageList imageList1;
+        private Panel panel1;
+        private MaterialSkin.Controls.MaterialFlatButton btnMenuAlmancen;
+        private Button btnMenuCliente;
+        private Button btnMenuConfituracion;
+        private Button btnProveedor;
+        private Button btnProducto;
+        private Button btnSalir;
     }
 }

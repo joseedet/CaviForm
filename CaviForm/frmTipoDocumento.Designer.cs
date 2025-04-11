@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent ( )
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTipoDocumento));
             btnAceptar = new Button();
@@ -38,10 +38,10 @@
             // btnAceptar
             // 
             btnAceptar.Image = (Image)resources.GetObject("btnAceptar.Image");
-            btnAceptar.Location = new Point(168, 148);
+            btnAceptar.Location = new Point(188, 185);
             btnAceptar.Margin = new Padding(4);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(80, 43);
+            btnAceptar.Size = new Size(46, 46);
             btnAceptar.TabIndex = 3;
             btnAceptar.UseVisualStyleBackColor = true;
             btnAceptar.Click += btnAceptar_Click;
@@ -49,10 +49,10 @@
             // btnCancelar
             // 
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
-            btnCancelar.Location = new Point(288, 148);
+            btnCancelar.Location = new Point(336, 185);
             btnCancelar.Margin = new Padding(4);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(80, 43);
+            btnCancelar.Size = new Size(46, 46);
             btnCancelar.TabIndex = 4;
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
@@ -64,7 +64,7 @@
             lblDescripcion.Depth = 0;
             lblDescripcion.Font = new Font("Roboto", 11F);
             lblDescripcion.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblDescripcion.Location = new Point(20, 103);
+            lblDescripcion.Location = new Point(27, 134);
             lblDescripcion.Margin = new Padding(4, 0, 4, 0);
             lblDescripcion.MouseState = MaterialSkin.MouseState.HOVER;
             lblDescripcion.Name = "lblDescripcion";
@@ -77,7 +77,7 @@
             txtDescripcion.BackColor = Color.White;
             txtDescripcion.Depth = 0;
             txtDescripcion.Hint = "";
-            txtDescripcion.Location = new Point(127, 99);
+            txtDescripcion.Location = new Point(134, 130);
             txtDescripcion.Margin = new Padding(4);
             txtDescripcion.MaxLength = 32767;
             txtDescripcion.MouseState = MaterialSkin.MouseState.HOVER;
@@ -97,7 +97,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(506, 221);
+            ClientSize = new Size(506, 321);
             Controls.Add(txtDescripcion);
             Controls.Add(lblDescripcion);
             Controls.Add(btnCancelar);

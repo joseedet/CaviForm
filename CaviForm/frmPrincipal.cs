@@ -9,6 +9,7 @@ namespace CaviForm
 {
     public partial class frmPrincipal : MaterialForm
     {
+        ToolTip toolTipPrincipal = new();
         public frmPrincipal ( )
         {
             InitializeComponent();
@@ -44,6 +45,7 @@ namespace CaviForm
         private void frmPrincipal_Load (object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+            toolTipPrincipal.IsBalloon = true;
             //this.StartPosition = FormStartPosition.CenterScreen;
             CargaMenus(true);
             /*this.toolStripMenuItemBloquear.Visible = false;
@@ -62,31 +64,17 @@ namespace CaviForm
 
         private void toolStripMenuItemAlmacen_Click (object sender, EventArgs e)
         {
-            frmAlmacen frm;
 
-            frm = new frmAlmacen();
-
-            frm.MdiParent = this;
-
-            frm.StartPosition = FormStartPosition.Manual;
-
-            //Calculamos el centro del formulario padre
-
-            frm.Location = new Point(
-                (this.ClientSize.Width - frm.Width) / 2,
-                (this.ClientSize.Height - frm.Height) / 2);
-
-
-            frm.Show();
         }
 
         private void toolStripMenuItemConectar_Click (object sender, EventArgs e)
         {
             frmLogin frm = new frmLogin();
 
-            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
 
-            frm.ShowDialog();
+            frm.Show();
         }
         private void CargaMenus (bool visible)
         {
@@ -126,21 +114,54 @@ namespace CaviForm
 
         private void toolStripMenuItemCliente_Click (object sender, EventArgs e)
         {
+            ClienteClick();
+        }
+
+        private void btnMenuCliente_Click (object sender, EventArgs e)
+        {
+            ClienteClick();
+        }
+        private void ClienteClick ( )
+        {
+
+
+        }
+
+        private void btnMenuAlmacen_Click (object sender, EventArgs e)
+        {
+            frmAlmacen frm;
+            frm = new frmAlmacen();
+
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void btnMenuCliente_Click_1 (object sender, EventArgs e)
+        {
             frmCliente frm = new frmCliente();
 
             frm.MdiParent = this;
-
-            //frm.StartPosition = FormStartPosition.Manual;
-
-            //Calculamos el centro del formulario padre
-
-            /*frm.Location = new Point(
-                (this.ClientSize.Width - frm.Width) / 2,
-                (this.ClientSize.Height - frm.Height) / 2);*/
-
-            //frm.StartPosition = FormStartPosition.CenterScreen;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();
+        }
+
+        private void btnMenuConcepto_Click (object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMenuConfituracion_Click (object sender, EventArgs e)
+        {
+            frmConfiguracion frm = new();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void btnMenuConfituracion_MouseEnter (object sender, EventArgs e)
+        {
+            toolTipPrincipal.SetToolTip(btnMenuConfituracion, "Configuración del sistema");
         }
     }
 }

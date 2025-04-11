@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent ( )
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
@@ -69,21 +69,27 @@
             // 
             // cboTipoDocumento
             // 
+            cboTipoDocumento.BackColor = Color.White;
+            cboTipoDocumento.FlatStyle = FlatStyle.Flat;
             cboTipoDocumento.Font = new Font("Microsoft Sans Serif", 11F);
+            cboTipoDocumento.ForeColor = Color.Black;
             cboTipoDocumento.FormattingEnabled = true;
-            cboTipoDocumento.Location = new Point(196, 95);
+            cboTipoDocumento.Location = new Point(204, 151);
             cboTipoDocumento.Margin = new Padding(3, 4, 3, 4);
             cboTipoDocumento.Name = "cboTipoDocumento";
-            cboTipoDocumento.Size = new Size(280, 26);
+            cboTipoDocumento.Size = new Size(335, 26);
             cboTipoDocumento.TabIndex = 2;
             // 
             // txtNotas
             // 
-            txtNotas.Location = new Point(196, 334);
+            txtNotas.BackColor = Color.White;
+            txtNotas.BorderStyle = BorderStyle.None;
+            txtNotas.ForeColor = Color.Black;
+            txtNotas.Location = new Point(204, 385);
             txtNotas.Margin = new Padding(3, 4, 3, 4);
             txtNotas.Multiline = true;
             txtNotas.Name = "txtNotas";
-            txtNotas.Size = new Size(691, 105);
+            txtNotas.Size = new Size(830, 47);
             txtNotas.TabIndex = 26;
             // 
             // panel1
@@ -95,7 +101,7 @@
             panel1.Controls.Add(btnDeshacer);
             panel1.Controls.Add(btnEditar);
             panel1.Controls.Add(btnNuevo);
-            panel1.Location = new Point(333, 471);
+            panel1.Location = new Point(443, 628);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(349, 73);
@@ -201,7 +207,7 @@
             lblTipoDocumento.FlatStyle = FlatStyle.Flat;
             lblTipoDocumento.Font = new Font("Roboto", 11F);
             lblTipoDocumento.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblTipoDocumento.Location = new Point(34, 100);
+            lblTipoDocumento.Location = new Point(63, 154);
             lblTipoDocumento.MouseState = MaterialSkin.MouseState.HOVER;
             lblTipoDocumento.Name = "lblTipoDocumento";
             lblTipoDocumento.Size = new Size(135, 19);
@@ -216,7 +222,7 @@
             lblDocumento.FlatStyle = FlatStyle.Flat;
             lblDocumento.Font = new Font("Roboto", 11F);
             lblDocumento.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblDocumento.Location = new Point(72, 137);
+            lblDocumento.Location = new Point(101, 191);
             lblDocumento.MouseState = MaterialSkin.MouseState.HOVER;
             lblDocumento.Name = "lblDocumento";
             lblDocumento.Size = new Size(97, 19);
@@ -230,7 +236,7 @@
             lblNombreComercial.Depth = 0;
             lblNombreComercial.Font = new Font("Roboto", 11F);
             lblNombreComercial.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblNombreComercial.Location = new Point(23, 176);
+            lblNombreComercial.Location = new Point(52, 230);
             lblNombreComercial.MouseState = MaterialSkin.MouseState.HOVER;
             lblNombreComercial.Name = "lblNombreComercial";
             lblNombreComercial.Size = new Size(146, 19);
@@ -245,7 +251,7 @@
             lblNombreContacto.FlatStyle = FlatStyle.Flat;
             lblNombreContacto.Font = new Font("Roboto", 11F);
             lblNombreContacto.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblNombreContacto.Location = new Point(30, 215);
+            lblNombreContacto.Location = new Point(59, 269);
             lblNombreContacto.MouseState = MaterialSkin.MouseState.HOVER;
             lblNombreContacto.Name = "lblNombreContacto";
             lblNombreContacto.Size = new Size(139, 19);
@@ -259,7 +265,7 @@
             lblApellidosContacto.Depth = 0;
             lblApellidosContacto.Font = new Font("Roboto", 11F);
             lblApellidosContacto.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblApellidosContacto.Location = new Point(21, 253);
+            lblApellidosContacto.Location = new Point(50, 307);
             lblApellidosContacto.MouseState = MaterialSkin.MouseState.HOVER;
             lblApellidosContacto.Name = "lblApellidosContacto";
             lblApellidosContacto.Size = new Size(148, 19);
@@ -274,7 +280,7 @@
             lblDireccion.FlatStyle = FlatStyle.Flat;
             lblDireccion.Font = new Font("Roboto", 11F);
             lblDireccion.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblDireccion.Location = new Point(86, 293);
+            lblDireccion.Location = new Point(115, 347);
             lblDireccion.MouseState = MaterialSkin.MouseState.HOVER;
             lblDireccion.Name = "lblDireccion";
             lblDireccion.Size = new Size(83, 19);
@@ -289,7 +295,7 @@
             lblNotas.FlatStyle = FlatStyle.Flat;
             lblNotas.Font = new Font("Roboto", 11F);
             lblNotas.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblNotas.Location = new Point(119, 334);
+            lblNotas.Location = new Point(132, 388);
             lblNotas.MouseState = MaterialSkin.MouseState.HOVER;
             lblNotas.Name = "lblNotas";
             lblNotas.Size = new Size(50, 19);
@@ -301,7 +307,7 @@
             txtDocumento.BackColor = Color.White;
             txtDocumento.Depth = 0;
             txtDocumento.Hint = "";
-            txtDocumento.Location = new Point(196, 135);
+            txtDocumento.Location = new Point(204, 191);
             txtDocumento.MaxLength = 32767;
             txtDocumento.MouseState = MaterialSkin.MouseState.HOVER;
             txtDocumento.Name = "txtDocumento";
@@ -309,7 +315,7 @@
             txtDocumento.SelectedText = "";
             txtDocumento.SelectionLength = 0;
             txtDocumento.SelectionStart = 0;
-            txtDocumento.Size = new Size(280, 23);
+            txtDocumento.Size = new Size(335, 23);
             txtDocumento.TabIndex = 4;
             txtDocumento.TabStop = false;
             txtDocumento.UseSystemPasswordChar = false;
@@ -319,7 +325,7 @@
             txtNombreComercial.BackColor = Color.White;
             txtNombreComercial.Depth = 0;
             txtNombreComercial.Hint = "";
-            txtNombreComercial.Location = new Point(196, 171);
+            txtNombreComercial.Location = new Point(204, 232);
             txtNombreComercial.MaxLength = 32767;
             txtNombreComercial.MouseState = MaterialSkin.MouseState.HOVER;
             txtNombreComercial.Name = "txtNombreComercial";
@@ -327,7 +333,7 @@
             txtNombreComercial.SelectedText = "";
             txtNombreComercial.SelectionLength = 0;
             txtNombreComercial.SelectionStart = 0;
-            txtNombreComercial.Size = new Size(280, 23);
+            txtNombreComercial.Size = new Size(335, 23);
             txtNombreComercial.TabIndex = 6;
             txtNombreComercial.TabStop = false;
             txtNombreComercial.UseSystemPasswordChar = false;
@@ -337,7 +343,7 @@
             txtNombreContacto.BackColor = Color.White;
             txtNombreContacto.Depth = 0;
             txtNombreContacto.Hint = "";
-            txtNombreContacto.Location = new Point(196, 209);
+            txtNombreContacto.Location = new Point(204, 265);
             txtNombreContacto.MaxLength = 32767;
             txtNombreContacto.MouseState = MaterialSkin.MouseState.HOVER;
             txtNombreContacto.Name = "txtNombreContacto";
@@ -345,7 +351,7 @@
             txtNombreContacto.SelectedText = "";
             txtNombreContacto.SelectionLength = 0;
             txtNombreContacto.SelectionStart = 0;
-            txtNombreContacto.Size = new Size(280, 23);
+            txtNombreContacto.Size = new Size(335, 23);
             txtNombreContacto.TabIndex = 8;
             txtNombreContacto.TabStop = false;
             txtNombreContacto.UseSystemPasswordChar = false;
@@ -355,7 +361,7 @@
             txtApellidosContacto.BackColor = Color.White;
             txtApellidosContacto.Depth = 0;
             txtApellidosContacto.Hint = "";
-            txtApellidosContacto.Location = new Point(196, 247);
+            txtApellidosContacto.Location = new Point(204, 303);
             txtApellidosContacto.MaxLength = 32767;
             txtApellidosContacto.MouseState = MaterialSkin.MouseState.HOVER;
             txtApellidosContacto.Name = "txtApellidosContacto";
@@ -363,7 +369,7 @@
             txtApellidosContacto.SelectedText = "";
             txtApellidosContacto.SelectionLength = 0;
             txtApellidosContacto.SelectionStart = 0;
-            txtApellidosContacto.Size = new Size(280, 23);
+            txtApellidosContacto.Size = new Size(335, 23);
             txtApellidosContacto.TabIndex = 10;
             txtApellidosContacto.TabStop = false;
             txtApellidosContacto.UseSystemPasswordChar = false;
@@ -373,7 +379,7 @@
             txtDireccion.BackColor = Color.White;
             txtDireccion.Depth = 0;
             txtDireccion.Hint = "";
-            txtDireccion.Location = new Point(196, 291);
+            txtDireccion.Location = new Point(204, 347);
             txtDireccion.MaxLength = 32767;
             txtDireccion.MouseState = MaterialSkin.MouseState.HOVER;
             txtDireccion.Name = "txtDireccion";
@@ -381,7 +387,7 @@
             txtDireccion.SelectedText = "";
             txtDireccion.SelectionLength = 0;
             txtDireccion.SelectionStart = 0;
-            txtDireccion.Size = new Size(280, 23);
+            txtDireccion.Size = new Size(335, 23);
             txtDireccion.TabIndex = 12;
             txtDireccion.TabStop = false;
             txtDireccion.UseSystemPasswordChar = false;
@@ -393,7 +399,7 @@
             lblCodPostal.Depth = 0;
             lblCodPostal.Font = new Font("Roboto", 11F);
             lblCodPostal.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblCodPostal.Location = new Point(496, 98);
+            lblCodPostal.Location = new Point(555, 150);
             lblCodPostal.MouseState = MaterialSkin.MouseState.HOVER;
             lblCodPostal.Name = "lblCodPostal";
             lblCodPostal.Size = new Size(97, 19);
@@ -405,7 +411,7 @@
             txtCodPostal.BackColor = Color.White;
             txtCodPostal.Depth = 0;
             txtCodPostal.Hint = "";
-            txtCodPostal.Location = new Point(606, 98);
+            txtCodPostal.Location = new Point(665, 150);
             txtCodPostal.MaxLength = 32767;
             txtCodPostal.MouseState = MaterialSkin.MouseState.HOVER;
             txtCodPostal.Name = "txtCodPostal";
@@ -413,7 +419,7 @@
             txtCodPostal.SelectedText = "";
             txtCodPostal.SelectionLength = 0;
             txtCodPostal.SelectionStart = 0;
-            txtCodPostal.Size = new Size(280, 23);
+            txtCodPostal.Size = new Size(369, 23);
             txtCodPostal.TabIndex = 14;
             txtCodPostal.TabStop = false;
             txtCodPostal.UseSystemPasswordChar = false;
@@ -426,7 +432,7 @@
             lblPoblacion.FlatStyle = FlatStyle.Flat;
             lblPoblacion.Font = new Font("Roboto", 11F);
             lblPoblacion.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblPoblacion.Location = new Point(507, 135);
+            lblPoblacion.Location = new Point(566, 187);
             lblPoblacion.MouseState = MaterialSkin.MouseState.HOVER;
             lblPoblacion.Name = "lblPoblacion";
             lblPoblacion.Size = new Size(86, 19);
@@ -438,7 +444,7 @@
             txtPoblacion.BackColor = Color.White;
             txtPoblacion.Depth = 0;
             txtPoblacion.Hint = "";
-            txtPoblacion.Location = new Point(606, 133);
+            txtPoblacion.Location = new Point(665, 185);
             txtPoblacion.MaxLength = 32767;
             txtPoblacion.MouseState = MaterialSkin.MouseState.HOVER;
             txtPoblacion.Name = "txtPoblacion";
@@ -446,7 +452,7 @@
             txtPoblacion.SelectedText = "";
             txtPoblacion.SelectionLength = 0;
             txtPoblacion.SelectionStart = 0;
-            txtPoblacion.Size = new Size(280, 23);
+            txtPoblacion.Size = new Size(369, 23);
             txtPoblacion.TabIndex = 16;
             txtPoblacion.TabStop = false;
             txtPoblacion.UseSystemPasswordChar = false;
@@ -459,7 +465,7 @@
             lblProvincia.FlatStyle = FlatStyle.Flat;
             lblProvincia.Font = new Font("Roboto", 11F);
             lblProvincia.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblProvincia.Location = new Point(512, 173);
+            lblProvincia.Location = new Point(571, 225);
             lblProvincia.MouseState = MaterialSkin.MouseState.HOVER;
             lblProvincia.Name = "lblProvincia";
             lblProvincia.Size = new Size(81, 19);
@@ -471,7 +477,7 @@
             txtProvincia.BackColor = Color.White;
             txtProvincia.Depth = 0;
             txtProvincia.Hint = "";
-            txtProvincia.Location = new Point(606, 169);
+            txtProvincia.Location = new Point(665, 221);
             txtProvincia.MaxLength = 32767;
             txtProvincia.MouseState = MaterialSkin.MouseState.HOVER;
             txtProvincia.Name = "txtProvincia";
@@ -479,7 +485,7 @@
             txtProvincia.SelectedText = "";
             txtProvincia.SelectionLength = 0;
             txtProvincia.SelectionStart = 0;
-            txtProvincia.Size = new Size(280, 23);
+            txtProvincia.Size = new Size(369, 23);
             txtProvincia.TabIndex = 18;
             txtProvincia.TabStop = false;
             txtProvincia.UseSystemPasswordChar = false;
@@ -492,7 +498,7 @@
             lblTelefono.FlatStyle = FlatStyle.Flat;
             lblTelefono.Font = new Font("Roboto", 11F);
             lblTelefono.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblTelefono.Location = new Point(520, 213);
+            lblTelefono.Location = new Point(579, 265);
             lblTelefono.MouseState = MaterialSkin.MouseState.HOVER;
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new Size(73, 19);
@@ -504,7 +510,7 @@
             txtTelefono.BackColor = Color.White;
             txtTelefono.Depth = 0;
             txtTelefono.Hint = "";
-            txtTelefono.Location = new Point(606, 212);
+            txtTelefono.Location = new Point(665, 264);
             txtTelefono.MaxLength = 32767;
             txtTelefono.MouseState = MaterialSkin.MouseState.HOVER;
             txtTelefono.Name = "txtTelefono";
@@ -512,7 +518,7 @@
             txtTelefono.SelectedText = "";
             txtTelefono.SelectionLength = 0;
             txtTelefono.SelectionStart = 0;
-            txtTelefono.Size = new Size(280, 23);
+            txtTelefono.Size = new Size(369, 23);
             txtTelefono.TabIndex = 20;
             txtTelefono.TabStop = false;
             txtTelefono.UseSystemPasswordChar = false;
@@ -524,7 +530,7 @@
             lblMovil.Depth = 0;
             lblMovil.Font = new Font("Roboto", 11F);
             lblMovil.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblMovil.Location = new Point(537, 253);
+            lblMovil.Location = new Point(596, 305);
             lblMovil.MouseState = MaterialSkin.MouseState.HOVER;
             lblMovil.Name = "lblMovil";
             lblMovil.Size = new Size(56, 19);
@@ -536,7 +542,7 @@
             txtMovil.BackColor = Color.White;
             txtMovil.Depth = 0;
             txtMovil.Hint = "";
-            txtMovil.Location = new Point(608, 255);
+            txtMovil.Location = new Point(667, 303);
             txtMovil.MaxLength = 32767;
             txtMovil.MouseState = MaterialSkin.MouseState.HOVER;
             txtMovil.Name = "txtMovil";
@@ -544,7 +550,7 @@
             txtMovil.SelectedText = "";
             txtMovil.SelectionLength = 0;
             txtMovil.SelectionStart = 0;
-            txtMovil.Size = new Size(278, 23);
+            txtMovil.Size = new Size(367, 23);
             txtMovil.TabIndex = 22;
             txtMovil.TabStop = false;
             txtMovil.UseSystemPasswordChar = false;
@@ -557,7 +563,7 @@
             lblCorreo.FlatStyle = FlatStyle.Flat;
             lblCorreo.Font = new Font("Roboto", 11F);
             lblCorreo.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblCorreo.Location = new Point(528, 295);
+            lblCorreo.Location = new Point(587, 347);
             lblCorreo.MouseState = MaterialSkin.MouseState.HOVER;
             lblCorreo.Name = "lblCorreo";
             lblCorreo.Size = new Size(65, 19);
@@ -569,7 +575,7 @@
             txtCorreo.BackColor = Color.White;
             txtCorreo.Depth = 0;
             txtCorreo.Hint = "";
-            txtCorreo.Location = new Point(608, 291);
+            txtCorreo.Location = new Point(667, 343);
             txtCorreo.MaxLength = 32767;
             txtCorreo.MouseState = MaterialSkin.MouseState.HOVER;
             txtCorreo.Name = "txtCorreo";
@@ -577,7 +583,7 @@
             txtCorreo.SelectedText = "";
             txtCorreo.SelectionLength = 0;
             txtCorreo.SelectionStart = 0;
-            txtCorreo.Size = new Size(278, 23);
+            txtCorreo.Size = new Size(367, 23);
             txtCorreo.TabIndex = 24;
             txtCorreo.TabStop = false;
             txtCorreo.UseSystemPasswordChar = false;
@@ -587,7 +593,7 @@
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
-            ClientSize = new Size(939, 573);
+            ClientSize = new Size(1114, 714);
             Controls.Add(txtCorreo);
             Controls.Add(lblCorreo);
             Controls.Add(txtMovil);
@@ -616,8 +622,10 @@
             Controls.Add(txtNotas);
             Controls.Add(cboTipoDocumento);
             Font = new Font("Microsoft Sans Serif", 11F);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmCliente";
             Text = " Cliente";
             Load += frmCliente_Load;

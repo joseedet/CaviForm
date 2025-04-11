@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent ( )
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlmacen));
             btnCancelar = new Button();
@@ -59,7 +59,7 @@
             btnCancelar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
-            btnCancelar.Location = new Point(287, 322);
+            btnCancelar.Location = new Point(525, 480);
             btnCancelar.Margin = new Padding(4);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(46, 46);
@@ -76,7 +76,7 @@
             lblDescripcion.FlatStyle = FlatStyle.Flat;
             lblDescripcion.Font = new Font("Roboto", 11F);
             lblDescripcion.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblDescripcion.Location = new Point(8, 86);
+            lblDescripcion.Location = new Point(239, 140);
             lblDescripcion.Margin = new Padding(4, 0, 4, 0);
             lblDescripcion.MouseState = MaterialSkin.MouseState.HOVER;
             lblDescripcion.Name = "lblDescripcion";
@@ -92,7 +92,7 @@
             btnAceptar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnAceptar.FlatStyle = FlatStyle.Flat;
             btnAceptar.Image = (Image)resources.GetObject("btnAceptar.Image");
-            btnAceptar.Location = new Point(103, 322);
+            btnAceptar.Location = new Point(341, 480);
             btnAceptar.Margin = new Padding(4);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(46, 46);
@@ -107,7 +107,7 @@
             checkBox1.BackColor = Color.Transparent;
             checkBox1.CheckAlign = ContentAlignment.MiddleRight;
             checkBox1.FlatStyle = FlatStyle.Flat;
-            checkBox1.Location = new Point(52, 112);
+            checkBox1.Location = new Point(283, 166);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(64, 22);
             checkBox1.TabIndex = 3;
@@ -120,7 +120,7 @@
             txtDescripcion.BackColor = Color.White;
             txtDescripcion.Depth = 0;
             txtDescripcion.Hint = "";
-            txtDescripcion.Location = new Point(115, 82);
+            txtDescripcion.Location = new Point(346, 136);
             txtDescripcion.Margin = new Padding(4);
             txtDescripcion.MaxLength = 32767;
             txtDescripcion.MouseState = MaterialSkin.MouseState.HOVER;
@@ -155,7 +155,7 @@
             // 
             txtPoblacion.Depth = 0;
             txtPoblacion.Hint = "";
-            txtPoblacion.Location = new Point(113, 208);
+            txtPoblacion.Location = new Point(344, 262);
             txtPoblacion.MaxLength = 32767;
             txtPoblacion.MouseState = MaterialSkin.MouseState.HOVER;
             txtPoblacion.Name = "txtPoblacion";
@@ -178,7 +178,7 @@
             lblPoblacion.FlatStyle = FlatStyle.Flat;
             lblPoblacion.Font = new Font("Roboto", 11F);
             lblPoblacion.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblPoblacion.Location = new Point(1, 212);
+            lblPoblacion.Location = new Point(232, 266);
             lblPoblacion.MouseState = MaterialSkin.MouseState.HOVER;
             lblPoblacion.Name = "lblPoblacion";
             lblPoblacion.Size = new Size(106, 19);
@@ -191,7 +191,7 @@
             // 
             txtCodPostal.Depth = 0;
             txtCodPostal.Hint = "";
-            txtCodPostal.Location = new Point(115, 176);
+            txtCodPostal.Location = new Point(346, 230);
             txtCodPostal.MaxLength = 32767;
             txtCodPostal.MouseState = MaterialSkin.MouseState.HOVER;
             txtCodPostal.Name = "txtCodPostal";
@@ -214,7 +214,7 @@
             lblCodPostal.FlatStyle = FlatStyle.Flat;
             lblCodPostal.Font = new Font("Roboto", 11F);
             lblCodPostal.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblCodPostal.Location = new Point(10, 180);
+            lblCodPostal.Location = new Point(241, 234);
             lblCodPostal.MouseState = MaterialSkin.MouseState.HOVER;
             lblCodPostal.Name = "lblCodPostal";
             lblCodPostal.Size = new Size(93, 19);
@@ -225,7 +225,7 @@
             // 
             txtDireccion.Depth = 0;
             txtDireccion.Hint = "";
-            txtDireccion.Location = new Point(116, 144);
+            txtDireccion.Location = new Point(347, 198);
             txtDireccion.MaxLength = 32767;
             txtDireccion.MouseState = MaterialSkin.MouseState.HOVER;
             txtDireccion.Name = "txtDireccion";
@@ -248,7 +248,7 @@
             lblDireccion.FlatStyle = FlatStyle.Flat;
             lblDireccion.Font = new Font("Roboto", 11F);
             lblDireccion.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblDireccion.Location = new Point(12, 148);
+            lblDireccion.Location = new Point(243, 202);
             lblDireccion.MouseState = MaterialSkin.MouseState.HOVER;
             lblDireccion.Name = "lblDireccion";
             lblDireccion.Size = new Size(91, 19);
@@ -263,7 +263,7 @@
             btnNuevo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Image = (Image)resources.GetObject("btnNuevo.Image");
-            btnNuevo.Location = new Point(57, 322);
+            btnNuevo.Location = new Point(295, 480);
             btnNuevo.Margin = new Padding(4);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(46, 46);
@@ -279,7 +279,7 @@
             btnModificar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnModificar.FlatStyle = FlatStyle.Flat;
             btnModificar.Image = (Image)resources.GetObject("btnModificar.Image");
-            btnModificar.Location = new Point(149, 322);
+            btnModificar.Location = new Point(387, 480);
             btnModificar.Margin = new Padding(4);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(46, 46);
@@ -295,7 +295,7 @@
             btnDeshacer.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnDeshacer.FlatStyle = FlatStyle.Flat;
             btnDeshacer.Image = (Image)resources.GetObject("btnDeshacer.Image");
-            btnDeshacer.Location = new Point(195, 322);
+            btnDeshacer.Location = new Point(433, 480);
             btnDeshacer.Margin = new Padding(4);
             btnDeshacer.Name = "btnDeshacer";
             btnDeshacer.Size = new Size(46, 46);
@@ -311,7 +311,7 @@
             btnEliminar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Image = (Image)resources.GetObject("btnEliminar.Image");
-            btnEliminar.Location = new Point(241, 322);
+            btnEliminar.Location = new Point(479, 480);
             btnEliminar.Margin = new Padding(4);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(46, 46);
@@ -327,7 +327,7 @@
             lblProvinicia.FlatStyle = FlatStyle.Flat;
             lblProvinicia.Font = new Font("Roboto", 11F);
             lblProvinicia.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblProvinicia.Location = new Point(18, 244);
+            lblProvinicia.Location = new Point(249, 298);
             lblProvinicia.MouseState = MaterialSkin.MouseState.HOVER;
             lblProvinicia.Name = "lblProvinicia";
             lblProvinicia.Size = new Size(85, 19);
@@ -338,7 +338,7 @@
             // 
             txtProvin.Depth = 0;
             txtProvin.Hint = "";
-            txtProvin.Location = new Point(113, 240);
+            txtProvin.Location = new Point(344, 294);
             txtProvin.MaxLength = 32767;
             txtProvin.MouseState = MaterialSkin.MouseState.HOVER;
             txtProvin.Name = "txtProvin";
@@ -360,18 +360,18 @@
             lblTelefono.Depth = 0;
             lblTelefono.Font = new Font("Roboto", 11F);
             lblTelefono.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblTelefono.Location = new Point(12, 273);
+            lblTelefono.Location = new Point(243, 327);
             lblTelefono.MouseState = MaterialSkin.MouseState.HOVER;
             lblTelefono.Name = "lblTelefono";
-            lblTelefono.Size = new Size(79, 19);
+            lblTelefono.Size = new Size(91, 19);
             lblTelefono.TabIndex = 27;
-            lblTelefono.Text = "Teléfono *";
+            lblTelefono.Text = "Teléfono    *";
             // 
             // txtTelefono
             // 
             txtTelefono.Depth = 0;
             txtTelefono.Hint = "";
-            txtTelefono.Location = new Point(113, 269);
+            txtTelefono.Location = new Point(344, 323);
             txtTelefono.MaxLength = 32767;
             txtTelefono.MouseState = MaterialSkin.MouseState.HOVER;
             txtTelefono.Name = "txtTelefono";
@@ -391,7 +391,7 @@
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 128, 255);
-            ClientSize = new Size(382, 381);
+            ClientSize = new Size(867, 539);
             Controls.Add(txtTelefono);
             Controls.Add(lblTelefono);
             Controls.Add(txtProvin);
@@ -416,6 +416,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmAlmacen";
             Text = "Almacén";
             Activated += frmAlmacen_Activated;

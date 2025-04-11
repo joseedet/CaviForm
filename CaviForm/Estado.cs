@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace CaviForm
 {
-    class Estado
+    public class Estado
     {
         private bool Guardar{ get; set; }
         private bool Nuevo { get; set; }
-        private bool Editar{ get; set; }
+        private bool Modificar{ get; set; }
         private bool Deshacer{ get; set; }
+        private bool Eliminar { get; set; }
     }
 }

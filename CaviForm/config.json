@@ -1,6 +1,6 @@
 {
     "ConnectionStrings": {
-        "DefaultConnection": "Server=DESKTOP-7APQ8I3\\SQLEXPRESS;Database=Gest;User Id=sa;Password=Malabo1968.;Encrypt=True;TrustServerCertificate=True"
+        "DefaultConnection":"Data Source=DESKTOP-LH8T4UE\\MATRIX;User ID=sa;Password=Malabo1968.;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;Application Intent=ReadWrite;Multi Subnet Failover=False"
     },
   
   "Logs": {
