@@ -81,7 +81,7 @@ namespace CaviForm
                 fechaModificacion = user.FechaModificacionContra;
                 correoUsuario = user.Correo;
 
-                var func = Validator.Validate(user, Validaciones.ValiddacionUsuario.validations) ?
+                var func = Validator.Validate(user, Validaciones.ValidacionUsuario.validations) ?
                 (Action)Success :
                 (Action)Error;
 

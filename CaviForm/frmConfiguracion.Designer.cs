@@ -52,7 +52,7 @@ namespace CaviForm
             panel1.Controls.Add(btnAlmacen);
             panel1.Location = new Point(21, 113);
             panel1.Name = "panel1";
-            panel1.Size = new Size(285, 79);
+            panel1.Size = new Size(285, 200);
             panel1.TabIndex = 0;
             // 
             // btnIva
@@ -193,7 +193,7 @@ namespace CaviForm
             PerformLayout();
         }
 
-        
+
 
         #endregion
 

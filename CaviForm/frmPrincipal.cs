@@ -9,6 +9,8 @@ namespace CaviForm
 {
     public partial class frmPrincipal : MaterialForm
     {
+        private bool login=false;
+
         ToolTip toolTipPrincipal = new();
         public frmPrincipal ( )
         {
@@ -46,6 +48,9 @@ namespace CaviForm
         {
             this.WindowState = FormWindowState.Maximized;
             toolTipPrincipal.IsBalloon = true;
+            panelMenuPrincipal.Visible = false;
+
+            Login();
             //this.StartPosition = FormStartPosition.CenterScreen;
             CargaMenus(true);
             /*this.toolStripMenuItemBloquear.Visible = false;
@@ -58,6 +63,14 @@ namespace CaviForm
             this.ConsultasToolStripMenuItem.Visible = false;
             this.InformesToolStripMenuItem.Visible = false;
             this.AyudaToolStripMenuItem.Visible = false;*/
+
+
+        }
+        public void Panel (bool visible)
+        {
+
+            panelMenuPrincipal.Visible = visible;
+            login = true;
 
 
         }
@@ -105,6 +118,7 @@ namespace CaviForm
             frm.Location = new Point(
                 (this.ClientSize.Width - frm.Width) / 2,
                 (this.ClientSize.Height - frm.Height) / 2);
+                
 
 
             frm.Show();
@@ -162,6 +176,56 @@ namespace CaviForm
         private void btnMenuConfituracion_MouseEnter (object sender, EventArgs e)
         {
             toolTipPrincipal.SetToolTip(btnMenuConfituracion, "Configuración del sistema");
+        }
+
+        private void btnSalir_Click (object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMenuCliente_Enter (object sender, EventArgs e)
+        {
+            toolTipPrincipal.SetToolTip(btnMenuCliente, "Gestión cliente");
+        }
+
+        private void btnProducto_MouseEnter (object sender, EventArgs e)
+        {
+            toolTipPrincipal.SetToolTip(btnProducto, "Gestión de producto");
+        }
+
+        private void btnLogin_MouseEnter (object sender, EventArgs e)
+        {
+            toolTipPrincipal.SetToolTip(btnUsuario, "Entrar en la aplicación");
+        }
+        private void Login ( )
+        {
+
+            frmLogin frm = new frmLogin();
+
+            //frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Normal;
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
+            if (true)
+            {
+                panelMenuPrincipal.Visible = true;
+            }
+            else
+            {
+                panelMenuPrincipal.Visible=false;
+            }
+        }
+
+        private void btnUsuario_Click (object sender, EventArgs e)
+        {
+            frmCambioUsuario frm = new frmCambioUsuario();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
+        }
+
+        private void frmPrincipal_Activated (object sender, EventArgs e)
+        {
+            if(login) panelMenuPrincipal.Visible = true;    
         }
     }
 }

@@ -46,7 +46,7 @@
             btnAceptar.FlatAppearance.BorderSize = 0;
             btnAceptar.FlatStyle = FlatStyle.Flat;
             btnAceptar.Image = (Image)resources.GetObject("btnAceptar.Image");
-            btnAceptar.Location = new Point(516, 480);
+            btnAceptar.Location = new Point(174, 279);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(44, 45);
             btnAceptar.TabIndex = 4;
@@ -60,7 +60,7 @@
             btnCancelar.FlatAppearance.BorderSize = 0;
             btnCancelar.FlatStyle = FlatStyle.Flat;
             btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
-            btnCancelar.Location = new Point(586, 480);
+            btnCancelar.Location = new Point(244, 279);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(51, 45);
             btnCancelar.TabIndex = 5;
@@ -90,7 +90,7 @@
             materialLabel1.FlatStyle = FlatStyle.Flat;
             materialLabel1.Font = new Font("Roboto", 11F);
             materialLabel1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialLabel1.Location = new Point(427, 418);
+            materialLabel1.Location = new Point(85, 217);
             materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             materialLabel1.Name = "materialLabel1";
             materialLabel1.Size = new Size(71, 19);
@@ -102,7 +102,7 @@
             txtUsuario.Depth = 0;
             txtUsuario.Font = new Font("Microsoft Sans Serif", 11F);
             txtUsuario.Hint = "";
-            txtUsuario.Location = new Point(501, 420);
+            txtUsuario.Location = new Point(159, 219);
             txtUsuario.MaxLength = 32767;
             txtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
             txtUsuario.Name = "txtUsuario";
@@ -123,7 +123,7 @@
             lblContrasenya.FlatStyle = FlatStyle.Flat;
             lblContrasenya.Font = new Font("Roboto", 11F);
             lblContrasenya.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            lblContrasenya.Location = new Point(402, 449);
+            lblContrasenya.Location = new Point(60, 248);
             lblContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
             lblContrasenya.Name = "lblContrasenya";
             lblContrasenya.Size = new Size(96, 19);
@@ -135,7 +135,7 @@
             txtContrasenya.Depth = 0;
             txtContrasenya.Font = new Font("Microsoft Sans Serif", 11F);
             txtContrasenya.Hint = "";
-            txtContrasenya.Location = new Point(501, 449);
+            txtContrasenya.Location = new Point(159, 248);
             txtContrasenya.MaxLength = 32767;
             txtContrasenya.MouseState = MaterialSkin.MouseState.HOVER;
             txtContrasenya.Name = "txtContrasenya";
@@ -153,7 +153,7 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(501, 278);
+            pictureBox1.Location = new Point(159, 77);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(151, 137);
             pictureBox1.TabIndex = 11;
@@ -163,7 +163,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1035, 628);
+            ClientSize = new Size(428, 335);
             Controls.Add(pictureBox1);
             Controls.Add(txtContrasenya);
             Controls.Add(lblContrasenya);

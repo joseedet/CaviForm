@@ -4,8 +4,10 @@ using MaterialSkin.Controls;
 
 namespace CaviForm
 {
+   
     public partial class frmLogin : MaterialForm
     {
+        private bool Resultado = false;
         ErrorProvider errorProvider;
         ToolTip toolTip;
         public frmLogin()
@@ -19,20 +21,23 @@ namespace CaviForm
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            Application.Exit();
+            Resultado = false;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            /*if (txtUsuario.Text == "" || txtContrasenya.Text == "")
-            {
-                MessageBox.Show("Usuario o contraseña incorrectas");
-
-            }*/
-            if (DALUsuario.ValidarUsuario(txtUsuario.Text, txtContrasenya.Text, "ValidarUsuariario") == 1)
+           
+            if (DALUsuario.ValidarUsuario(txtUsuario.Text, txtContrasenya.Text, "ValidaUsuario") == 1)
             {
 
-                // ejecutar otro procedimiento almacenado paras saber el rol al que pertenece el usuario.
+                MessageBox.Show("Se ha registrado correctamente en el sistema", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                frmPrincipal frm = new();
+                frm.Panel(true);
+                Close();
+                Resultado = true;
 
 
             }
@@ -80,7 +85,7 @@ namespace CaviForm
 
         private void btnCancelar_MouseEnter(object sender, EventArgs e)
         {
-            toolTip.SetToolTip(btnCancelar, "Cerrar");
+            toolTip.SetToolTip(btnCancelar, "Salir de la aplicación");
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -96,6 +101,12 @@ namespace CaviForm
         private void txtContrasenya_MouseEnter(object sender, EventArgs e)
         {
             toolTip.SetToolTip(txtContrasenya, "Introducir contraseña");
+        }
+        public bool Result()
+        {
+
+            return Resultado;
+
         }
     }
 }

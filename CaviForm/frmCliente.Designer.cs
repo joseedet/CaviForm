@@ -319,6 +319,7 @@
             txtDocumento.TabIndex = 4;
             txtDocumento.TabStop = false;
             txtDocumento.UseSystemPasswordChar = false;
+            txtDocumento.Validating += txtDocumento_Validating;
             // 
             // txtNombreComercial
             // 
@@ -629,6 +630,7 @@
             Name = "frmCliente";
             Text = " Cliente";
             Load += frmCliente_Load;
+            Validating += frmCliente_Validating;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

@@ -179,8 +179,11 @@ namespace DAL
             using(SqlConnection conn=new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
             {
                 conn.Open();
-                    using(SqlCommand command=new SqlCommand(NombreProcedimiento,conn))
+                
+                using (SqlCommand command=new SqlCommand(NombreProcedimiento,conn))
                     {
+                        command.CommandType = CommandType.StoredProcedure;
+
                         command.Parameters.AddWithValue("@UsuarioId", UsuarioId);
                         command.Parameters.AddWithValue("@Contrasenya", Contrasenya);
 

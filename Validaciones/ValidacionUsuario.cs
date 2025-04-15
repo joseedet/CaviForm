@@ -4,7 +4,7 @@ using static Validaciones.IValidacion<Models.ViewModels.ViewModelUsuario>;
 
 namespace Validaciones
 {
-    public class ValiddacionUsuario:IValidacion<Models.ViewModels.ViewModelUsuario>
+    public class ValidacionUsuario:IValidacion<Models.ViewModels.ViewModelUsuario>
     {
         
         public static readonly Predicate<Models.ViewModels.ViewModelUsuario>[] validations =

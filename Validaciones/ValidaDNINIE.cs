@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.WebSockets;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Validaciones
@@ -39,7 +40,45 @@ namespace Validaciones
                 //NIE
                 case 2:
 
-                    return true;
+                    //public static bool ValidarNIE (string nie)
+       //{
+                    if (string.IsNullOrEmpty(dnicifnie))
+                        return false;
+
+                    // Formato básico del NIE: Letra inicial (X, Y, Z) seguida de 7 dígitos y una letra final
+                    string pattern = @"^[XYZ]\d{7}[A-Z]$";
+                    Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+
+                    if (!regex.IsMatch(dnicifnie))
+                        return false;
+
+                    // Reemplazar la letra inicial por el número correspondiente
+                    char initialLetter = dnicifnie[0];
+                    string nieNumerico = dnicifnie.Substring(1, 7);
+                    switch (initialLetter)
+                    {
+                        case 'X':
+                            nieNumerico = "0" + nieNumerico;
+                            break;
+                        case 'Y':
+                            nieNumerico = "1" + nieNumerico;
+                            break;
+                        case 'Z':
+                            nieNumerico = "2" + nieNumerico;
+                            break;
+                        default:
+                            return false;
+                    }
+
+            // Calcular la letra de control
+                int numero = int.Parse(nieNumerico);
+                char expectedLetter = "TRWAGMYFPDXBNJZSQVHLCKE"[numero % 23];
+
+                // Comparar la letra de control calculada con la letra final del NIE
+                return expectedLetter == dnicifnie[8];
+              //}
+
+                    //return true;
                    
                     
 

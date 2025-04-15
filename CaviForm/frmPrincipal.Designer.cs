@@ -68,14 +68,20 @@
             toolStripMenuItemAyuda1 = new ToolStripMenuItem();
             toolStripMenuItemAcerca = new ToolStripMenuItem();
             imageList1 = new ImageList(components);
-            panel1 = new Panel();
+            panelMenuPrincipal = new Panel();
+            btnUsuario = new Button();
+            lblUsuario = new Label();
+            lblArchivo = new Label();
+            panel2 = new Panel();
+            btmHome = new Button();
             btnSalir = new Button();
             btnProducto = new Button();
             btnProveedor = new Button();
             btnMenuConfituracion = new Button();
             btnMenuCliente = new Button();
             menuStripPrincipal.SuspendLayout();
-            panel1.SuspendLayout();
+            panelMenuPrincipal.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // menuStripPrincipal
@@ -344,20 +350,84 @@
             imageList1.TransparentColor = Color.Transparent;
             imageList1.Images.SetKeyName(0, "Almacen.ico");
             // 
-            // panel1
+            // panelMenuPrincipal
             // 
-            panel1.BackColor = Color.SteelBlue;
-            panel1.Controls.Add(btnSalir);
-            panel1.Controls.Add(btnProducto);
-            panel1.Controls.Add(btnProveedor);
-            panel1.Controls.Add(btnMenuConfituracion);
-            panel1.Controls.Add(btnMenuCliente);
-            panel1.Dock = DockStyle.Left;
-            panel1.ForeColor = Color.White;
-            panel1.Location = new Point(3, 48);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(201, 767);
-            panel1.TabIndex = 6;
+            panelMenuPrincipal.BackColor = Color.SteelBlue;
+            panelMenuPrincipal.Controls.Add(btnUsuario);
+            panelMenuPrincipal.Controls.Add(lblUsuario);
+            panelMenuPrincipal.Controls.Add(lblArchivo);
+            panelMenuPrincipal.Controls.Add(panel2);
+            panelMenuPrincipal.Controls.Add(btnSalir);
+            panelMenuPrincipal.Controls.Add(btnProducto);
+            panelMenuPrincipal.Controls.Add(btnProveedor);
+            panelMenuPrincipal.Controls.Add(btnMenuConfituracion);
+            panelMenuPrincipal.Controls.Add(btnMenuCliente);
+            panelMenuPrincipal.Dock = DockStyle.Left;
+            panelMenuPrincipal.ForeColor = Color.White;
+            panelMenuPrincipal.Location = new Point(3, 48);
+            panelMenuPrincipal.Name = "panelMenuPrincipal";
+            panelMenuPrincipal.Size = new Size(154, 767);
+            panelMenuPrincipal.TabIndex = 6;
+            // 
+            // btnUsuario
+            // 
+            btnUsuario.FlatAppearance.BorderSize = 0;
+            btnUsuario.FlatStyle = FlatStyle.Flat;
+            btnUsuario.Image = (Image)resources.GetObject("btnUsuario.Image");
+            btnUsuario.ImageAlign = ContentAlignment.MiddleLeft;
+            btnUsuario.Location = new Point(3, 230);
+            btnUsuario.Name = "btnUsuario";
+            btnUsuario.Size = new Size(145, 37);
+            btnUsuario.TabIndex = 13;
+            btnUsuario.Text = "Gestion usuario";
+            btnUsuario.TextAlign = ContentAlignment.MiddleRight;
+            btnUsuario.UseVisualStyleBackColor = true;
+            btnUsuario.Click += btnUsuario_Click;
+            btnUsuario.MouseEnter += btnLogin_MouseEnter;
+            // 
+            // lblUsuario
+            // 
+            lblUsuario.AutoSize = true;
+            lblUsuario.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblUsuario.Location = new Point(23, 206);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(74, 24);
+            lblUsuario.TabIndex = 12;
+            lblUsuario.Text = "Usuario";
+            // 
+            // lblArchivo
+            // 
+            lblArchivo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblArchivo.AutoSize = true;
+            lblArchivo.FlatStyle = FlatStyle.Flat;
+            lblArchivo.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblArchivo.Location = new Point(31, 71);
+            lblArchivo.Name = "lblArchivo";
+            lblArchivo.Size = new Size(74, 24);
+            lblArchivo.TabIndex = 11;
+            lblArchivo.Text = "Archivo";
+            lblArchivo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(btmHome);
+            panel2.Location = new Point(3, 3);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(195, 65);
+            panel2.TabIndex = 10;
+            // 
+            // btmHome
+            // 
+            btmHome.FlatAppearance.BorderSize = 0;
+            btmHome.FlatStyle = FlatStyle.Flat;
+            btmHome.Image = (Image)resources.GetObject("btmHome.Image");
+            btmHome.ImageAlign = ContentAlignment.MiddleLeft;
+            btmHome.Location = new Point(0, 3);
+            btmHome.Name = "btmHome";
+            btmHome.Size = new Size(145, 55);
+            btmHome.TabIndex = 0;
+            btmHome.Text = "Menú";
+            btmHome.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
@@ -365,70 +435,81 @@
             btnSalir.FlatAppearance.BorderSize = 0;
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.Image = (Image)resources.GetObject("btnSalir.Image");
-            btnSalir.ImageAlign = ContentAlignment.TopLeft;
-            btnSalir.Location = new Point(3, 612);
+            btnSalir.ImageAlign = ContentAlignment.TopCenter;
+            btnSalir.Location = new Point(3, 688);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(195, 136);
+            btnSalir.Size = new Size(154, 76);
             btnSalir.TabIndex = 9;
             btnSalir.Text = "Salir aplicación";
             btnSalir.TextAlign = ContentAlignment.BottomCenter;
             btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // btnProducto
             // 
+            btnProducto.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             btnProducto.FlatAppearance.BorderSize = 0;
             btnProducto.FlatStyle = FlatStyle.Flat;
             btnProducto.Image = (Image)resources.GetObject("btnProducto.Image");
             btnProducto.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProducto.Location = new Point(3, 61);
+            btnProducto.Location = new Point(3, 132);
             btnProducto.Name = "btnProducto";
-            btnProducto.Size = new Size(195, 40);
+            btnProducto.Size = new Size(148, 37);
             btnProducto.TabIndex = 8;
             btnProducto.Text = "Producto";
+            btnProducto.TextAlign = ContentAlignment.MiddleRight;
             btnProducto.UseVisualStyleBackColor = true;
+            btnProducto.MouseEnter += btnProducto_MouseEnter;
             // 
             // btnProveedor
             // 
+            btnProveedor.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             btnProveedor.FlatAppearance.BorderSize = 0;
             btnProveedor.FlatStyle = FlatStyle.Flat;
             btnProveedor.Image = (Image)resources.GetObject("btnProveedor.Image");
             btnProveedor.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProveedor.Location = new Point(3, 107);
+            btnProveedor.Location = new Point(3, 169);
             btnProveedor.Name = "btnProveedor";
-            btnProveedor.Size = new Size(195, 40);
+            btnProveedor.Size = new Size(148, 37);
             btnProveedor.TabIndex = 8;
             btnProveedor.Text = "Proveedor";
+            btnProveedor.TextAlign = ContentAlignment.MiddleRight;
             btnProveedor.UseVisualStyleBackColor = true;
             // 
             // btnMenuConfituracion
             // 
+            btnMenuConfituracion.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             btnMenuConfituracion.BackColor = Color.SteelBlue;
             btnMenuConfituracion.FlatAppearance.BorderSize = 0;
             btnMenuConfituracion.FlatStyle = FlatStyle.Flat;
             btnMenuConfituracion.Image = (Image)resources.GetObject("btnMenuConfituracion.Image");
             btnMenuConfituracion.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMenuConfituracion.Location = new Point(3, 285);
+            btnMenuConfituracion.Location = new Point(3, 378);
             btnMenuConfituracion.Name = "btnMenuConfituracion";
-            btnMenuConfituracion.Size = new Size(195, 40);
+            btnMenuConfituracion.Size = new Size(148, 37);
             btnMenuConfituracion.TabIndex = 7;
             btnMenuConfituracion.Text = "Configuración";
+            btnMenuConfituracion.TextAlign = ContentAlignment.MiddleRight;
             btnMenuConfituracion.UseVisualStyleBackColor = false;
             btnMenuConfituracion.Click += btnMenuConfituracion_Click;
             btnMenuConfituracion.MouseEnter += btnMenuConfituracion_MouseEnter;
             // 
             // btnMenuCliente
             // 
+            btnMenuCliente.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             btnMenuCliente.FlatAppearance.BorderSize = 0;
             btnMenuCliente.FlatStyle = FlatStyle.Flat;
             btnMenuCliente.Image = (Image)resources.GetObject("btnMenuCliente.Image");
             btnMenuCliente.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMenuCliente.Location = new Point(3, 15);
+            btnMenuCliente.Location = new Point(3, 95);
             btnMenuCliente.Name = "btnMenuCliente";
-            btnMenuCliente.Size = new Size(195, 40);
+            btnMenuCliente.Size = new Size(148, 37);
             btnMenuCliente.TabIndex = 5;
             btnMenuCliente.Text = "Cliente";
+            btnMenuCliente.TextAlign = ContentAlignment.MiddleRight;
             btnMenuCliente.UseVisualStyleBackColor = true;
             btnMenuCliente.Click += btnMenuCliente_Click_1;
+            btnMenuCliente.Enter += btnMenuCliente_Enter;
             // 
             // frmPrincipal
             // 
@@ -436,7 +517,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Blue;
             ClientSize = new Size(990, 818);
-            Controls.Add(panel1);
+            Controls.Add(panelMenuPrincipal);
             Controls.Add(menuStripPrincipal);
             Font = new Font("Microsoft Sans Serif", 11F);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -447,10 +528,13 @@
             Padding = new Padding(3, 24, 3, 3);
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CAVIC";
+            Activated += frmPrincipal_Activated;
             Load += frmPrincipal_Load;
             menuStripPrincipal.ResumeLayout(false);
             menuStripPrincipal.PerformLayout();
-            panel1.ResumeLayout(false);
+            panelMenuPrincipal.ResumeLayout(false);
+            panelMenuPrincipal.PerformLayout();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -495,12 +579,17 @@
         private ToolStripMenuItem toolStripMenuItemGestionUsuarios;
         private ToolStripSeparator toolStripSeparator5;
         private ImageList imageList1;
-        private Panel panel1;
+        private Panel panelMenuPrincipal;
         private MaterialSkin.Controls.MaterialFlatButton btnMenuAlmancen;
         private Button btnMenuCliente;
         private Button btnMenuConfituracion;
         private Button btnProveedor;
         private Button btnProducto;
         private Button btnSalir;
+        private Panel panel2;
+        private Button btmHome;
+        private Label lblArchivo;
+        private Button btnUsuario;
+        private Label lblUsuario;
     }
 }
