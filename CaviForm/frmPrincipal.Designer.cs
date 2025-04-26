@@ -375,7 +375,7 @@
             btnUsuario.FlatStyle = FlatStyle.Flat;
             btnUsuario.Image = (Image)resources.GetObject("btnUsuario.Image");
             btnUsuario.ImageAlign = ContentAlignment.MiddleLeft;
-            btnUsuario.Location = new Point(3, 230);
+            btnUsuario.Location = new Point(0, 250);
             btnUsuario.Name = "btnUsuario";
             btnUsuario.Size = new Size(145, 37);
             btnUsuario.TabIndex = 13;
@@ -389,7 +389,7 @@
             // 
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUsuario.Location = new Point(23, 206);
+            lblUsuario.Location = new Point(13, 223);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(74, 24);
             lblUsuario.TabIndex = 12;

@@ -26,7 +26,7 @@ namespace CaviForm
         /// <summary>
         /// Creamos el constructor del host
         /// </summary>
-        /// <returns>HostBuilder</returns>
+        /// <returns>IHostBuilder</returns>
         static IHostBuilder CreateHostBuilder ( ) => Host.CreateDefaultBuilder()
             .ConfigureAppConfiguration((context, config) => { config.AddJsonFile("config.json", optional: false, reloadOnChange: true); })
             .ConfigureServices((context, services) =>

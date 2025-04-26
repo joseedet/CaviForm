@@ -68,7 +68,7 @@ namespace DAL
                             user.Contrasenya = reader[3].ToString();
                             user.RolId = (int)reader[4];
                             user.Correo = reader[5].ToString();
-
+                            user.Activo= (bool)reader[6];
                         }
 
                         return user;

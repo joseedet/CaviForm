@@ -9,8 +9,9 @@ namespace CaviForm
 {
     public partial class frmTipoDocumento : MaterialForm
     {
-        private TipoDocumento tipo;
-        private ErrorProvider errorProvider;
+        private TipoDocumento tipo=new();
+        private ErrorProvider errorProvider=new();
+        private ToolTip toolTip = new();
         private static string miTipo;
 
         public frmTipoDocumento()
@@ -18,8 +19,8 @@ namespace CaviForm
             InitializeComponent();
             MaterialUI.loadMaterial(this);
 
-            TipoDocumento tipo = new TipoDocumento();
-            errorProvider = new ErrorProvider();
+            //TipoDocumento tipo = new TipoDocumento();
+            //errorProvider = new ErrorProvider();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -57,7 +58,8 @@ namespace CaviForm
         {
             try
             {
-                DALTipoDocumento.Agregar(miTipo, "InsertTipoDocumento");
+                
+                DALTipoDocumento.Agregar(miTipo,true,"InsertTipo_Documento");
                 MessageBox.Show("El registro ha sido guardado con éxito", Application.ProductName, MessageBoxButtons.OK,MessageBoxIcon.Information);
                 
                

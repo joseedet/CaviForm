@@ -16,6 +16,7 @@ namespace Models
         public DateTime FechaModificacionContra { get; set; }
         public int RolId { get; set; }
         public string Correo { get; set; } = "";
+        public bool Activo { get; set; }
 
     }
 }

@@ -31,6 +31,7 @@ namespace CaviForm
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfiguracion));
             panel1 = new Panel();
+            btnTipoDocumento = new Button();
             btnIva = new Button();
             btnConcepto = new Button();
             btnAlmacen = new Button();
@@ -47,13 +48,27 @@ namespace CaviForm
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(btnTipoDocumento);
             panel1.Controls.Add(btnIva);
             panel1.Controls.Add(btnConcepto);
             panel1.Controls.Add(btnAlmacen);
             panel1.Location = new Point(21, 113);
             panel1.Name = "panel1";
-            panel1.Size = new Size(285, 200);
+            panel1.Size = new Size(249, 200);
             panel1.TabIndex = 0;
+            // 
+            // btnTipoDocumento
+            // 
+            btnTipoDocumento.FlatAppearance.BorderSize = 0;
+            btnTipoDocumento.FlatStyle = FlatStyle.Flat;
+            btnTipoDocumento.Image = (Image)resources.GetObject("btnTipoDocumento.Image");
+            btnTipoDocumento.Location = new Point(17, 84);
+            btnTipoDocumento.Name = "btnTipoDocumento";
+            btnTipoDocumento.Size = new Size(46, 46);
+            btnTipoDocumento.TabIndex = 2;
+            btnTipoDocumento.UseVisualStyleBackColor = true;
+            btnTipoDocumento.Click += btnTipoDocumento_Click;
+            btnTipoDocumento.MouseEnter += btnTipoDocumento_MouseEnter;
             // 
             // btnIva
             // 
@@ -63,7 +78,7 @@ namespace CaviForm
             btnIva.Image = (Image)resources.GetObject("btnIva.Image");
             btnIva.Location = new Point(179, 13);
             btnIva.Name = "btnIva";
-            btnIva.Size = new Size(63, 55);
+            btnIva.Size = new Size(46, 46);
             btnIva.TabIndex = 1;
             btnIva.UseVisualStyleBackColor = false;
             btnIva.MouseEnter += btnIva_MouseEnter;
@@ -76,7 +91,7 @@ namespace CaviForm
             btnConcepto.Image = (Image)resources.GetObject("btnConcepto.Image");
             btnConcepto.Location = new Point(96, 13);
             btnConcepto.Name = "btnConcepto";
-            btnConcepto.Size = new Size(63, 55);
+            btnConcepto.Size = new Size(46, 46);
             btnConcepto.TabIndex = 1;
             btnConcepto.UseVisualStyleBackColor = false;
             btnConcepto.MouseEnter += btnConcepto_MouseEnter;
@@ -89,7 +104,7 @@ namespace CaviForm
             btnAlmacen.Image = (Image)resources.GetObject("btnAlmacen.Image");
             btnAlmacen.Location = new Point(17, 13);
             btnAlmacen.Name = "btnAlmacen";
-            btnAlmacen.Size = new Size(63, 55);
+            btnAlmacen.Size = new Size(46, 46);
             btnAlmacen.TabIndex = 0;
             btnAlmacen.UseVisualStyleBackColor = false;
             btnAlmacen.Click += btnAlmacen_Click;
@@ -106,9 +121,9 @@ namespace CaviForm
             lblFormularios.Location = new Point(26, 80);
             lblFormularios.MouseState = MaterialSkin.MouseState.HOVER;
             lblFormularios.Name = "lblFormularios";
-            lblFormularios.Size = new Size(162, 19);
+            lblFormularios.Size = new Size(185, 19);
             lblFormularios.TabIndex = 1;
-            lblFormularios.Text = "Configuración Maestra";
+            lblFormularios.Text = "Configuración formularios";
             // 
             // btnCerrar
             // 
@@ -187,6 +202,7 @@ namespace CaviForm
             MinimizeBox = false;
             Name = "frmConfiguracion";
             Text = "Configuración";
+            Load += frmConfiguracion_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ResumeLayout(false);
@@ -207,5 +223,6 @@ namespace CaviForm
         private Button btnCambiarUsuario;
         private Button btnCambioContrasenya;
         private Label lblGestionUsuarios;
+        private Button btnTipoDocumento;
     }
 }
