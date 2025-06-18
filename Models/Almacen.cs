@@ -10,6 +10,7 @@
         public string Poblacion { get; set; } = "";
         public string Provincia { get; set; } = "";
         public string Telefono { get; set; } = "";
+        public bool Activo { get; set; } = true;
 
     }
 }

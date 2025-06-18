@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent ( )
+        private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
             lblBuscar = new Label();
@@ -60,15 +60,16 @@
             textBox1.Size = new Size(265, 23);
             textBox1.TabIndex = 2;
             // 
-            // GestionUsuarios
+            // frmGestionUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(771, 417);
+            ClientSize = new Size(818, 432);
             Controls.Add(textBox1);
             Controls.Add(lblBuscar);
             Controls.Add(dataGridView1);
-            Name = "GestionUsuarios";
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Name = "frmGestionUsuarios";
             Text = "Usuarios";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

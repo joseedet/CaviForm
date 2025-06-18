@@ -175,24 +175,51 @@ namespace DAL
         /// <returns>int</returns>
         public static int ValidarUsuario(string UsuarioId,string Contrasenya,string NombreProcedimiento)
         {
+          
+
+
             int resultado;
-            using(SqlConnection conn=new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
+            using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
             {
-                conn.Open();
-                
-                using (SqlCommand command=new SqlCommand(NombreProcedimiento,conn))
+
+                try
+                {
+                    conn.Open();
+
+                    using (SqlCommand command = new SqlCommand(NombreProcedimiento, conn))
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
                         command.Parameters.AddWithValue("@UsuarioId", UsuarioId);
                         command.Parameters.AddWithValue("@Contrasenya", Contrasenya);
 
-                        resultado = (int)command.ExecuteScalar();
+                        resultado = Convert.ToInt32(command.ExecuteScalar());
                         return resultado;
                     }
-            }
+                }
 
 
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al validar usuario: " + ex.Message);
+                }
+            }         
+           
+        }
+
+        public static void Agregar(string Descripcion, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static bool Actualizar(int id, string Descripcion, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static Usuario PorId(int id, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
         }
     }
 }

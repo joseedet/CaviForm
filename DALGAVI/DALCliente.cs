@@ -71,6 +71,11 @@ namespace DAL
 
         }
 
+        public static bool Actualizar(int id, string Descripcion, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void Agregar (string Descripcion, string NombreProcedimiento)
         {
             throw new NotImplementedException();
@@ -130,6 +135,12 @@ namespace DAL
             }
 
         }
+
+        public static void Agregar(string Descripcion, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Ejecuta consulta de eliminacion de cliente.
         /// </summary>
@@ -203,6 +214,12 @@ namespace DAL
 
            }
         }
+
+        public static Cliente PorId(int id, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Ejecuta consulta a base de datos del tipo select y devuelve lista de clientes.
         /// </summary>

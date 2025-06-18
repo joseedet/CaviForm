@@ -76,6 +76,7 @@
             // 
             dataGridViewTipoDocumentos.AllowUserToAddRows = false;
             dataGridViewTipoDocumentos.AllowUserToDeleteRows = false;
+            dataGridViewTipoDocumentos.BackgroundColor = Color.White;
             dataGridViewTipoDocumentos.BorderStyle = BorderStyle.None;
             dataGridViewTipoDocumentos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewTipoDocumentos.Location = new Point(214, 148);
@@ -83,7 +84,8 @@
             dataGridViewTipoDocumentos.ReadOnly = true;
             dataGridViewTipoDocumentos.Size = new Size(685, 332);
             dataGridViewTipoDocumentos.TabIndex = 4;
-            dataGridViewTipoDocumentos.CellContentClick += this.dataGridViewTipoDocumentos_CellContentClick;
+            dataGridViewTipoDocumentos.CellClick += dataGridViewTipoDocumentos_CellClick;
+            dataGridViewTipoDocumentos.CellContentClick += dataGridViewTipoDocumentos_CellContentClick;
             // 
             // frmListaTipoDocumento
             // 

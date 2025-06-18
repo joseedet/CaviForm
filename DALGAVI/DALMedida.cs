@@ -32,6 +32,11 @@ namespace DAL
             }
         }
 
+        public static bool Actualizar(int id, string Descripcion, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void Agregar (string Descripcion, string NombreProcedimiento)
         {
             using (SqlConnection conn=new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
@@ -49,6 +54,11 @@ namespace DAL
 
 
             }
+        }
+
+        public static void Agregar(string Descripcion, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
         }
 
         public static bool Eliminar (int id, string NonbreProcedimiento)
@@ -104,6 +114,11 @@ namespace DAL
 
             }
 
+        }
+
+        public static Medida PorId(int id, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
         }
 
         public static List<Medida> TodosLosRegistros (string NombreProcedimiento)

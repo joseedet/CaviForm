@@ -10,6 +10,7 @@ namespace DAL
     {
         private static int TipoDocumentoId;
         private static string Descripcion = "";
+        private static bool Activo;
         //private TipoDocumento tipoDocumento;
 
         public DALTipoDocumento ( )
@@ -46,6 +47,12 @@ namespace DAL
 
             }
         }
+
+        public static bool Actualizar(int id, string Descripcion, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Añadimos un nuevo tipo de documente.
         /// </summary>
@@ -171,6 +178,7 @@ namespace DAL
                             {
                                 TipoDocumentoId = (int)reader[0];
                                 Descripcion = reader[1].ToString();
+                                Activo = (bool)reader[2];
 
                             }
 
@@ -183,6 +191,11 @@ namespace DAL
                     }
                 }
             }
+        }
+
+        public static TipoDocumento PorId(int id, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>

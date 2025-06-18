@@ -1,8 +1,9 @@
-﻿using System.Data;
-using Dal;
+﻿using Dal;
 using DAL.Interfaces;
 using Microsoft.Data.SqlClient;
 using Models;
+using System;
+using System.Data;
 
 
 namespace DAL
@@ -21,7 +22,7 @@ namespace DAL
         /// <param name="NombreProcedimiento"></param>
         /// <returns>bool</returns>
 
-        public static bool Actualizar (int id, string Descripcion, string NombreProcedimiento)
+        public static bool Actualizar (int id, string Descripcion,bool Activo, string NombreProcedimiento)
         {
             using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
             {
@@ -41,7 +42,7 @@ namespace DAL
         /// </summary>
         /// <param name="Descripcion"></param>
         /// <param name="NombreProcedimiento"></param>
-        public static void Agregar (string Descripcion, string NombreProcedimiento)
+        public static void Agregar (string Descripcion,bool Activo, string NombreProcedimiento)
         {
             using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
             {
@@ -52,16 +53,34 @@ namespace DAL
 
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@Descripcion", Descripcion);
+                        command.Parameters.AddWithValue("@Activo", Activo);
                         command.ExecuteNonQuery();
                     }                
-            }
+            }   
         }
-        /// <summary>
+        /// <summary>        
         /// Ejecuta consulta a base de datos del tipo Delete y devuelve true si ha sido exitosa
         /// </summary>
         /// <param name="id"></param>
         /// <param name="NonbreProcedimiento"></param>
         /// <returns>bool</returns>
+        /// 
+        public static void Agregar(string Descripcion,string NombreProcedimiento)
+        {
+            using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
+            {
+
+                conn.Open();
+                using (var command = new SqlCommand(NombreProcedimiento, conn))
+                {
+
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@Descripcion", Descripcion);
+                   // command.Parameters.AddWithValue("@Activo", Activo);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
         public static bool Eliminar (int id, string NonbreProcedimiento)
         {
             using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
@@ -86,7 +105,7 @@ namespace DAL
         /// <param name="id"></param>
         /// <param name="NonbreProcedimiento"></param>
         /// <returns></returns>
-        public static Almacen PorId (int id, string NonbreProcedimiento)
+        public static Almacen PorId (int id, bool Activo,string NonbreProcedimiento)
         {
                 Almacen tipo = new Almacen();
 
@@ -114,6 +133,7 @@ namespace DAL
                             {
                                 tipo.AlmacenId = (int)reader[0];
                                 tipo.Descripcion = reader[1].ToString();
+                                tipo.Activo = (bool)reader[2];
 
                             }
 

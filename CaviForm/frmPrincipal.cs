@@ -153,10 +153,10 @@ namespace CaviForm
 
         private void btnMenuCliente_Click_1 (object sender, EventArgs e)
         {
-            frmCliente frm = new frmCliente();
+            frmListaClientes frm = new frmListaClientes();
 
             frm.MdiParent = this;
-            frm.WindowState = FormWindowState.Maximized;
+            frm.WindowState = FormWindowState.Normal;
             frm.Show();
         }
 

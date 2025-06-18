@@ -1,6 +1,7 @@
 ﻿using DAL;
 using EjemploLogin;
 using MaterialSkin.Controls;
+using Microsoft.Data.SqlClient;
 
 namespace CaviForm
 {
@@ -28,18 +29,28 @@ namespace CaviForm
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-           
-            if (DALUsuario.ValidarUsuario(txtUsuario.Text, txtContrasenya.Text, "ValidaUsuario") == 1)
+            try
             {
+                if (DALUsuario.ValidarUsuario(txtUsuario.Text, txtContrasenya.Text, "ValidaUsuario") == 1)
+                {
 
-                MessageBox.Show("Se ha registrado correctamente en el sistema", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Se ha registrado correctamente en el sistema", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                frmPrincipal frm = new();
-                frm.Panel(true);
-                Close();
-                Resultado = true;
+                    frmPrincipal frm = new();
+                    frm.Panel(true);
+                    Close();
+                    Resultado = true;
 
+                }
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show("Usuario y/o contraseña incorrectos", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

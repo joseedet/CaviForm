@@ -101,5 +101,6 @@ namespace CaviForm
         {
             errorProvider1.SetError(txtDocumento, "");
         }
+        ///TODO:Implemntar la carga del combobox de tipo documento.
     }
 }

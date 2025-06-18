@@ -164,5 +164,20 @@ namespace DAL
                 }
             }
         }
+
+        public static void Agregar(string Descripcion, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static bool Actualizar(int id, string Descripcion, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static Rol PorId(int id, bool Activo, string NombreProcedimiento)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
