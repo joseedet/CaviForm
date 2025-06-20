@@ -26,7 +26,7 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent ( )
+        private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
@@ -69,11 +69,8 @@
             toolStripMenuItemAcerca = new ToolStripMenuItem();
             imageList1 = new ImageList(components);
             panelMenuPrincipal = new Panel();
-            btnUsuario = new Button();
-            lblUsuario = new Label();
-            lblArchivo = new Label();
-            panel2 = new Panel();
             btmHome = new Button();
+            btnUsuario = new Button();
             btnSalir = new Button();
             btnProducto = new Button();
             btnProveedor = new Button();
@@ -81,7 +78,6 @@
             btnMenuCliente = new Button();
             menuStripPrincipal.SuspendLayout();
             panelMenuPrincipal.SuspendLayout();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // menuStripPrincipal
@@ -90,7 +86,7 @@
             menuStripPrincipal.Location = new Point(3, 24);
             menuStripPrincipal.Name = "menuStripPrincipal";
             menuStripPrincipal.Padding = new Padding(8, 2, 0, 2);
-            menuStripPrincipal.Size = new Size(984, 24);
+            menuStripPrincipal.Size = new Size(1017, 24);
             menuStripPrincipal.TabIndex = 0;
             // 
             // archivoToolStripMenuItem
@@ -353,10 +349,8 @@
             // panelMenuPrincipal
             // 
             panelMenuPrincipal.BackColor = Color.SteelBlue;
+            panelMenuPrincipal.Controls.Add(btmHome);
             panelMenuPrincipal.Controls.Add(btnUsuario);
-            panelMenuPrincipal.Controls.Add(lblUsuario);
-            panelMenuPrincipal.Controls.Add(lblArchivo);
-            panelMenuPrincipal.Controls.Add(panel2);
             panelMenuPrincipal.Controls.Add(btnSalir);
             panelMenuPrincipal.Controls.Add(btnProducto);
             panelMenuPrincipal.Controls.Add(btnProveedor);
@@ -366,8 +360,22 @@
             panelMenuPrincipal.ForeColor = Color.White;
             panelMenuPrincipal.Location = new Point(3, 48);
             panelMenuPrincipal.Name = "panelMenuPrincipal";
-            panelMenuPrincipal.Size = new Size(154, 767);
+            panelMenuPrincipal.Size = new Size(151, 767);
             panelMenuPrincipal.TabIndex = 6;
+            // 
+            // btmHome
+            // 
+            btmHome.FlatAppearance.BorderSize = 0;
+            btmHome.FlatStyle = FlatStyle.Flat;
+            btmHome.Image = (Image)resources.GetObject("btmHome.Image");
+            btmHome.ImageAlign = ContentAlignment.MiddleLeft;
+            btmHome.Location = new Point(-3, 0);
+            btmHome.Name = "btmHome";
+            btmHome.Size = new Size(137, 68);
+            btmHome.TabIndex = 0;
+            btmHome.Text = "InvenFac";
+            btmHome.TextAlign = ContentAlignment.MiddleRight;
+            btmHome.UseVisualStyleBackColor = true;
             // 
             // btnUsuario
             // 
@@ -375,7 +383,7 @@
             btnUsuario.FlatStyle = FlatStyle.Flat;
             btnUsuario.Image = (Image)resources.GetObject("btnUsuario.Image");
             btnUsuario.ImageAlign = ContentAlignment.MiddleLeft;
-            btnUsuario.Location = new Point(0, 250);
+            btnUsuario.Location = new Point(3, 271);
             btnUsuario.Name = "btnUsuario";
             btnUsuario.Size = new Size(145, 37);
             btnUsuario.TabIndex = 13;
@@ -385,50 +393,6 @@
             btnUsuario.Click += btnUsuario_Click;
             btnUsuario.MouseEnter += btnLogin_MouseEnter;
             // 
-            // lblUsuario
-            // 
-            lblUsuario.AutoSize = true;
-            lblUsuario.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUsuario.Location = new Point(13, 223);
-            lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(74, 24);
-            lblUsuario.TabIndex = 12;
-            lblUsuario.Text = "Usuario";
-            // 
-            // lblArchivo
-            // 
-            lblArchivo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lblArchivo.AutoSize = true;
-            lblArchivo.FlatStyle = FlatStyle.Flat;
-            lblArchivo.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblArchivo.Location = new Point(31, 71);
-            lblArchivo.Name = "lblArchivo";
-            lblArchivo.Size = new Size(74, 24);
-            lblArchivo.TabIndex = 11;
-            lblArchivo.Text = "Archivo";
-            lblArchivo.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(btmHome);
-            panel2.Location = new Point(3, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(195, 65);
-            panel2.TabIndex = 10;
-            // 
-            // btmHome
-            // 
-            btmHome.FlatAppearance.BorderSize = 0;
-            btmHome.FlatStyle = FlatStyle.Flat;
-            btmHome.Image = (Image)resources.GetObject("btmHome.Image");
-            btmHome.ImageAlign = ContentAlignment.MiddleLeft;
-            btmHome.Location = new Point(0, 3);
-            btmHome.Name = "btmHome";
-            btmHome.Size = new Size(145, 55);
-            btmHome.TabIndex = 0;
-            btmHome.Text = "Menú";
-            btmHome.UseVisualStyleBackColor = true;
-            // 
             // btnSalir
             // 
             btnSalir.BackColor = Color.SteelBlue;
@@ -436,7 +400,7 @@
             btnSalir.FlatStyle = FlatStyle.Flat;
             btnSalir.Image = (Image)resources.GetObject("btnSalir.Image");
             btnSalir.ImageAlign = ContentAlignment.TopCenter;
-            btnSalir.Location = new Point(3, 688);
+            btnSalir.Location = new Point(0, 672);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(154, 76);
             btnSalir.TabIndex = 9;
@@ -452,9 +416,9 @@
             btnProducto.FlatStyle = FlatStyle.Flat;
             btnProducto.Image = (Image)resources.GetObject("btnProducto.Image");
             btnProducto.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProducto.Location = new Point(3, 132);
+            btnProducto.Location = new Point(3, 147);
             btnProducto.Name = "btnProducto";
-            btnProducto.Size = new Size(148, 37);
+            btnProducto.Size = new Size(145, 37);
             btnProducto.TabIndex = 8;
             btnProducto.Text = "Producto";
             btnProducto.TextAlign = ContentAlignment.MiddleRight;
@@ -468,9 +432,9 @@
             btnProveedor.FlatStyle = FlatStyle.Flat;
             btnProveedor.Image = (Image)resources.GetObject("btnProveedor.Image");
             btnProveedor.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProveedor.Location = new Point(3, 169);
+            btnProveedor.Location = new Point(3, 190);
             btnProveedor.Name = "btnProveedor";
-            btnProveedor.Size = new Size(148, 37);
+            btnProveedor.Size = new Size(145, 37);
             btnProveedor.TabIndex = 8;
             btnProveedor.Text = "Proveedor";
             btnProveedor.TextAlign = ContentAlignment.MiddleRight;
@@ -486,7 +450,7 @@
             btnMenuConfituracion.ImageAlign = ContentAlignment.MiddleLeft;
             btnMenuConfituracion.Location = new Point(3, 378);
             btnMenuConfituracion.Name = "btnMenuConfituracion";
-            btnMenuConfituracion.Size = new Size(148, 37);
+            btnMenuConfituracion.Size = new Size(137, 37);
             btnMenuConfituracion.TabIndex = 7;
             btnMenuConfituracion.Text = "Configuración";
             btnMenuConfituracion.TextAlign = ContentAlignment.MiddleRight;
@@ -501,9 +465,9 @@
             btnMenuCliente.FlatStyle = FlatStyle.Flat;
             btnMenuCliente.Image = (Image)resources.GetObject("btnMenuCliente.Image");
             btnMenuCliente.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMenuCliente.Location = new Point(3, 95);
+            btnMenuCliente.Location = new Point(3, 104);
             btnMenuCliente.Name = "btnMenuCliente";
-            btnMenuCliente.Size = new Size(148, 37);
+            btnMenuCliente.Size = new Size(145, 37);
             btnMenuCliente.TabIndex = 5;
             btnMenuCliente.Text = "Cliente";
             btnMenuCliente.TextAlign = ContentAlignment.MiddleRight;
@@ -516,7 +480,7 @@
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Blue;
-            ClientSize = new Size(990, 818);
+            ClientSize = new Size(1023, 818);
             Controls.Add(panelMenuPrincipal);
             Controls.Add(menuStripPrincipal);
             Font = new Font("Microsoft Sans Serif", 11F);
@@ -533,8 +497,6 @@
             menuStripPrincipal.ResumeLayout(false);
             menuStripPrincipal.PerformLayout();
             panelMenuPrincipal.ResumeLayout(false);
-            panelMenuPrincipal.PerformLayout();
-            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -586,10 +548,7 @@
         private Button btnProveedor;
         private Button btnProducto;
         private Button btnSalir;
-        private Panel panel2;
         private Button btmHome;
-        private Label lblArchivo;
         private Button btnUsuario;
-        private Label lblUsuario;
     }
 }

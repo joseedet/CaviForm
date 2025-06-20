@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent ( )
+        private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             btnAceptar = new Button();
@@ -147,6 +147,7 @@
             txtContrasenya.TabIndex = 10;
             txtContrasenya.TabStop = false;
             txtContrasenya.UseSystemPasswordChar = false;
+            txtContrasenya.KeyPress += txtContrasenya_KeyPress;
             txtContrasenya.MouseEnter += txtContrasenya_MouseEnter;
             // 
             // pictureBox1

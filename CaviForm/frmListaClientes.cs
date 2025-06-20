@@ -47,6 +47,18 @@ namespace CaviForm
         {
             toolTipListaClientes.SetToolTip(btnCancelar, "Cerrar el formulario sin realizar ninguna acción");
         }
+        private void btnNuevoCliente_Click(object sender, EventArgs e)
+        {
+            frmCliente frm = new();
+            frm.MdiParent = this;
+            frm.WindowState = FormWindowState.Normal;
+            frm.Show();
+        }
+
+        private void btnNuevoCliente_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipListaClientes.SetToolTip(btnNuevoCliente, "Agregar un nuevo cliente");
+        }
     }
 }
  

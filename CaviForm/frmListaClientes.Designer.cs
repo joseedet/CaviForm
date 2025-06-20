@@ -1,4 +1,5 @@
-﻿namespace CaviForm
+﻿
+namespace CaviForm
 {
     partial class frmListaClientes
     {
@@ -40,6 +41,7 @@
             materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             btnBuscar = new Button();
             toolTipListaClientes = new ToolTip(components);
+            btnNuevoCliente = new Button();
             groupBoxBusqueda.SuspendLayout();
             SuspendLayout();
             // 
@@ -166,7 +168,7 @@
             btnBuscar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnBuscar.FlatStyle = FlatStyle.Flat;
             btnBuscar.Image = (Image)resources.GetObject("btnBuscar.Image");
-            btnBuscar.Location = new Point(471, 215);
+            btnBuscar.Location = new Point(471, 264);
             btnBuscar.Margin = new Padding(4);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(46, 46);
@@ -178,11 +180,29 @@
             // 
             toolTipListaClientes.IsBalloon = true;
             // 
+            // btnNuevoCliente
+            // 
+            btnNuevoCliente.BackColor = Color.Transparent;
+            btnNuevoCliente.FlatAppearance.BorderSize = 0;
+            btnNuevoCliente.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnNuevoCliente.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnNuevoCliente.FlatStyle = FlatStyle.Flat;
+            btnNuevoCliente.Image = (Image)resources.GetObject("btnNuevoCliente.Image");
+            btnNuevoCliente.Location = new Point(471, 191);
+            btnNuevoCliente.Margin = new Padding(4);
+            btnNuevoCliente.Name = "btnNuevoCliente";
+            btnNuevoCliente.Size = new Size(46, 46);
+            btnNuevoCliente.TabIndex = 6;
+            btnNuevoCliente.UseVisualStyleBackColor = false;
+            btnNuevoCliente.Click += btnNuevoCliente_Click;
+            btnNuevoCliente.MouseEnter += btnNuevoCliente_MouseEnter;
+            // 
             // frmListaClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(544, 406);
+            Controls.Add(btnNuevoCliente);
             Controls.Add(btnBuscar);
             Controls.Add(materialLabel1);
             Controls.Add(btnCancelar);
@@ -200,6 +220,8 @@
             PerformLayout();
         }
 
+
+
         #endregion
 
         private ListBox lstResultados;
@@ -212,5 +234,6 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private Button btnBuscar;
         private ToolTip toolTipListaClientes;
+        private Button btnNuevoCliente;
     }
 }

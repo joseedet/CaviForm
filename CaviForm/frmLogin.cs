@@ -5,7 +5,7 @@ using Microsoft.Data.SqlClient;
 
 namespace CaviForm
 {
-   
+
     public partial class frmLogin : MaterialForm
     {
         private bool Resultado = false;
@@ -35,14 +35,20 @@ namespace CaviForm
                 {
 
                     MessageBox.Show("Se ha registrado correctamente en el sistema", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                    var _grupoUsuario= DALObtenerGrupo.ObtenerGrupo(txtUsuario.Text, "ObtenerGrupo");   
+
+                    var _grupoUsuario = DALObtenerGrupo.ObtenerGrupo(txtUsuario.Text, "ObtenerGrupo");
 
                     frmPrincipal frm = new();
-                    frm.Panel(true,_grupoUsuario);
+                    frm.Panel(true, _grupoUsuario);
                     Close();
                     Resultado = true;
 
+                }
+                else
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrectos", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtContrasenya.Clear();
+                    txtUsuario.Focus();
                 }
             }
             catch (NullReferenceException ex)
@@ -120,6 +126,15 @@ namespace CaviForm
 
             return Resultado;
 
+        }
+
+        private void txtContrasenya_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true; // Evita el sonido del beep al presionar Enter
+                btnAceptar.PerformClick(); // Simula el clic en el botón Aceptar
+            }
         }
     }
 }
