@@ -35,9 +35,11 @@ namespace CaviForm
                 {
 
                     MessageBox.Show("Se ha registrado correctamente en el sistema", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    var _grupoUsuario= DALObtenerGrupo.ObtenerGrupo(txtUsuario.Text, "ObtenerGrupo");   
 
                     frmPrincipal frm = new();
-                    frm.Panel(true);
+                    frm.Panel(true,_grupoUsuario);
                     Close();
                     Resultado = true;
 

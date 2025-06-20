@@ -66,8 +66,9 @@ namespace CaviForm
 
 
         }
-        public void Panel (bool visible)
+        public void Panel (bool visible,string grupo)
         {
+            ///TODO: Cambiar el grupo de usuario para gestionar los permisos de acceso a los distintos módulos de la aplicación.Hacer switch de grupo de usuario.
 
             panelMenuPrincipal.Visible = visible;
             login = true;
