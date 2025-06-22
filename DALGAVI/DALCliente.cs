@@ -2,6 +2,7 @@
 using Dal;
 using DAL.Interfaces;
 using Microsoft.Data.SqlClient;
+using Microsoft.IdentityModel.Tokens;
 using Models;
 
 namespace DAL
@@ -106,32 +107,54 @@ namespace DAL
         {
             using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString()))
             {
-                conn.Open();
-
-                using (var command = new SqlCommand(NombreProcedimiento, conn))
+                if (string.IsNullOrEmpty(NombreProcedimiento))
                 {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@TipoDocumentoId", TipoDocumentoId);
-                    command.Parameters.AddWithValue("@NombreComercial", NombreComercial);
-                    command.Parameters.AddWithValue("@NombreContacto", NombreContacto);
-                    command.Parameters.AddWithValue("@ApellidosContacto", ApellidoContacto);
-                    command.Parameters.AddWithValue("@Direccion", Direccion);
-                    command.Parameters.AddWithValue("@CodPostal", CodPostal);
-                    command.Parameters.AddWithValue("@Poblacion", Poblacion);
-                    command.Parameters.AddWithValue("@Provincia", Provincia);
-                    command.Parameters.AddWithValue("@Telefono", Telefono);
-                    command.Parameters.AddWithValue("@Movil", Movil);
-                    command.Parameters.AddWithValue("@Correo", Correo);
-                    command.Parameters.AddWithValue("@Notas", Notas);
-                    command.Parameters.AddWithValue("@Aniversario", Aniversario);
-                    command.Parameters.AddWithValue("@Activo", Activo);
+                    throw new ArgumentException("El nombre del procedimiento no puede ser nulo o vacío.", nameof(NombreProcedimiento));
+                }
+                try
+                {
+                    conn.Open();
 
-                    command.ExecuteNonQuery();
+                    using (var command = new SqlCommand(NombreProcedimiento, conn))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@TipoDocumentoId", TipoDocumentoId);
+                        command.Parameters.AddWithValue("@NombreComercial", NombreComercial);
+                        command.Parameters.AddWithValue("@NombreContacto", NombreContacto);
+                        command.Parameters.AddWithValue("@ApellidosContacto", ApellidoContacto);
+                        command.Parameters.AddWithValue("@Direccion", Direccion);
+                        command.Parameters.AddWithValue("@CodPostal", CodPostal);
+                        command.Parameters.AddWithValue("@Poblacion", Poblacion);
+                        command.Parameters.AddWithValue("@Provincia", Provincia);
+                        command.Parameters.AddWithValue("@Telefono", Telefono);
+                        command.Parameters.AddWithValue("@Movil", Movil);
+                        command.Parameters.AddWithValue("@Correo", Correo);
+                        command.Parameters.AddWithValue("@Notas", Notas);
+                        command.Parameters.AddWithValue("@Aniversario", Aniversario);
+                        command.Parameters.AddWithValue("@Activo", Activo);
 
-                    return true;
+                        command.ExecuteNonQuery();
+
+                        return true;
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de excepciones, por ejemplo, registrar el error o lanzar una excepción personalizada
+                    Console.WriteLine($"Error SQL: {ex.Message}");
+                    // Aquí podrías registrar el error en un log o lanzar una excepción personalizada
+                    LogEx.LogException.LogError(ex, "Error al agregar cliente.");
+                       return false;
 
                 }
-
+                finally
+                {
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
             }
 
         }
@@ -149,17 +172,38 @@ namespace DAL
         /// <returns>bool</returns>
         public static bool Eliminar (int id, string NonbreProcedimiento)
         {
-            using(SqlConnection conn=new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
+            if (string.IsNullOrEmpty(NonbreProcedimiento))
+            {
+                throw new ArgumentException("El nombre del procedimiento no puede ser nulo o vacío.", nameof(NonbreProcedimiento));
+            }
+            using (SqlConnection conn = new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
             {
                 conn.Open();
-                
-                using(var command=new SqlCommand(NonbreProcedimiento,conn))
+                try
                 {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@ClienteId", id);
+                    using (var command = new SqlCommand(NonbreProcedimiento, conn))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@ClienteId", id);
 
-                    command.ExecuteNonQuery();
-                    return true;
+                        command.ExecuteNonQuery();
+                        return true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Manejo de excepciones, por ejemplo, registrar el error o lanzar una excepción personalizada
+                    Console.WriteLine($"Error SQL: {ex.Message}");
+                    // Aquí podrías registrar el error en un log o lanzar una excepción personalizada
+                    LogEx.LogException.LogError(ex, "Error al eliminar cliente.");
+                    return false;
+                }
+                finally
+                {
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
                 }
             }
         }
@@ -169,9 +213,17 @@ namespace DAL
         /// <param name="id"></param>
         /// <param name="NombreProcedimiento"></param>
         /// <returns>Cliente</returns>
-        public static Cliente PorId (int id, string NombreProcedimiento)
+        public static Cliente PorId(int id, string NombreProcedimiento)
         {
-           using(SqlConnection conn=new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
+            if (id <= 0)
+            { throw new ArgumentException("El id del cliente debe ser mayor que cero.", nameof(id)); }
+            if (string.IsNullOrEmpty(NombreProcedimiento))
+            {
+                throw new ArgumentException("El nombre del procedimiento no puede ser nulo o vacío.", nameof(NombreProcedimiento));
+
+            }
+     
+            using (SqlConnection conn=new SqlConnection(DalDbConexion.GetConnectionString().ToString()))
            {
                 Cliente cliente = new Cliente();
 
